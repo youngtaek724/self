@@ -3,10 +3,16 @@
 <configuration>
     <typeAliases>
         <typeAlias type="com.example.app.domain.vo.TestVO" alias="testVO"/>
-        <typeAlias type="com.example.app.admin.vo.AdminLoginVO" alias="AdminLoginVO"/>
+        <typeAlias type="com.example.app.domain.vo.AuthStoreVO" alias="authStoreVO"/>
+        <typeAlias type="com.example.app.domain.vo.ContractInfoVO" alias="contractInfoVO"/>
+        <typeAlias type="com.example.app.domain.vo.CouponInfoVO" alias="couponInfoVO"/>
+        <typeAlias type="com.example.app.domain.vo.HotelMstVO" alias="hotelMstVO"/>
+        <typeAlias type="com.example.app.domain.vo.RankInfoVO" alias="rankInfoVO"/>
+        <typeAlias type="com.example.app.domain.vo.RoomInfoVO" alias="roomInfoVO"/>
+        <typeAlias type="com.example.app.domain.vo.UserCouponVO" alias="userCouponVO"/>
+        <typeAlias type="com.example.app.domain.vo.UserInfoVO" alias="userInfoVO"/>
+        <typeAlias type="com.example.app.domain.vo.WishListVO" alias="wishListVO"/>
+        <typeAlias type="com.example.app.admin.vo.AdminLoginVO" alias="adminLoginVO"/>
         <typeAlias type="com.example.app.security.dto.CustomUserDetails" alias="CustomUserDetails"/>
-        
-
     </typeAliases>
-
 </configuration>
