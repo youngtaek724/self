@@ -1,16 +1,16 @@
 package com.example.app.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 @RequiredArgsConstructor
 @RequestMapping("/board/*")
 public class BoardController {
-    /*master 브랜치 테스트용(sinhyung___test)*/
+
     @GetMapping("/faq")
     public void faq(Model model){
 

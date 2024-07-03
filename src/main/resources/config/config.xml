@@ -3,5 +3,10 @@
 <configuration>
     <typeAliases>
         <typeAlias type="com.example.app.domain.vo.TestVO" alias="testVO"/>
+        <typeAlias type="com.example.app.admin.vo.AdminLoginVO" alias="AdminLoginVO"/>
+        <typeAlias type="com.example.app.security.dto.CustomUserDetails" alias="CustomUserDetails"/>
+        
+
     </typeAliases>
+
 </configuration>

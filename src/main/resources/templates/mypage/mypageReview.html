@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/review.css">
+    <link rel="stylesheet" href="/css/mypage.css">
     <link rel="stylesheet" href="/css/1018dd7e055bc4cc.css">
 
 </head>
@@ -335,17 +336,18 @@
 </script>
 <script src="/js/jquery.min.js"></script>
 <script th:inline="javascript">
-    $(".myinfo").on("click", function (){
+    $(".myinfo").on("click", function () {
         location.href = "/mypage/mypageInfo";
     })
-    $(".reserve").on("click", function (){
+    $(".reserve").on("click", function () {
         location.href = "/mypage/mypageReserve";
     })
-    $(".review").on("click", function (){
+    $(".review").on("click", function () {
         location.href = "/mypage/mypageReview";
     })
-    $(".wish").on("click", function (){
+    $(".wish").on("click", function () {
         location.href = "/mypage/mypageWish";
     })
 </script>
+
 </html>

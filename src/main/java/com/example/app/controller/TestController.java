@@ -1,19 +1,22 @@
 package com.example.app.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
+
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 @RequiredArgsConstructor
 @RequestMapping("/main/*")
 public class TestController {
-    @GetMapping("/test")
-    public void test(Model model){
 
+    @PostMapping("/test")
+    @PreAuthorize("@securityChecker.checkLevel('GUEST')")
+    public String test(Model model){
+        return "hello";
     }
 
 }

@@ -735,10 +735,10 @@
     }
 
     .Header_Header__-Uqw2 .Header_naver__XtvKG:after {
-        background: url('/images/logo3.JPG');
+        background: url(https://vertical.pstatic.net/vertical/static/common/images/gnb/naver_pc.svg);
         display: block;
-        width: 52px;
-        height: 19px;
+        width: 54px;
+        height: 10px;
         content: ""
     }
 
