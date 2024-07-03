@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 @RequestMapping("/board/*")
 public class BoardController {
-    /*master 브랜치 테스트용(taek)*/
+    /*master 브랜치 테스트용(sinhyung)*/
     @GetMapping("/faq")
     public void faq(Model model){
 
