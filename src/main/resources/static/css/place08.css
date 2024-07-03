@@ -1,0 +1,81 @@
+.Pagination_Pagination__Yanet {
+    text-align: center;
+    border-top: 1px solid #eff3f6;
+    border-bottom: 1px solid #eff3f6
+}
+
+@media only screen and (max-width: 767px) {
+    .Pagination_Pagination__Yanet {
+        padding:19px 0
+    }
+}
+
+@media only screen and (min-width: 1025px),only screen and (min-width:768px)and (max-width:1024px) {
+    .Pagination_Pagination__Yanet {
+        padding:23px 0
+    }
+}
+
+.Pagination_Pagination__Yanet .Pagination_next__tTpJB,.Pagination_Pagination__Yanet .Pagination_prev__D_uXc {
+    width: 29px;
+    height: 29px;
+    padding-right: 2px;
+    vertical-align: text-bottom;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.05);
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.05);
+    border: 1px solid #e9e9e9;
+    background-color: #fff
+}
+
+.Pagination_Pagination__Yanet .Pagination_next__tTpJB:before,.Pagination_Pagination__Yanet .Pagination_prev__D_uXc:before {
+    display: block;
+    margin: 0 auto;
+    width: 7px;
+    height: 7px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    border-top: 1px solid #424242;
+    border-right: 1px solid #424242;
+    content: ""
+}
+
+.Pagination_Pagination__Yanet .Pagination_next__tTpJB:disabled:before,.Pagination_Pagination__Yanet .Pagination_prev__D_uXc:disabled:before {
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    content: ""
+}
+
+.Pagination_Pagination__Yanet .Pagination_prev__D_uXc {
+    margin-right: 12px;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg)
+}
+
+.Pagination_Pagination__Yanet .Pagination_next__tTpJB {
+    margin-left: 12px
+}
+
+.Pagination_Pagination__Yanet .Pagination_page__O0Lgy {
+    display: inline-block;
+    vertical-align: 7px;
+    padding: 0 7px;
+    font-size: 15px;
+    line-height: 1.4;
+    letter-spacing: -.3px;
+    color: #9e9e9e
+}
+
+.Pagination_Pagination__Yanet .Pagination_page__O0Lgy.Pagination_now__b15Fx {
+    font-weight: 700;
+    color: #242424
+}
+
+[data-current=item] .Pagination_Pagination__Yanet {
+    border-bottom: 0
+}
+
+/*# sourceMappingURL=028b1711aa1f5760.css.map*/

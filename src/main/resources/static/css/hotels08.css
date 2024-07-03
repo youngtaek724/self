@@ -1,0 +1,547 @@
+.CPReview_review_anchor__D_f6f {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #424242;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #e7e7e7
+}
+
+.CPReview_review_anchor__D_f6f:after {
+    display: inline-block;
+    margin-left: 6px;
+    background-image: url(/img/main-e4ca9a83c23af0cfb997f0845911dc9e.png);
+    -webkit-background-size: 306px auto;
+    background-size: 306px auto;
+    background-position: -268px -217px;
+    width: 6px;
+    height: 11px;
+    content: ""
+}
+
+@media only screen and (max-width: 767px) {
+    .CPReview_review_anchor__D_f6f {
+        padding:15px 0 11px;
+        font-weight: 500;
+        line-height: 1.43;
+        letter-spacing: -.3px
+    }
+}
+
+@media only screen and (min-width: 768px)and (max-width:1024px) {
+    .CPReview_review_anchor__D_f6f {
+        padding:19px 0 16px;
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: -.2px
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .CPReview_review_anchor__D_f6f {
+        padding:19px 0 16px;
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: -.2px
+    }
+}
+
+.CPReview_CPReview__kDHNn {
+    border-top: 1px solid #eff3f6
+}
+
+@media only screen and (max-width: 767px) {
+    .CPReview_CPReview__kDHNn>.CPReview_inner___yHhd {
+        padding-block:35px
+    }
+}
+
+@media only screen and (min-width: 1025px),only screen and (min-width:768px)and (max-width:1024px) {
+    .CPReview_CPReview__kDHNn>.CPReview_inner___yHhd {
+        padding-block:53px 50px
+    }
+}
+
+.CPReview_CPReview__kDHNn .CPReview_header__6_CJ7 .CPReview_title__79yE9 {
+    margin: 0;
+    color: #000
+}
+
+@media only screen and (max-width: 767px) {
+    .CPReview_CPReview__kDHNn .CPReview_header__6_CJ7 .CPReview_title__79yE9 {
+        font-size:18px;
+        line-height: 1.33;
+        letter-spacing: -.3px
+    }
+}
+
+@media only screen and (min-width: 1025px),only screen and (min-width:768px)and (max-width:1024px) {
+    .CPReview_CPReview__kDHNn .CPReview_header__6_CJ7 .CPReview_title__79yE9 {
+        font-size:20px;
+        line-height: 1.35;
+        letter-spacing: 2px
+    }
+
+    .CPReview_CPReview__kDHNn .CPReview_header__6_CJ7 .CPReview_txt_only__69co3 {
+        float: left;
+        margin-right: 8px
+    }
+}
+
+.CPReview_CPReview__kDHNn .CPReview_review_tabs___eDGa {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.CPReview_CPReview__kDHNn .CPReview_review_tabs___eDGa>* {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+
+@media only screen and (max-width: 379px) {
+    .CPReview_CPReview__kDHNn .CPReview_review_tabs___eDGa>:first-child {
+        -webkit-flex-basis:45%;
+        -ms-flex-preferred-size: 45%;
+        flex-basis: 45%
+    }
+}
+
+@media only screen and (min-width: 380px) {
+    .CPReview_CPReview__kDHNn .CPReview_review_tabs___eDGa>:first-child {
+        -webkit-flex-basis:50%;
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%
+    }
+}
+
+@media only screen and (max-width: 379px) {
+    .CPReview_CPReview__kDHNn .CPReview_review_tabs___eDGa>:last-child {
+        -webkit-flex-basis:55%;
+        -ms-flex-preferred-size: 55%;
+        flex-basis: 55%
+    }
+}
+
+@media only screen and (min-width: 380px) {
+    .CPReview_CPReview__kDHNn .CPReview_review_tabs___eDGa>:last-child {
+        -webkit-flex-basis:50%;
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .CPReview_CPReview__kDHNn .CPReview_review_tabs___eDGa {
+        margin-top:17px;
+        margin-bottom: 10px
+    }
+}
+
+@media only screen and (min-width: 1025px),only screen and (min-width:768px)and (max-width:1024px) {
+    .CPReview_CPReview__kDHNn .CPReview_review_tabs___eDGa {
+        margin-top:15px;
+        margin-bottom: 23px
+    }
+}
+
+.CPReview_Rating__oqejn {
+    text-align: center;
+    -webkit-border-radius: 10px;
+    border-radius: 10px
+}
+
+@media only screen and (min-width: 1025px),only screen and (min-width:768px)and (max-width:1024px) {
+    .CPReview_Rating__oqejn {
+        display:-webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center
+    }
+
+    .CPReview_Rating__oqejn>* {
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0
+    }
+
+    .CPReview_Rating__oqejn>:first-child {
+        -webkit-flex-basis: 45%;
+        -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1
+    }
+
+    .CPReview_Rating__oqejn>:last-child {
+        -webkit-flex-basis: 55%;
+        -ms-flex-preferred-size: 55%;
+        flex-basis: 55%
+    }
+}
+
+[data-current=booking] .CPReview_Rating__oqejn {
+    border: 1px solid rgba(49,117,198,.1);
+    background-color: rgba(49,117,198,.02)
+}
+
+[data-current=tripadvisor] .CPReview_Rating__oqejn {
+    border: 1px solid rgba(0,170,108,.1);
+    background-color: rgba(0,170,108,.02)
+}
+
+@media only screen and (max-width: 767px) {
+    .CPReview_Rating__oqejn .CPReview_summary_wrap__r4HKe {
+        padding:22px 0 30px
+    }
+}
+
+@media only screen and (min-width: 1025px),only screen and (min-width:768px)and (max-width:1024px) {
+    .CPReview_Rating__oqejn .CPReview_summary_wrap__r4HKe {
+        display:-webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 38px 0
+    }
+
+    .CPReview_Rating__oqejn .CPReview_summary_wrap__r4HKe>* {
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0
+    }
+
+    .CPReview_Rating__oqejn .CPReview_summary_wrap__r4HKe>:first-child {
+        -webkit-order: 3;
+        -ms-flex-order: 3;
+        order: 3
+    }
+}
+
+[data-current=tripadvisor] .CPReview_Rating__oqejn .CPReview_summary_wrap__r4HKe .CPReview_total_rating__p1vdR:before {
+    display: inline-block;
+    margin-right: 10px;
+    background-image: url(/item-b07e66ec298c8bfae42d56b5dd722a90.png);
+    -webkit-background-size: 372px auto;
+    background-size: 372px auto;
+    background-position: -44px -321px;
+    width: 25px;
+    height: 15px;
+    content: ""
+}
+
+.CPReview_Rating__oqejn .CPReview_people__c_hx0 {
+    color: #8f8f8f
+}
+
+@media only screen and (max-width: 767px) {
+    .CPReview_Rating__oqejn .CPReview_people__c_hx0 {
+        font-size:14px;
+        line-height: 1.43;
+        letter-spacing: -.3px
+    }
+}
+
+@media only screen and (min-width: 1025px),only screen and (min-width:768px)and (max-width:1024px) {
+    .CPReview_Rating__oqejn .CPReview_people__c_hx0 {
+        margin-left:18px;
+        font-size: 16px;
+        line-height: 1.44;
+        letter-spacing: -.2px
+    }
+}
+
+.CPReview_Rating__oqejn .CPReview_total_rating__p1vdR {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.CPReview_Rating__oqejn .CPReview_total_rating__p1vdR>* {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+
+.CPReview_Rating__oqejn .CPReview_score__FimY4 {
+    display: inline-block;
+    margin-right: 10px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    -webkit-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -.32px;
+    color: #fff;
+    background-color: #003485
+}
+
+@media only screen and (max-width: 767px) {
+    .CPReview_Rating__oqejn .CPReview_score__FimY4 {
+        width:32px;
+        padding: 6px 0 8px
+    }
+}
+
+@media only screen and (min-width: 1025px),only screen and (min-width:768px)and (max-width:1024px) {
+    .CPReview_Rating__oqejn .CPReview_score__FimY4 {
+        width:36px;
+        padding: 8px 0 10px
+    }
+}
+
+.CPReview_Rating__oqejn .CPReview_star_bg__xS3cV {
+    position: relative;
+    display: block
+}
+
+@media only screen and (max-width: 767px) {
+    .CPReview_Rating__oqejn .CPReview_star_bg__xS3cV {
+        width:109px;
+        height: 20px;
+        -webkit-background-size: 109px 20px;
+        background-size: 109px 20px
+    }
+}
+
+@media only screen and (min-width: 1025px),only screen and (min-width:768px)and (max-width:1024px) {
+    .CPReview_Rating__oqejn .CPReview_star_bg__xS3cV {
+        width:120px;
+        height: 22px;
+        -webkit-background-size: 120px 22px;
+        background-size: 120px 22px
+    }
+}
+
+.CPReview_Rating__oqejn .CPReview_star_bg__xS3cV .CPReview_star_current__hH1yM {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+@media only screen and (max-width: 767px) {
+    .CPReview_Rating__oqejn .CPReview_star_bg__xS3cV .CPReview_star_current__hH1yM {
+        -webkit-background-size:109px 20px;
+        background-size: 109px 20px
+    }
+}
+
+@media only screen and (min-width: 1025px),only screen and (min-width:768px)and (max-width:1024px) {
+    .CPReview_Rating__oqejn .CPReview_star_bg__xS3cV .CPReview_star_current__hH1yM {
+        -webkit-background-size:120px 22px;
+        background-size: 120px 22px
+    }
+}
+
+[data-current=booking] .CPReview_Rating__oqejn .CPReview_star_bg__xS3cV {
+    background-image: url(/images/ico_svg/item_CPReview_star_bg_booking.svg)
+}
+
+[data-current=booking] .CPReview_Rating__oqejn .CPReview_star_bg__xS3cV .CPReview_star_current__hH1yM {
+    background-image: url(/images/ico_svg/item_CPReview_star_booking.svg)
+}
+
+[data-current=tripadvisor] .CPReview_Rating__oqejn .CPReview_star_bg__xS3cV {
+    background-image: url(/images/ico_svg/item_CPReview_star_bg_tripadvisor.svg)
+}
+
+[data-current=tripadvisor] .CPReview_Rating__oqejn .CPReview_star_bg__xS3cV .CPReview_star_current__hH1yM {
+    background-image: url(/images/ico_svg/item_CPReview_star_tripadvisor.svg)
+}
+
+@media only screen and (max-width: 767px) {
+    .CPReview_Rating__oqejn .CPReview_txt_rating__nkUbS {
+        margin-left:6px
+    }
+}
+
+@media only screen and (min-width: 1025px),only screen and (min-width:768px)and (max-width:1024px) {
+    .CPReview_Rating__oqejn .CPReview_txt_rating__nkUbS {
+        margin-left:12px
+    }
+}
+
+.CPReview_Rating__oqejn .CPReview_txt_rating__nkUbS .CPReview_current__xIozL {
+    font-weight: 700;
+    color: #242424
+}
+
+@media only screen and (max-width: 767px) {
+    .CPReview_Rating__oqejn .CPReview_txt_rating__nkUbS .CPReview_current__xIozL {
+        font-size:24px;
+        line-height: 1.17;
+        letter-spacing: 1.2px
+    }
+}
+
+@media only screen and (min-width: 1025px),only screen and (min-width:768px)and (max-width:1024px) {
+    .CPReview_Rating__oqejn .CPReview_txt_rating__nkUbS .CPReview_current__xIozL {
+        font-size:36px;
+        line-height: 1
+    }
+}
+
+.CPReview_Rating__oqejn .CPReview_txt_rating__nkUbS .CPReview_total__kJFG1 {
+    color: #9e9e9e
+}
+
+@media only screen and (max-width: 767px) {
+    .CPReview_Rating__oqejn .CPReview_txt_rating__nkUbS .CPReview_total__kJFG1 {
+        font-size:24px;
+        line-height: 1.17;
+        letter-spacing: -.21px
+    }
+}
+
+@media only screen and (min-width: 1025px),only screen and (min-width:768px)and (max-width:1024px) {
+    .CPReview_Rating__oqejn .CPReview_txt_rating__nkUbS .CPReview_total__kJFG1 {
+        font-size:36px;
+        line-height: 1
+    }
+}
+
+.CPReview_Rating__oqejn .CPReview_txt_rating__nkUbS .CPReview_total__kJFG1:before {
+    display: inline-block;
+    vertical-align: 2px;
+    font-size: 18px;
+    font-weight: 200;
+    margin: 0 4px;
+    opacity: .6;
+    content: "/"
+}
+
+.CPReview_review_feature___d8EP {
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.CPReview_review_feature___d8EP>* {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+
+.CPReview_review_feature___d8EP>:first-child {
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1
+}
+
+.CPReview_review_feature___d8EP>:last-child {
+    margin-left: auto
+}
+
+@media only screen and (max-width: 767px) {
+    .CPReview_review_feature___d8EP {
+        -webkit-align-items:center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 13px;
+        padding-top: 4px;
+        font-size: 14px;
+        line-height: 1.43;
+        letter-spacing: -.3px
+    }
+}
+
+@media only screen and (min-width: 1025px),only screen and (min-width:768px)and (max-width:1024px) {
+    .CPReview_review_feature___d8EP {
+        margin-bottom:22px
+    }
+
+    .CPReview_review_feature___d8EP+* {
+        clear: both
+    }
+}
+
+.CPReview_review_feature___d8EP .CPReview_txt__GL6HU {
+    display: inline-block;
+    color: #8f8f8f
+}
+
+@media only screen and (max-width: 767px) {
+    .CPReview_review_feature___d8EP .CPReview_txt__GL6HU {
+        font-size:14px;
+        line-height: 1.43;
+        letter-spacing: -.3px
+    }
+}
+
+@media only screen and (min-width: 1025px),only screen and (min-width:768px)and (max-width:1024px) {
+    .CPReview_review_feature___d8EP .CPReview_txt__GL6HU {
+        font-size:14px;
+        line-height: 36px;
+        letter-spacing: -.2px
+    }
+}
+
+.CPReview_review_feature___d8EP>.CPReview_txt__GL6HU:before {
+    display: inline-block;
+    margin-right: 4px;
+    vertical-align: -2px;
+    background-image: url(/item-b07e66ec298c8bfae42d56b5dd722a90.png);
+    -webkit-background-size: 372px auto;
+    background-size: 372px auto;
+    background-position: -288px -22px;
+    width: 15px;
+    height: 15px;
+    content: ""
+}
+
+.CPReview_review_feature___d8EP .CPReview_awards__vyxNU .CPReview_txt__GL6HU:after {
+    display: inline-block;
+    margin-right: 4px;
+    content: ","
+}
+
+.CPReview_review_feature___d8EP .CPReview_awards__vyxNU .CPReview_txt__GL6HU:last-child:after {
+    display: none
+}
+
+.CPReview_review_feature___d8EP .CPReview_provide_img__OcqZV {
+    margin-left: 6px;
+    vertical-align: middle;
+    font-size: 0
+}
+
+.CPReview_review_feature___d8EP .CPReview_provide_img__OcqZV:before {
+    display: inline-block;
+    margin-top: -2px;
+    background-image: url(/item-b07e66ec298c8bfae42d56b5dd722a90.png);
+    -webkit-background-size: 372px auto;
+    background-size: 372px auto;
+    background-position: 0 -111px;
+    width: 80px;
+    height: 36px;
+    vertical-align: middle;
+    content: ""
+}
+
+@media only screen and (max-width: 767px) {
+    .CPReview_review_anchor__D_f6f {
+        margin-top:12px
+    }
+}
+
+/*# sourceMappingURL=609de7807d8232e0.css.map*/

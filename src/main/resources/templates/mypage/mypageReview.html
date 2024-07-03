@@ -1,0 +1,351 @@
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>MY페이지 : 네이버 항공권/호텔</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/review.css">
+    <link rel="stylesheet" href="/css/1018dd7e055bc4cc.css">
+
+</head>
+
+<body data-ui-view="pc" id="bodyhide">
+    <div id="__next">
+        <div id="mypage" class="_travelId__ReviewMyPage__jYMOq" data-float="false">
+            <!--*****header*****!-->
+            <header th:replace="/main/header.html :: div"></header>
+            <!--******body 시작*****!-->
+            <div id="content" class="content">
+                <div id="aside" class="aside">
+                    <aside class="aside_Aside__oVpog">
+                        <div class="aside_container__ST1WW aside_has_page_margin__DtYJs">
+                            <div class="aside_inner__0oyo4">
+                                <div class="aside_profile__MHkWS">
+                                    <figure class="aside_figure__NpFTm"><img
+                                            src="https://phinf.pstatic.net/contact/20210919_171/1632050475539NE3fj_JPEG/C5B2FB83-444F-4EE3-A585-88EB6954E074.jpeg"
+                                            alt="프로필 이미지"></figure>
+                                    <div class="texts"><strong class="aside_nickname__WnDUf">최신형</strong><span
+                                            class="aside_id__QB2BF">tlsg****</span></div>
+                                </div>
+                                <nav class="my_nav">
+                                    <ul class="nav_tabs">
+                                        <li class="nav_tab as_flight">
+                                            <button class="tab myinfo" data-target="info">내 정보</button>
+                                        </li>
+                                        <li class="nav_tab as_flight">
+                                            <button class="tab reserve">예약 내역</button>
+                                        </li>
+                                        <li class="nav_tab as_dibs">
+                                            <button class="tab wish">찜한 여행지</button>
+                                        </li>
+                                        <li class="nav_tab as_dibs">
+                                            <button class="tab review">리뷰</button>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div id="mainContent" class="cards">
+                    <div class="profile_ReviewProfile__rR1gi">
+                        <div class="card_Card__SqiQV card_plans__S0tuL">
+                            <div class="profile_profile__2krcU">
+                                <figure class="profile_figure__1kn3g"><img
+                                        src="https://search.pstatic.net/common?src=https%3A%2F%2Fphinf.pstatic.net%2Fcontact%2F20210919_171%2F1632050475539NE3fj_JPEG%2FC5B2FB83-444F-4EE3-A585-88EB6954E074.jpeg&amp;type=f100_100"
+                                        class="img" alt="" loading="lazy" data-testid=""></figure>
+                                <div class="profile_meta__maUZR">
+                                    <div class="profile_nickname__2DuhK"><b>최신형</b>님의 리뷰</div>
+                                    <div class="profile_bio__vP_m6"><button class="profile_edit__g5riq">소개글을
+                                            입력해주세요</button></div>
+                                </div>
+                            </div>
+                            <div class="profile_feed__K4ZQe">
+                                <div class="profile_subject__wkXl_"><button disabled=""><span
+                                            class="profile_name__a8VEg">리뷰</span><span
+                                            class="profile_quantity__yPWSB">0</span></button></div>
+                                <div class="profile_subject__wkXl_"><button disabled=""><span
+                                            class="profile_name__a8VEg">사진</span><span
+                                            class="profile_quantity__yPWSB">0</span></button></div>
+                            </div><button class="profile_new__X1j7R" onclick="btnClick();">리뷰 남기기</button>
+                        </div>
+                    </div>
+                    <div class="ReviewPlaceList_ReviewPlaceList__2tJOc">
+                        <div class="card_Card__SqiQV card_plans__S0tuL ReviewPlaceList_card__1i524">
+                            <div class="ReviewPlaceList_empty__2JC8U">
+                                <p class="ReviewPlaceList_suggestion__0CiHj">작성된 리뷰가 없습니다.<br>여행을 다녀왔다면 방문 후기를
+                                    남겨보세요!
+                                </p><button class="ReviewPlaceList_new__Io0Tr" id="my-div" onclick="btnClick();">리뷰
+                                    쓰기</button>
+                            </div>
+                        </div>
+                    </div><button role="button" class="topButton_topButton__hvSsm"></button>
+                </div>
+                <div id="mainContent" class="test" style="display: none;">
+                    <div class="profile_ReviewProfile__rR1gi">
+                        <div class="card_Card__SqiQV card_plans__S0tuL">
+                            <div class="profile_profile__2krcU">
+                                <figure class="profile_figure__1kn3g"><img
+                                        src="https://search.pstatic.net/common?src=https%3A%2F%2Fphinf.pstatic.net%2Fcontact%2F20210919_171%2F1632050475539NE3fj_JPEG%2FC5B2FB83-444F-4EE3-A585-88EB6954E074.jpeg&amp;type=f100_100"
+                                        class="img" alt="" loading="lazy" data-testid=""></figure>
+                                <div class="profile_meta__maUZR">
+                                    <div class="profile_nickname__2DuhK"><b>모달창</b>님의 리뷰</div>
+                                    <div class="profile_bio__vP_m6"><button class="profile_edit__g5riq">소개글을
+                                            입력해주세요</button></div>
+                                </div>
+                            </div>
+                            <div class="profile_feed__K4ZQe">
+                                <div class="profile_subject__wkXl_"><button disabled=""><span
+                                            class="profile_name__a8VEg">리뷰</span><span
+                                            class="profile_quantity__yPWSB">0</span></button></div>
+                                <div class="profile_subject__wkXl_"><button disabled=""><span
+                                            class="profile_name__a8VEg">사진</span><span
+                                            class="profile_quantity__yPWSB">0</span></button></div>
+                            </div><button class="profile_new__X1j7R">리뷰 남기기</button>
+                        </div>
+                    </div>
+                    <div class="ReviewPlaceList_ReviewPlaceList__2tJOc">
+                        <div class="card_Card__SqiQV card_plans__S0tuL ReviewPlaceList_card__1i524">
+                            <div class="ReviewPlaceList_empty__2JC8U">
+                                <p class="ReviewPlaceList_suggestion__0CiHj">작성된 리뷰가 없습니다.<br>여행을 다녀왔다면 방문 후기를
+                                    남겨보세요!
+                                </p><button class="ReviewPlaceList_new__Io0Tr" id="my-div" onclick="btnClick();">리뷰
+                                    쓰기</button>
+                            </div>
+                        </div>
+                    </div><button role="button" class="topButton_topButton__hvSsm"></button>
+                </div>
+
+                <div id="modalRoot" style="display: none;">
+                    <div class="modal_Modal__QU0b6" data-modaltype="full">
+                        <div class="modal_inner__almtj selectReviewPlaceModal_SelectReviewPlaceModal__BJP15"
+                            style="top: 79.9826px; bottom: 127.389px;">
+                            <div class="modal_ModalHeader__tVf2_" data-modaltype="full">
+                                <div class="selectReviewPlaceModal_title__nIG6_">명소 선택</div>
+                                <div class="selectReviewPlaceModal_search__apBaq">
+                                    <div class="searchInput_SearchInput__mZSK1"><svg width="18" height="18"
+                                            viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M1.8889 7.65346C1.8889 4.4598 4.46673 1.88713 7.66678 1.88713C10.8668 1.88713 13.4447 4.4598 13.4447 7.65346C13.4447 10.8471 10.8668 13.4198 7.66678 13.4198C4.46673 13.4198 1.8889 10.8471 1.8889 7.65346ZM1 7.65346C1 11.335 3.97783 14.3069 7.66678 14.3069C9.34216 14.3069 10.8709 13.6939 12.0406 12.6799L16.3696 17.0003L16.9985 16.3731L12.6713 12.0549C13.7065 10.883 14.3336 9.34295 14.3336 7.65346C14.3336 3.97188 11.3557 1 7.66678 1C3.97783 1 1 3.97188 1 7.65346Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M12.0406 12.6799L12.3938 12.326C12.2082 12.1408 11.9111 12.1303 11.713 12.3021L12.0406 12.6799ZM16.3696 17.0003L16.0164 17.3542C16.2116 17.5489 16.5275 17.549 16.7227 17.3543L16.3696 17.0003ZM16.9985 16.3731L17.3516 16.7271C17.4457 16.6333 17.4985 16.506 17.4985 16.3732C17.4986 16.2404 17.4457 16.113 17.3517 16.0192L16.9985 16.3731ZM12.6713 12.0549L12.2966 11.7239C12.1216 11.922 12.131 12.2221 12.3181 12.4089L12.6713 12.0549ZM7.66678 1.38713C4.19153 1.38713 1.3889 4.18271 1.3889 7.65346H2.3889C2.3889 4.73688 4.74193 2.38713 7.66678 2.38713V1.38713ZM13.9447 7.65346C13.9447 4.18271 11.142 1.38713 7.66678 1.38713V2.38713C10.5916 2.38713 12.9447 4.73688 12.9447 7.65346H13.9447ZM7.66678 13.9198C11.142 13.9198 13.9447 11.1242 13.9447 7.65346H12.9447C12.9447 10.57 10.5916 12.9198 7.66678 12.9198V13.9198ZM1.3889 7.65346C1.3889 11.1242 4.19153 13.9198 7.66678 13.9198V12.9198C4.74193 12.9198 2.3889 10.57 2.3889 7.65346H1.3889ZM7.66678 13.8069C4.25303 13.8069 1.5 11.058 1.5 7.65346H0.5C0.5 11.6121 3.70263 14.8069 7.66678 14.8069V13.8069ZM11.713 12.3021C10.6312 13.2399 9.21789 13.8069 7.66678 13.8069V14.8069C9.46643 14.8069 11.1105 14.1479 12.3681 13.0577L11.713 12.3021ZM16.7228 16.6464L12.3938 12.326L11.6874 13.0338L16.0164 17.3542L16.7228 16.6464ZM16.6455 16.0191L16.0166 16.6463L16.7227 17.3543L17.3516 16.7271L16.6455 16.0191ZM12.3181 12.4089L16.6454 16.727L17.3517 16.0192L13.0245 11.701L12.3181 12.4089ZM13.8336 7.65346C13.8336 9.21676 13.2539 10.6401 12.2966 11.7239L13.046 12.3859C14.159 11.1259 14.8336 9.46913 14.8336 7.65346H13.8336ZM7.66678 1.5C11.0805 1.5 13.8336 4.24896 13.8336 7.65346H14.8336C14.8336 3.69479 11.6309 0.5 7.66678 0.5V1.5ZM1.5 7.65346C1.5 4.24896 4.25303 1.5 7.66678 1.5V0.5C3.70263 0.5 0.5 3.69479 0.5 7.65346H1.5Z"
+                                                fill="currentColor"></path>
+                                        </svg><input class="searchInput_input__oXdGi" type="text"
+                                            placeholder="해외 명소 검색 (ex. 파리 에펠탑)" value=""></div>
+                                </div><button class="modal_close__FImnA close" aria-label="닫기"
+                                    data-testid="modalCloseButton"></button>
+                            </div>
+                            <div class="modal_ModalContent__NBgou" data-scroll-lock-scrollable="true">
+                                <div class="selectReviewPlaceModal_places__hPCZ2">
+                                    <div class="selectReviewPlaceModal_notice__kkuM3">리뷰를 작성할 명소를 선택해주세요</div>
+                                    <div class="selectReviewPlaceModal_tags__C_Ezq"><button role="radio"
+                                            class="selectReviewPlaceModal_tag__MtkRE" aria-checked="true">최근 본
+                                            명소</button><button role="radio" "" class="selectReviewPlaceModal_tag__MtkRE"
+                                            aria-checked="false">인기
+                                            명소</button></div>
+                                    <ul class="selectReviewPlaceModal_list__45PNG">
+                                        <li class="item">
+                                            <div class="selectReviewPlaceModal_place__6bXpl">
+                                                <div class="ReviewPlaceList_ReviewPlaceItem__2_kJl">
+                                                    <figure class="ReviewPlaceList_figure__wBKaR"><img
+                                                            src="https://search.pstatic.net/common?src=http%3A%2F%2Fmedia-cdn.tripadvisor.com%2Fmedia%2Fphoto-o%2F1b%2F84%2F55%2F68%2Fhawksmoor-spitalfields.jpg&amp;type=f54_54_travelhome"
+                                                            class="image" loading="lazy"></figure>
+                                                    <div class="ReviewPlaceList_information__NOfro">
+                                                        <div class="ReviewPlaceList_name___2iSb"><mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>스<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>피<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>탈<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>필<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>즈<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>
+                                                            <mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>혹<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>스<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>무<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>어<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>
+                                                        </div>
+                                                        <div class="ReviewPlaceList_subtext__Kvuae"><span
+                                                                class="ReviewPlaceList_text__fyRyB">런던</span><span
+                                                                class="ReviewPlaceList_text__fyRyB">영국식</span></div>
+                                                    </div><button class="ReviewPlaceList_new__Io0Tr"
+                                                        onclick="reviewModal();" aria-label="리뷰 쓰기"></button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="selectReviewPlaceModal_place__6bXpl">
+                                                <div class="ReviewPlaceList_ReviewPlaceItem__2_kJl">
+                                                    <figure class="ReviewPlaceList_figure__wBKaR"><img
+                                                            src="https://search.pstatic.net/common?src=https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F5885_000_10%2F20201111223651785_MPT39HFBA.jpg%2Ffb275_32_i1.jpg%3Ftype%3Dw540_fst&amp;type=f54_54_travelhome"
+                                                            class="image" loading="lazy"></figure>
+                                                    <div class="ReviewPlaceList_information__NOfro">
+                                                        <div class="ReviewPlaceList_name___2iSb"><mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>오<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>키<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>나<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>와<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>
+                                                            <mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>아<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>메<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>리<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>칸<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>
+                                                            <mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>빌<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>리<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>지<mark
+                                                                style="font-weight:inherit;color:#fe5d41;background-color:transparent"></mark>
+                                                        </div>
+                                                        <div class="ReviewPlaceList_subtext__Kvuae"><span
+                                                                class="ReviewPlaceList_text__fyRyB">오키나와</span><span
+                                                                class="ReviewPlaceList_text__fyRyB">랜드마크</span>
+                                                        </div>
+                                                    </div><button class="ReviewPlaceList_new__Io0Tr"
+                                                        aria-label="리뷰 쓰기"></button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="popoverRoot"></div>
+            <div id="snackbarRoot">
+                <div class="snackbar_Snackbars__E2QMH"></div>
+            </div>
+        </div>
+        <footer class="_travelId__footer__wiyNI" id="mypageFooter">
+            <div class="footer_Footer__EMYgA">
+                <div class="footer_inner__9sp44">
+                    <ul class="footer_list__0h0hn">
+                        <li class="footer_item___B89j"><a class="footer_anchor__cC2Wf" role="" target="_blank"
+                                data-testid="" href="https://www.naver.com/more.html">전체서비스</a></li>
+                        <li class="footer_item___B89j"><a class="footer_anchor__cC2Wf" role="" target="_blank"
+                                data-testid="" href="https://policy.naver.com/policy/service.html">이용약관</a></li>
+                        <li class="footer_item___B89j"><a class="footer_anchor__cC2Wf" role="" target="_blank"
+                                data-testid="" href="https://policy.naver.com/policy/privacy.html"><strong
+                                    class="footer_emphasized__OJ3Ib">개인정보처리방침</strong></a></li>
+                        <li class="footer_item___B89j"><a class="footer_anchor__cC2Wf" role="" target="_blank"
+                                data-testid=""
+                                href="https://help.naver.com/alias/search/contents/contents09.naver">통합검색고객센터</a>
+                        </li>
+                        <li class="footer_item___B89j">
+                            <address class="footer_address__G4VRM"><a class="footer_anchor__cC2Wf" role=""
+                                    target="_blank" data-testid="" href="https://www.navercorp.com">ⓒ NAVER
+                                    Corp.</a></address>
+                        </li>
+                        <li class="footer_item___B89j"><a class="footer_anchor__cC2Wf" role="" target="_self"
+                                data-testid="" href="tel:1588-3820">대표번호 1588-3820</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div id="travel_ntm" style="display:none" data-nsc="tourinfo.my_reviews" data-sti="search_travel_m_reviews">
+        </div>
+    </div>
+
+    <div class="modal_Modal__QU0b6" data-modaltype="centered" style="display: none;" id="reviewModal">
+        <div class="modal_inner__almtj writeReviewModal_WriteReviewModal__sclnp writeReviewModal_as_centered__gLtvo">
+            <div class="modal_ModalHeader__tVf2_ writeReviewModal_modal-header__PKIQK" data-modaltype="centered">
+                <div class="writeReviewModal_title__s6Xhi">
+                    <div class="writeReviewModal_text__tWs_l">리뷰 쓰기</div>
+                </div><button class="modal_close__FImnA close" aria-label="닫기" data-testid="modalCloseButton"></button>
+            </div>
+            <div class="modal_ModalContent__NBgou writeReviewModal_modal-content__p2beJ"
+                data-scroll-lock-scrollable="true">
+                <section class="writeReviewModal_rate__8JnJK"><strong
+                        class="writeReviewModal_subject__KuTjo writeReviewModal_poi__zUWwx">
+                        <div class="writeReviewModal_inner__Edw8A"><span class="writeReviewModal_store__Aeb4A">스피탈필즈
+                                혹스무어</span>&nbsp;방문은 어떠셨나요?</div>
+                    </strong><span class="writeReviewModal_announce__z9Rp1"><i>5점</i><i>최고였어요!</i></span>
+                    <div class="writeReviewModal_stars__Jaxmm" role="radiogroup"><button
+                            class="writeReviewModal_star__QHt8L" role="radio" data-value="1"
+                            aria-selected="true"></button><button class="writeReviewModal_star__QHt8L" role="radio"
+                            data-value="2" aria-selected="true"></button><button class="writeReviewModal_star__QHt8L"
+                            role="radio" data-value="3" aria-selected="true"></button><button
+                            class="writeReviewModal_star__QHt8L" role="radio" data-value="4"
+                            aria-selected="true"></button><button class="writeReviewModal_star__QHt8L" role="radio"
+                            data-value="5" aria-selected="true"></button></div>
+                </section>
+                <section class="writeReviewModal_textreview__eGEnP"><strong class="writeReviewModal_subject__KuTjo">방문
+                        후기를 남겨주세요</strong>
+                    <div class="writeReviewModal_textarea__Z_Cun"><textarea
+                            placeholder="솔직한 방문 후기를 남겨주세요. 여행자들에게 도움이 될만한 Tip을 남겨주셔도 좋아요!" maxlength="500"></textarea>
+                        <div class="writeReviewModal_limit__FN2oz"><span
+                                class="writeReviewModal_current__UsCUP">0</span><span
+                                class="writeReviewModal_max__39arm">&nbsp;/&nbsp;500</span></div>
+                    </div>
+                    <div class="writeReviewModal_images__z_ZyX"><label
+                            class="writeReviewModal_input_label__koLnU"><input type="file"
+                                accept="capture=camera, .jpg, .jpeg, .png, .bmp, .webp, .heic, .heif" multiple=""
+                                style="position: absolute; overflow: hidden; width: 1px; height: 1px; margin: -1px;">
+                            <div class="writeReviewModal_upload__RpLNL">사진추가 <i>최대20장</i></div>
+                        </label></div>
+                </section>
+                <div class="writeReviewModal_foot__2na_t">
+                    <div class="writeReviewModal_notice__eBEbH"><button>리뷰 작성 유의사항</button></div><button
+                        class="writeReviewModal_submit__8TmoN" disabled="">등록하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // 리뷰 작성 버튼 동작
+    function btnClick() {
+        const mydiv = document.getElementById('my-div');
+        const mainContent = document.getElementById('mainContent');
+        const modalRoot = document.getElementById('modalRoot');
+        const body = document.getElementById('bodyhide');
+
+        if (mydiv.style.display === 'none') {
+            mydiv.style.display = 'block';
+            mainContent.style.display = 'block';
+            modalRoot.style.display = 'block';
+
+
+        } else {
+            mydiv.style.display = 'none';
+            mainContent.style.display = 'none';
+            modalRoot.style.display = 'block';
+            body.style.overflow = 'hidden';
+            body.style.paddingRight = '17px';
+            body.setAttribute('data-scroll-lock-saved-overflow-y-property', 'scroll');
+            body.setAttribute('data-scroll-lock-saved-inline-overflow-property data-scroll-lock-locked="true"', 'true');
+            body.setAttribute('data-scroll-lock-filled-gap"', 'true');
+            body.setAttribute('data-scroll-lock-current-fill-gap-method"', 'padding');
+        }
+    }
+
+    // 리뷰 작성 모달 동작
+    function reviewModal() {
+        const reviewModal = document.getElementById('reviewModal');
+        reviewModal.style.display = 'flex';
+    }
+</script>
+<script src="/js/jquery.min.js"></script>
+<script th:inline="javascript">
+    $(".myinfo").on("click", function (){
+        location.href = "/mypage/mypageInfo";
+    })
+    $(".reserve").on("click", function (){
+        location.href = "/mypage/mypageReserve";
+    })
+    $(".review").on("click", function (){
+        location.href = "/mypage/mypageReview";
+    })
+    $(".wish").on("click", function (){
+        location.href = "/mypage/mypageWish";
+    })
+</script>
+</html>

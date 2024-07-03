@@ -1,0 +1,1166 @@
+body,
+html {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 1em;
+  color: inherit;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+b {
+  font-weight: inherit;
+}
+
+address,
+dt,
+em,
+i,
+u {
+  text-decoration: inherit;
+  font-style: inherit;
+}
+
+figure {
+  margin: 0;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.MyWidget {
+  border-radius: 10px;
+}
+.MyWidget > *:first-child {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+.MyWidget > *:last-child {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+@media only screen and ( max-width: 767px ) {
+  .MyWidget {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.03);
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MyWidget {
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
+  }
+}
+.MyWidget[data-grade="1"] .travelclub {
+  background-color: #FCFCFC;
+  border: 1px solid #DBDBDB;
+}
+.MyWidget[data-grade="1"] .travelclub_info .grade {
+  color: #242424;
+}
+.MyWidget[data-grade="2"] .travelclub {
+  background-color: #F9FFFF;
+  border: 1px solid #D0EAE8;
+}
+.MyWidget[data-grade="2"] .travelclub_info .grade {
+  color: #00B3C2;
+}
+.MyWidget[data-grade="3"] .travelclub {
+  background-color: #FFFAF4;
+  border: 1px solid #FFE8CD;
+}
+.MyWidget[data-grade="3"] .travelclub_info .grade {
+  color: #FEAE35;
+}
+.MyWidget .travelclub {
+  display: flex;
+  align-items: center;
+  background-color: #f9ffff;
+  border: 1px solid #D0EAE8;
+}
+@media only screen and ( max-width: 767px ) {
+  .MyWidget .travelclub {
+    padding: 14px 18px 11px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MyWidget .travelclub {
+    padding: 19px 31px;
+  }
+}
+.MyWidget .travelclub > .travelclub_info {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.MyWidget .travelclub > .login {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.MyWidget .travelclub > .open_button {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.MyWidget .travelclub_info {
+  display: flex;
+  justify-content: space-between;
+  color: #424242;
+  text-align: left;
+}
+@media only screen and ( max-width: 767px ) {
+  .MyWidget .travelclub_info {
+    font-size: 14px;
+    line-height: 1.79;
+    letter-spacing: -0.3px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MyWidget .travelclub_info {
+    font-size: 13px;
+    line-height: 1.54;
+    letter-spacing: -0.2px;
+  }
+}
+.MyWidget .travelclub_info > * {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.MyWidget .travelclub_info .grade_info {
+  text-align: left;
+}
+@media only screen and ( max-width: 767px ) {
+  .MyWidget .travelclub_info .additional {
+    display: none;
+  }
+}
+.MyWidget .travelclub_info .grade {
+  font-weight: 700;
+}
+.MyWidget .travelclub_info .travelclub_button {
+  display: inline-block;
+  margin-left: 6px;
+}
+.MyWidget .travelclub_info .travelclub_button::before {
+  display: inline-block;
+  background-repeat: no-repeat;
+  content: "";
+}
+@media only screen and ( max-width: 767px ) {
+  .MyWidget .travelclub_info .travelclub_button::before {
+    width: 14px;
+    height: 14px;
+    background-image: url(images/MyWidget_travelclub_link_before_mo.png);
+    background-size: 14px 14px;
+    vertical-align: -2px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MyWidget .travelclub_info .travelclub_button::before {
+    width: 15px;
+    height: 15px;
+    background-image: url(images/MyWidget_travelclub_link_before_pc.png);
+    background-size: 15px 15px;
+    vertical-align: -2px;
+  }
+}
+.MyWidget .travelclub_info .save_info {
+  font-weight: 700;
+  color: #0abe16;
+}
+@media only screen and ( max-width: 767px ) {
+  .MyWidget .travelclub_info .howto::before {
+    width: 16px;
+    height: 16px;
+    background-image: url(images/MyWidget_travelclub_howto_mo.png);
+    background-size: 100% auto;
+    display: inline-block;
+    margin-inline: 4px 0;
+    vertical-align: -3px;
+    content: "";
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MyWidget .travelclub_info .howto {
+    margin-inline: 5px 0;
+    padding-block: 5px 3px;
+    padding-inline: 9px;
+    border-radius: 13px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.3846153846;
+    letter-spacing: -0.2px;
+    color: #0ABE16;
+    background-color: rgba(10, 190, 22, 0.1215686275);
+  }
+  .MyWidget .travelclub_info .howto::after {
+    width: 6px;
+    height: 10px;
+    background-image: url(images/MyWidget_travelclub_howto_pc.png);
+    background-size: 100% auto;
+    display: inline-block;
+    margin-inline: 4px 0;
+    vertical-align: 0px;
+    content: "";
+  }
+}
+.MyWidget .login {
+  color: #424242;
+  margin-right: auto;
+}
+@media only screen and ( max-width: 767px ) {
+  .MyWidget .login {
+    font-size: 14px;
+    line-height: 1.79;
+    letter-spacing: -0.3px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MyWidget .login {
+    font-size: 13px;
+    line-height: 1.43;
+    letter-spacing: -0.2px;
+  }
+}
+.MyWidget .login .emphasis {
+  font-weight: 700;
+}
+.MyWidget .travelclub_logo {
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
+}
+.MyWidget .travelclub_logo::before {
+  display: inline-block;
+  background-repeat: no-repeat;
+  content: "";
+}
+@media only screen and ( max-width: 767px ) {
+  .MyWidget .travelclub_logo::before {
+    width: 80px;
+    height: 17px;
+    background-image: url(images/MyWidget_travelclub_logo_before_mo.png);
+    background-size: 80px 17px;
+    vertical-align: -3px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MyWidget .travelclub_logo::before {
+    width: 84px;
+    height: 18px;
+    background-image: url(images/MyWidget_travelclub_logo_before_pc.png);
+    background-size: 84px 18px;
+    vertical-align: -4px;
+  }
+}
+.MyWidget .travelclub_logo .blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+.MyWidget .open_button {
+  font-size: 0;
+  line-height: 0;
+}
+@media only screen and ( max-width: 767px ) {
+  .MyWidget .open_button {
+    padding: 10px 8px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MyWidget .open_button {
+    padding: 10px;
+  }
+}
+.MyWidget .open_button::before {
+  display: inline-block;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  content: "";
+}
+@media only screen and ( max-width: 767px ) {
+  .MyWidget .open_button::before {
+    width: 12px;
+    height: 7px;
+    background-image: url(images/MyWidget_open_button_before_mo.png);
+    background-size: 12px 7px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MyWidget .open_button::before {
+    width: 14px;
+    height: 8px;
+    background-image: url(images/MyWidget_open_button_before_pc.png);
+    background-size: 14px 8px;
+  }
+}
+.MyWidget .open_button[aria-expanded=true]::before {
+  transform: rotate(180deg);
+}
+.MyWidget .links {
+  display: flex;
+  border-width: 0 1px 1px;
+  border-style: solid;
+  border-color: #e9e9e9;
+  background-color: #fff;
+}
+.MyWidget .links > * {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.MyWidget .links .link {
+  text-align: center;
+}
+@media only screen and ( max-width: 767px ) {
+  .MyWidget .links .link {
+    padding: 15px 0 13px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MyWidget .links .link {
+    padding: 17px 0;
+  }
+}
+.MyWidget .links .link:nth-child(n+2) {
+  position: relative;
+  margin-left: 1px;
+}
+.MyWidget .links .link:nth-child(n+2)::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0 auto -1px;
+  border-left: 1px solid #d8d8d8;
+  content: "";
+}
+@media only screen and ( max-width: 767px ) {
+  .MyWidget .links .link:nth-child(n+2)::before {
+    height: 12px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MyWidget .links .link:nth-child(n+2)::before {
+    height: 14px;
+  }
+}
+.MyWidget .live_link > * {
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+@media only screen and ( max-width: 767px ) {
+  .MyWidget .live_link {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MyWidget .live_link {
+    font-size: 13px;
+    line-height: 1.53;
+  }
+}
+.MyWidget .live_link .text {
+  color: #424242;
+}
+.MyWidget .live_link .live_logo {
+  position: relative;
+  margin-left: 4px;
+}
+.MyWidget .live_link .live_logo .blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+.MyWidget .live_link .live_logo::before {
+  display: inline-block;
+  width: 50px;
+  height: 17px;
+  background-image: url(images/MyWidget_live_logo_before.png);
+  background-size: 50px 17px;
+  content: "";
+}
+@media only screen and ( max-width: 767px ) {
+  .MyWidget .live_link .live_logo::before {
+    vertical-align: -4px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MyWidget .live_link .live_logo::before {
+    vertical-align: -5px;
+  }
+}
+.MyWidget .live_link .state {
+  margin-left: 4px;
+  font-weight: 700;
+  color: #ff5353;
+}
+.MyWidget .live_link .additional {
+  margin-left: 4px;
+  color: #424242;
+}
+.MyWidget .live_link .additional::after {
+  display: inline-block;
+  width: 6px;
+  height: 11px;
+  margin-left: 8px;
+  background-image: url(images/MyWidget_live_link_additional_after.png);
+  background-size: 6px 11px;
+  background-repeat: no-repeat;
+  content: "";
+}
+.MyWidget .coupon_link > * {
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+@media only screen and ( max-width: 767px ) {
+  .MyWidget .coupon_link {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MyWidget .coupon_link {
+    font-size: 13px;
+    line-height: 1.53;
+  }
+}
+.MyWidget .coupon_link::before {
+  display: inline-block;
+  margin-right: 5px;
+  background-repeat: no-repeat;
+  content: "";
+}
+@media only screen and ( max-width: 767px ) {
+  .MyWidget .coupon_link::before {
+    width: 17px;
+    height: 14px;
+    background-image: url(images/MyWidget_coupon_link_before_mo.png);
+    background-size: 17px 14px;
+    vertical-align: -2px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MyWidget .coupon_link::before {
+    width: 15px;
+    height: 12px;
+    background-image: url(images/MyWidget_coupon_link_before_pc.png);
+    background-size: 15px 12px;
+    vertical-align: -2px;
+  }
+}
+.MyWidget .coupon_link .text {
+  color: #424242;
+}
+.MyWidget .coupon_link .count {
+  margin-left: 4px;
+  font-weight: 700;
+  color: #fe5d41;
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MyWidget[data-current=main] .travelclub {
+    padding: 20px 40px;
+  }
+  .MyWidget[data-current=main] .travelclub_info {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .MyWidget[data-current=main] .login {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .MyWidget[data-current=main] .links .link {
+    padding: 20px 0 21px;
+  }
+  .MyWidget[data-current=main] .live_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    line-height: 1.47;
+  }
+  .MyWidget[data-current=main] .live_link .text {
+    font-weight: 700;
+  }
+  .MyWidget[data-current=main] .live_link .live_logo::before {
+    width: 56px;
+    height: 20px;
+    background-image: url(images/MyWidget_live_logo_before_pc_main.png);
+    background-size: 56px 20px;
+    vertical-align: -5px;
+  }
+  .MyWidget[data-current=main] .coupon_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    line-height: 1.47;
+  }
+  .MyWidget[data-current=main] .coupon_link::before {
+    width: 18px;
+    height: 15px;
+    background-image: url(images/MyWidget_coupon_link_before_pc_main.png);
+    background-size: 18px 15px;
+  }
+  .MyWidget[data-current=main] .coupon_link .text {
+    font-weight: 700;
+  }
+}
+@media only screen and ( min-width: 1025px ) {
+  .MyWidget[data-service=flight][data-current=main], .MyWidget[data-service=hotel][data-current=main] {
+    display: flex;
+    height: 100px;
+  }
+  .MyWidget[data-service=flight][data-current=main] > *:first-child, .MyWidget[data-service=hotel][data-current=main] > *:first-child {
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .MyWidget[data-service=flight][data-current=main] > *:nth-child(2), .MyWidget[data-service=hotel][data-current=main] > *:nth-child(2) {
+    width: 436px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .MyWidget[data-service=flight][data-current=main] .travelclub, .MyWidget[data-service=hotel][data-current=main] .travelclub {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d0eae8 rgba(229, 248, 248, 0.9) #d0eae8 #d0eae8;
+  }
+  .MyWidget[data-service=flight][data-current=main][data-grade="1"] .travelclub, .MyWidget[data-service=hotel][data-current=main][data-grade="1"] .travelclub {
+    border-color: #DBDBDB rgba(219, 219, 219, 0.3) #DBDBDB #DBDBDB;
+  }
+  .MyWidget[data-service=flight][data-current=main][data-grade="2"] .travelclub, .MyWidget[data-service=hotel][data-current=main][data-grade="2"] .travelclub {
+    border-color: #d0eae8 rgba(229, 248, 248, 0.9) #d0eae8 #d0eae8;
+  }
+  .MyWidget[data-service=flight][data-current=main][data-grade="3"] .travelclub, .MyWidget[data-service=hotel][data-current=main][data-grade="3"] .travelclub {
+    border-color: #FFE8CD rgba(255, 232, 205, 0.3) #FFE8CD #FFE8CD;
+  }
+  .MyWidget[data-service=flight][data-current=main] .travelclub_info, .MyWidget[data-service=hotel][data-current=main] .travelclub_info {
+    font-size: 15px;
+    line-height: 1.47;
+  }
+  .MyWidget[data-service=flight][data-current=main] .login, .MyWidget[data-service=hotel][data-current=main] .login {
+    font-size: 15px;
+    line-height: 1.47;
+  }
+  .MyWidget[data-service=flight][data-current=main] .travelclub_logo::before, .MyWidget[data-service=hotel][data-current=main] .travelclub_logo::before {
+    width: 93px;
+    height: 20px;
+    background-image: url(images/MyWidget_travelclub_logo_before_pc_main.png);
+    background-size: 93px 20px;
+    vertical-align: -4px;
+  }
+  .MyWidget[data-service=flight][data-current=main] .links, .MyWidget[data-service=hotel][data-current=main] .links {
+    border-width: 1px 1px 1px 0;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MyWidget[data-service=mypage] .travelclub {
+    padding: 20px 22px 17px 24px;
+  }
+  .MyWidget[data-service=mypage] .travelclub_info {
+    font-size: 14px;
+    line-height: 1.5;
+    align-items: flex-end;
+  }
+  .MyWidget[data-service=mypage] .travelclub_info .howto {
+    margin-inline: 0;
+    padding-block: 0;
+    padding-inline: 0;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  .MyWidget[data-service=mypage] .travelclub_info .howto::before {
+    width: 16px;
+    height: 16px;
+    background-image: url(images/MyWidget_travelclub_howto_mo.png);
+    background-size: 100% auto;
+    display: inline-block;
+    margin-inline: 4px 0;
+    vertical-align: -3px;
+    content: "";
+  }
+  .MyWidget[data-service=mypage] .travelclub_info .howto::after {
+    content: none;
+  }
+  .MyWidget[data-service=mypage] .travelclub_info .howto .additional {
+    display: none;
+  }
+  .MyWidget[data-service=mypage] .login {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .MyWidget[data-service=mypage] .travelclub_logo {
+    display: block;
+    margin-bottom: 3px;
+  }
+  .MyWidget[data-service=mypage] .links .link {
+    padding: 19px 0;
+  }
+  .MyWidget[data-service=mypage] .live_link {
+    font-size: 15px;
+    line-height: 1.47;
+  }
+  .MyWidget[data-service=mypage] .live_link .text {
+    font-weight: 700;
+  }
+  .MyWidget[data-service=mypage] .live_link .live_logo::before {
+    vertical-align: -4px;
+  }
+}
+
+.MembershipPopup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  text-align: start;
+}
+.MembershipPopup::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  content: "";
+}
+.MembershipPopup .layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  color: #424242;
+  background-color: #fff;
+  border-radius: 10px;
+  border: solid 1px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 3px 9px 0 rgba(37, 50, 67, 0.1), 0 1px 1px 0 rgba(37, 50, 67, 0.03);
+  z-index: 10;
+}
+@media only screen and ( max-width: 767px ) {
+  .MembershipPopup .layer {
+    width: 325px;
+    padding: 24px 24px 19px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MembershipPopup .layer {
+    width: 350px;
+    padding: 27px 31px 21px;
+  }
+}
+.MembershipPopup .layer > .title {
+  display: block;
+  font-size: 0;
+  background-image: url(https://vertical.pstatic.net/vertical/static/common/images/MembershipPopup_title.png);
+  background-size: 100% auto;
+  background-position: 0;
+  width: 112px;
+  height: 24px;
+}
+.MembershipPopup .desc {
+  display: block;
+  margin-top: 13px;
+  color: #424242;
+}
+@media only screen and ( max-width: 767px ) {
+  .MembershipPopup .desc {
+    font-size: 15px;
+    line-height: 1.47;
+    letter-spacing: -0.3px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MembershipPopup .desc {
+    font-size: 14px;
+    line-height: 1.57;
+    letter-spacing: -0.28px;
+  }
+}
+.MembershipPopup .grade {
+  position: relative;
+  margin: 0 4px;
+  font-weight: 700;
+}
+.MembershipPopup .grade[data-grade="1"] {
+  color: #242424;
+  background: linear-gradient(0deg, #ececec 6px, transparent 6px), transparent;
+}
+.MembershipPopup .grade[data-grade="2"] {
+  color: #00b3c2;
+  background: linear-gradient(0deg, #e3f6f8 6px, transparent 6px), transparent;
+}
+.MembershipPopup .grade[data-grade="3"] {
+  color: #ffb759;
+  background: linear-gradient(0deg, #fef2e3 6px, transparent 6px), transparent;
+}
+.MembershipPopup .close {
+  position: absolute;
+  background-image: url(https://vertical.pstatic.net/vertical/static/common/images/MembershipPopup_close.png);
+  background-size: 100% auto;
+  background-position: 0;
+  width: 16px;
+  height: 16px;
+}
+@media only screen and ( max-width: 767px ) {
+  .MembershipPopup .close {
+    top: 24px;
+    right: 24px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MembershipPopup .close {
+    top: 20px;
+    right: 20px;
+  }
+}
+.MembershipPopup .GradeInfo.smart .highlight {
+  color: #00b3c2;
+}
+.MembershipPopup .GradeInfo.gold .highlight {
+  color: #ffb759;
+}
+.MembershipPopup .anchor {
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+  height: 43px;
+  line-height: 43px;
+  text-align: center;
+  color: #242424;
+  border-radius: 8px;
+  border: solid 1px #e7e7e7;
+}
+@media only screen and ( max-width: 767px ) {
+  .MembershipPopup .anchor {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .MembershipPopup .anchor {
+    font-size: 14px;
+    letter-spacing: -0.2px;
+  }
+}
+.MembershipPopup .anchor::after {
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: 1px;
+  background-image: url(https://vertical.pstatic.net/vertical/static/common/images/MembershipPopup_anchor.png);
+  background-size: 100% auto;
+  background-position: 0;
+  width: 6px;
+  height: 8px;
+  content: "";
+}
+
+.GradeInfo {
+  position: relative;
+  margin-top: 18px;
+}
+.GradeInfo::before {
+  display: block;
+  margin-bottom: 17px;
+  border-top: 1px solid #666;
+  content: "";
+}
+.GradeInfo > .title {
+  color: #424242;
+}
+@media only screen and ( max-width: 767px ) {
+  .GradeInfo > .title {
+    font-size: 15px;
+    line-height: 1.47;
+    letter-spacing: -0.3px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .GradeInfo > .title {
+    font-size: 14px;
+    line-height: 1.57;
+    letter-spacing: -0.28px;
+  }
+}
+.GradeInfo .info_list {
+  margin: 20px 0 0 0;
+}
+.GradeInfo .info_list > .item {
+  display: flex;
+}
+.GradeInfo .info_list > .item:nth-child(n+2) {
+  margin-top: 5px;
+}
+@media only screen and ( max-width: 767px ) {
+  .GradeInfo .info_list > .item {
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: -0.3px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .GradeInfo .info_list > .item {
+    font-size: 13px;
+    line-height: 1.54;
+    letter-spacing: -0.3px;
+  }
+}
+.GradeInfo .info_list > .item > * {
+  flex-shrink: 0;
+}
+.GradeInfo .info_list .main {
+  font-weight: 700;
+  text-decoration: inherit;
+  font-style: inherit;
+}
+.GradeInfo .info_list .sub {
+  margin: 0 0 0 8px;
+}
+.GradeInfo .info_list .sub .txt {
+  vertical-align: top;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: -0.3px;
+}
+.GradeInfo .txt_list {
+  margin: 0;
+  padding: 0;
+}
+.GradeInfo .txt_list > .item {
+  position: relative;
+  list-style: none;
+}
+.GradeInfo .txt_list > .item:nth-child(n+2) {
+  margin-top: 2px;
+}
+.GradeInfo.smart .txt_list .point {
+  font-weight: 700;
+  color: #00b3c2;
+  font-style: inherit;
+}
+.GradeInfo.gold .txt_list .point {
+  font-weight: 700;
+  color: #fca743;
+  font-style: inherit;
+}
+.GradeInfo .txt_list .caution {
+  color: #fe5d41;
+}
+.GradeInfo .txt_list .caution::before {
+  background-color: #fe5d41;
+}
+.GradeInfo .notification {
+  text-align: center;
+  background-color: #f9ffff;
+  border-top: 1px solid #d0eae8;
+}
+@media only screen and ( max-width: 767px ) {
+  .GradeInfo .notification {
+    padding-top: 15px;
+    margin: 19px -24px 0;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .GradeInfo .notification {
+    padding-top: 16px;
+    margin: 20px -31px 0;
+  }
+}
+.GradeInfo .notification .txt {
+  margin: 0;
+  font-weight: 400;
+  color: #424242;
+}
+@media only screen and ( max-width: 767px ) {
+  .GradeInfo .notification .txt {
+    font-size: 14px;
+    line-height: 1.57;
+    letter-spacing: -0.3px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .GradeInfo .notification .txt {
+    font-size: 13px;
+    line-height: 1.54;
+    letter-spacing: -0.2px;
+  }
+}
+.GradeInfo .notification .highlight {
+  display: block;
+  margin-top: 3px;
+  font-weight: 700;
+  color: #00b3c2;
+}
+.GradeInfo .noti_box {
+  position: relative;
+  color: #424242;
+}
+@media only screen and ( max-width: 767px ) {
+  .GradeInfo .noti_box {
+    font-size: 14px;
+    line-height: 1.57;
+    letter-spacing: -0.3px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .GradeInfo .noti_box {
+    font-size: 13px;
+    line-height: 1.54;
+    letter-spacing: -0.2px;
+  }
+}
+.GradeInfo .noti_box::before {
+  display: block;
+  border-top: 1px solid #eaf8f7;
+  content: "";
+}
+@media only screen and ( max-width: 767px ) {
+  .GradeInfo .noti_box::before {
+    margin: 16px 24px 19px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .GradeInfo .noti_box::before {
+    margin: 17px 24px 20px;
+  }
+}
+.GradeInfo .switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 9px;
+  margin: 4px 0 4px 8px;
+  vertical-align: top;
+  border-radius: 7.5px;
+  border: solid 1px #cbe1e1;
+  background-color: #e4efef;
+}
+.GradeInfo .switch::after {
+  position: absolute;
+  top: -5px;
+  left: -2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: solid 1px #cbe1e1;
+  background-color: #fff;
+  content: "";
+}
+.GradeInfo .switch[aria-checked=true] {
+  border: solid 1px #01afbf;
+  background-color: #00c4d5;
+}
+.GradeInfo .switch[aria-checked=true]::after {
+  left: auto;
+  right: -2px;
+}
+
+.GradeInfo .GradeButtonGroup {
+  display: flex;
+  column-gap: 6px;
+  padding: 0;
+}
+@media only screen and ( max-width: 767px ) {
+  .GradeInfo .GradeButtonGroup {
+    margin: 10px 0 0;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .GradeInfo .GradeButtonGroup {
+    margin: 17px 0 0;
+  }
+}
+.GradeInfo .GradeButtonGroup > * {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.GradeInfo .GradeButtonGroup .GradeButtonGroupItem {
+  position: relative;
+  height: 49px;
+  line-height: 49px;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 8px;
+  list-style: none;
+}
+@media only screen and ( max-width: 767px ) {
+  .GradeInfo .GradeButtonGroup .GradeButtonGroupItem {
+    font-size: 15px;
+    letter-spacing: -0.3px;
+  }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ), only screen and ( min-width: 1025px ) {
+  .GradeInfo .GradeButtonGroup .GradeButtonGroupItem {
+    font-size: 14px;
+    letter-spacing: -0.28px;
+  }
+}
+.GradeInfo .GradeButtonGroup .item {
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+}
+.GradeInfo .GradeButtonGroup .item[data-grade="1"] {
+  background-color: rgba(180, 180, 180, 0.1);
+  color: #242424;
+}
+.GradeInfo .GradeButtonGroup .item[data-grade="1"][aria-selected=true] {
+  line-height: 45px;
+  border: solid 2px #242424;
+  background-color: #fbfcfd;
+}
+.GradeInfo .GradeButtonGroup .item[data-grade="1"][aria-selected=true]::before {
+  display: inline-block;
+  background-image: url(https://vertical.pstatic.net/vertical/static/common/images/MembershipPopup_info_basic.png);
+  background-size: 100% auto;
+  background-position: 0;
+  width: 11px;
+  height: 8px;
+  content: "";
+  margin-right: 5px;
+  vertical-align: 2px;
+}
+.GradeInfo .GradeButtonGroup .item[data-grade="1"][aria-selected=true]::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  margin: 0 auto;
+  transform: rotate(45deg);
+  border-bottom: solid 2px #242424;
+  border-right: solid 2px #242424;
+  background-color: #fbfcfd;
+  content: "";
+}
+.GradeInfo .GradeButtonGroup .item[data-grade="2"] {
+  background-color: rgba(0, 196, 213, 0.1);
+  color: #00b3c2;
+}
+.GradeInfo .GradeButtonGroup .item[data-grade="2"][aria-selected=true] {
+  line-height: 45px;
+  border: solid 2px #242424;
+  background-color: #00c4d5;
+  color: #fff;
+}
+.GradeInfo .GradeButtonGroup .item[data-grade="2"][aria-selected=true]::before {
+  display: inline-block;
+  background-image: url(https://vertical.pstatic.net/vertical/static/common/images/MembershipPopup_info_smartgold.png);
+  background-size: 100% auto;
+  background-position: 0;
+  width: 11px;
+  height: 8px;
+  content: "";
+  margin-right: 5px;
+  vertical-align: 2px;
+}
+.GradeInfo .GradeButtonGroup .item[data-grade="2"][aria-selected=true]::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  margin: 0 auto;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-bottom: solid 2px #242424;
+  border-right: solid 2px #242424;
+  background-color: #00c4d5;
+  content: "";
+}
+.GradeInfo .GradeButtonGroup .item[data-grade="3"] {
+  background-color: rgba(255, 182, 96, 0.1);
+  color: #fca743;
+}
+.GradeInfo .GradeButtonGroup .item[data-grade="3"][aria-selected=true] {
+  line-height: 45px;
+  border: solid 2px #242424;
+  background-color: #ffb759;
+  color: #fff;
+}
+.GradeInfo .GradeButtonGroup .item[data-grade="3"][aria-selected=true]::before {
+  display: inline-block;
+  background-image: url(https://vertical.pstatic.net/vertical/static/common/images/MembershipPopup_info_smartgold.png);
+  background-size: 100% auto;
+  background-position: 0;
+  width: 11px;
+  height: 8px;
+  content: "";
+  margin-right: 5px;
+  vertical-align: 2px;
+}
+.GradeInfo .GradeButtonGroup .item[data-grade="3"][aria-selected=true]::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  margin: 0 auto;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-bottom: solid 2px #242424;
+  border-right: solid 2px #242424;
+  background-color: #ffb759;
+  content: "";
+}
