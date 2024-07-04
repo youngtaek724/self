@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.app.admin.mapper.AdminMapper">
+
+    <!-- insert-->
+    <insert id="test">
+
+    </insert>
+
+    <!-- select-->
+    <!-- 관리자 아이디로 로그인 정보 가져오기 -->
+    <select id="adminLogin" resultType="AdminLoginVO">
+        select admin_id as id,
+               password 
+          from admin 
+         where admin_id = #{id};
+    </select>
+
+    <!-- 관리자 정보 가져오기 _ 토큰 발급시 사용() -->
+    <select id="getAdminLoginData" parameterType="String" resultType="CustomUserDetails">
+        select id,
+               password
+          from admin
+         where admin_id = #{id};
+    </select>
+
+    <!-- update-->
+    <update id="update">
+
+    </update>
+
+
+
+    <!-- delete -->
+    <delete id="delete">
+
+    </delete>
+
+</mapper>
+
+
+
+
+
+
+
