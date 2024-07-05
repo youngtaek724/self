@@ -1,4 +1,4 @@
-package com.example.app.domain.vo;
+package com.example.app.user.dto;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;

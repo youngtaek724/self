@@ -17,7 +17,11 @@ public class SecurityService implements UserDetailsService {
   
   @Autowired
   private AdminMapper adminMapper;
+  
+  // admin
 
+
+  // user
   @Override
   public CustomUserDetails loadUserByUsername(String id) throws UsernameNotFoundException {
     String findRole = id.split(":")[0];

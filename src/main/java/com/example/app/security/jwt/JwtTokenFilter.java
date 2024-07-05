@@ -20,7 +20,6 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.example.app.security.dto.TokenData;
 
-
 @Component
 public class JwtTokenFilter extends OncePerRequestFilter {
 
@@ -41,19 +40,24 @@ public class JwtTokenFilter extends OncePerRequestFilter {
     }
 
     final String jwt = authHeader.substring(7);
-    final TokenData tokenData = jwtService.extractTokenData(jwt);
+    final TokenData tokenData = jwtService.extractTokenData(jwt); // id = admin
 
 
     if (tokenData != null && SecurityContextHolder.getContext().getAuthentication() == null) {
       UserDetails userDetails = userDetailsService.loadUserByUsername(tokenData.getRole() + ":" + tokenData.getId());
-      if (jwtService.isTokenValid(jwt, userDetails)) {
+
+      if (jwtService.isTokenValid(jwt, tokenData.getId())) {
         SecurityContext context = SecurityContextHolder.createEmptyContext();
+
         UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(userDetails, null,
             userDetails.getAuthorities());
 
         authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+
         context.setAuthentication(authToken);
+
         SecurityContextHolder.setContext(context);
+
       }
     }
 

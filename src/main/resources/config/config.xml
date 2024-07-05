@@ -10,7 +10,7 @@
         <typeAlias type="com.example.app.domain.vo.RankInfoVO" alias="rankInfoVO"/>
         <typeAlias type="com.example.app.domain.vo.RoomInfoVO" alias="roomInfoVO"/>
         <typeAlias type="com.example.app.domain.vo.UserCouponVO" alias="userCouponVO"/>
-        <typeAlias type="com.example.app.domain.vo.UserInfoVO" alias="userInfoVO"/>
+        <typeAlias type="com.example.app.user.dto.UserInfoVO" alias="userInfoVO"/>
         <typeAlias type="com.example.app.domain.vo.WishListVO" alias="wishListVO"/>
         <typeAlias type="com.example.app.admin.vo.AdminLoginVO" alias="adminLoginVO"/>
         <typeAlias type="com.example.app.security.dto.CustomUserDetails" alias="CustomUserDetails"/>

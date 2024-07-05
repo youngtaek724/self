@@ -5,6 +5,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import com.example.app.security.dto.CustomUserDetails;
 
 
+
 public class UtilSecurity {
   public static CustomUserDetails getLoginSession() {
     if (SecurityContextHolder.getContext().getAuthentication() == null) {
