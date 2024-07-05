@@ -6,12 +6,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.app.auth.dto.SignUpBody;
 import com.example.app.auth.service.AuthService;
 import com.example.app.exception.SeskException;
+import com.example.app.user.dto.UserInfoVO;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -30,12 +31,12 @@ public class AuthRestController {
    * 회원가입
    * 
    * @param body
-   * @throws TodayFishException
+   * @throws SeskException
    */
   @PostMapping("/join")
   @PreAuthorize("@securityChecker.checkLevel('GUEST')")
   @Operation(summary = "회원가입", description = "회원가입")
-  public ResponseEntity<Void> signUp(@ModelAttribute @Valid SignUpBody body) throws SeskException {
+  public ResponseEntity<Void> signUp(@ModelAttribute @Valid UserInfoVO body) throws SeskException {
     authService.signUp(body);
     return new ResponseEntity<>(HttpStatus.OK);
   }
