@@ -1,11 +1,5 @@
 package com.example.app.auth.service;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Optional;
-
-import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,7 +17,6 @@ public class AuthService {
   private AuthMapper authMapper;
 
   public void signUp(UserInfoVO userInfoVO) {
-    authMapper.insertSignUp(UserInfoVO user);
   }
 
   /****************************************************************
