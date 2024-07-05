@@ -30,13 +30,14 @@ public class JwtService {
   public TokenData extractTokenData(String token) {
     Claims claims = extractAllClaims(token);
     TokenData tokenData = new TokenData(claims.getSubject(), RoleType.valueOf((String) claims.get("role")));
+
     return tokenData;
   } 
 
-  public boolean isTokenValid(String token, UserDetails userDetails) {
+  public boolean isTokenValid(String token, String userDetails) {
     final TokenData tokenData = extractTokenData(token);
     final String id = tokenData.getId();
-    return (id.equals(userDetails.getUsername())) && !isTokenExpired(token);
+    return (id.equals(userDetails)) && !isTokenExpired(token);
   }
 
   private <T> T extractClaim(String token, Function<Claims, T> claimsResolvers) {

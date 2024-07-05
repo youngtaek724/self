@@ -1,7 +1,6 @@
 package com.example.app.admin.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +18,7 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/admin")
 @Tag(name = "👨🏻‍💼 관리자", description = "관리자")
-public class AdminController {
+public class AdminRestController {
 
   @Autowired
   private AdminService adminService;

@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 public class TestRestController {
     
     @PostMapping("/new")
-    @PreAuthorize("@securityChecker.checkLevel('ADMIN')")
+    @PreAuthorize("@securityChecker.checkLevel('GUEST')")
     public String write(){
         return "hi";
     }

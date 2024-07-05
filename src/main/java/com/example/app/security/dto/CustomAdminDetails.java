@@ -32,6 +32,7 @@ public class CustomAdminDetails implements UserDetails {
   @Override
   public Collection<? extends GrantedAuthority> getAuthorities() {
     List<GrantedAuthority> authorities = new ArrayList<>();
+
     authorities.add(new SimpleGrantedAuthority(roleType.toString()));
     return authorities;
   }
