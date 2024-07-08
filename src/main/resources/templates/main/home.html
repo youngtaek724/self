@@ -1,4 +1,5 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -81,32 +82,16 @@
               <div class="SearchBox_search_area__YoOwW">
                 <div class="SearchBox_select_area__Xnvj8">
                   <div class="SearchBox_select_location__eSmdg">
-                    <button
-                      type="button"
-                      class="SearchBox_btn_location__AMvC8"
-                      aria-selected="false"
-                    >
-                      어디로 가시나요?
-                    </button>
+                    <button type="button" class="SearchBox_btn_location__AMvC8" aria-selected="false">어디로 가시나요?</button>
                   </div>
                   <div class="SearchBox_select_checkinout__UYttl _calendar">
-                    <button
-                      type="button"
-                      class="SearchBox_btn_checkin__MdsBo"
-                      aria-selected="false"
-                    >
+                    <button type="button" class="SearchBox_btn_checkin__MdsBo" aria-selected="false">
                       <span class="SearchBox_datetxt__WkJlX">체크인</span
                       ><span class="SearchBox_datetxt__WkJlX">체크아웃</span>
                     </button>
                   </div>
                   <div class="SearchBox_select_people__DhM2N">
-                    <button
-                      type="button"
-                      class="SearchBox_btn_people__kqLBO"
-                      aria-selected="false"
-                    >
-                      성인2
-                    </button>
+                    <button type="button" class="SearchBox_btn_people__kqLBO" aria-selected="false">성인2</button>
                   </div>
                   <div class="SearchBox_select_biz__WEe2G">
                     <button
@@ -199,10 +184,10 @@
                     -webkit-user-drag: none;
                     touch-action: auto;
                   ">
-                  <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="true">제주도</button>
-                  <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">서울</button>
+                  <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="true">서울</button>
+                  <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">제주</button>
                   <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">부산</button>
-                  <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">강원도</button>
+                  <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">강원</button>
                   <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">인천</button>
                   <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">강릉</button>
                   <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">속초</button>
@@ -218,402 +203,59 @@
                     touch-action: pan-y;
                   ">
                   <div class="flicking-camera" style="transform: translate(0px)">
-                    <div class="Popular_hotel_list__vIw4R" style="width: 1110px">
-                      <div class="item">
-                        <div class="Popular_PopularHotel__eJcbs">
-                          <figure class="Popular_thumb__m425I">
-                            <img
-                              draggable="false"
-                              class="Popular_img__IlKre"
-                              alt="그랜드 조선 제주"
-                              src="/images/noImg.png"
-                            />
-                          </figure>
-                          <div class="Popular_inner__JCj38">
-                            <div class="Popular_rank__cL6TY">
-                              <b class="Popular_num__M9KZR">1</b
-                              ><b
-                                class="Popular_state__GYddq Popular_increase__faTkz"
-                                ><span class="Popular_blind__VueMw"
-                                  >순위증가</span
-                                ></b
-                              >
-                            </div>
-                            <div class="Popular_info__qEnjm">
-                              <em class="Popular_hotelName__O95RW"
-                                >그랜드 조선 제주</em
-                              >
-                              <div class="Popular_feature__x_TU5">
-                                <i class="Popular_score__khyaG">9.3</i
-                                ><span class="Popular_rating__ybJCh"
-                                  ><span class="Popular_star__X113Q">5성급</span
-                                  ><i
-                                    class="Popular_label__DVT5y"
-                                    aria-label="성급인증"
-                                  ></i
-                                ></span>
+                    <div class="Popular_hotel_list__vIw4R" id="hotelContainer" style="width: 1110px">
+                      <!--
+                          1. 순위증가 css
+                          <b class="Popular_state__GYddq Popular_increase__faTkz">
+                            <span class="Popular_blind__VueMw">순위증가</span>
+                          </b>
+                          2. 순위감소 css
+                          <b class="Popular_state__GYddq Popular_decrease__1WHfG">
+                            <span class="Popular_blind__VueMw">순위하락</span>
+                          </b>
+                          3. 순위변동 x css
+                          <b class="Popular_state__GYddq Popular_none__QaQ_V">
+                            <span class="Popular_blind__VueMw">변동없음</span>
+                          </b>
+                          4. 신규 css
+                          <b class="Popular_state__GYddq Popular_new__6mpf8">
+                            <span class="Popular_blind__VueMw">진입</span>
+                          </b>
+                      -->
+
+                      <th:block th:each="top10Hotel : ${top10Hotels}">
+                        <div class="item" th:object="${top10Hotel}">
+                          <div class="Popular_PopularHotel__eJcbs">
+                            <figure class="Popular_thumb__m425I">
+                              <img draggable="false" class="Popular_img__IlKre" alt="그랜드 조선 제주" src="/images/noImg.png"/>
+                            </figure>
+                            <div class="Popular_inner__JCj38">
+                              <div class="Popular_rank__cL6TY">
+                                <b class="Popular_num__M9KZR" th:text="*{ranking}"></b>
+                                <b class="Popular_state__GYddq Popular_increase__faTkz">
+                                  <span class="Popular_blind__VueMw">순위증가</span>
+                                </b>
                               </div>
-                              <b class="Popular_price__g5iRn"
-                                ><span class="Popular_amount__YEn39"
-                                  >201,884</span
-                                ><span class="Popular_txt__DN5hF">원~</span></b
-                              >
-                            </div>
-                          </div>
-                          <a
-                            class="Popular_anchor__att5h"
-                            rel="noreferrer"
-                            href="/hotels/N5279751?adultCnt=2&amp;childAges="
-                            target="_blank"
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <div class="Popular_PopularHotel__eJcbs">
-                          <figure class="Popular_thumb__m425I">
-                            <img
-                              draggable="false"
-                              class="Popular_img__IlKre"
-                              alt="에코랜드 호텔"
-                              src="/images/noImg.png"
-                            />
-                          </figure>
-                          <div class="Popular_inner__JCj38">
-                            <div class="Popular_rank__cL6TY">
-                              <b class="Popular_num__M9KZR">2</b
-                              ><b
-                                class="Popular_state__GYddq Popular_decrease__1WHfG"
-                                ><span class="Popular_blind__VueMw"
-                                  >순위하락</span
-                                ></b
-                              >
-                            </div>
-                            <div class="Popular_info__qEnjm">
-                              <em class="Popular_hotelName__O95RW"
-                                >에코랜드 호텔</em
-                              >
-                              <div class="Popular_feature__x_TU5">
-                                <i class="Popular_score__khyaG">10.0</i
-                                ><span class="Popular_rating__ybJCh"
-                                  ><span class="Popular_star__X113Q">5성급</span
-                                  ><i
-                                    class="Popular_label__DVT5y"
-                                    aria-label="성급인증"
-                                  ></i
-                                ></span>
+                              <div class="Popular_info__qEnjm">
+                                <em class="Popular_hotelName__O95RW" th:text="*{hotelName}"></em>
+                                <div class="Popular_feature__x_TU5">
+                                  <i class="Popular_score__khyaG">9.3</i>
+                                  <span class="Popular_rating__ybJCh">
+                                    <span class="Popular_star__X113Q" th:text="*{starRating} + ' 성급'"></span>
+                                      <i class="Popular_label__DVT5y" aria-label="성급인증"></i>
+                                    </span>
+                                </div>
+                                <b class="Popular_price__g5iRn">
+                                  <span class="Popular_amount__YEn39" th:text="*{lowPrice}"></span>
+                                  <span class="Popular_txt__DN5hF">원~</span>
+                                </b>
                               </div>
-                              <b class="Popular_price__g5iRn"
-                                ><span class="Popular_amount__YEn39"
-                                  >182,642</span
-                                ><span class="Popular_txt__DN5hF">원~</span></b
-                              >
                             </div>
+                            <a class="Popular_anchor__att5h" rel="noreferrer" th:href="'/hotels/'  + '?adultCnt=2&childAges='" target="_blank"></a>
                           </div>
-                          <a
-                            class="Popular_anchor__att5h"
-                            rel="noreferrer"
-                            href="/hotels/N3774763?adultCnt=2&amp;childAges="
-                            target="_blank"
-                          ></a>
                         </div>
-                      </div>
-                      <div class="item">
-                        <div class="Popular_PopularHotel__eJcbs">
-                          <figure class="Popular_thumb__m425I">
-                            <img
-                              draggable="false"
-                              class="Popular_img__IlKre"
-                              alt="라마다 제주 시티 호텔"
-                              src="/images/noImg.png"
-                            /><i
-                              class="Popular_taAwards__L6n3R"
-                              aria-label="taAwards"
-                            ></i>
-                          </figure>
-                          <div class="Popular_inner__JCj38">
-                            <div class="Popular_rank__cL6TY">
-                              <b class="Popular_num__M9KZR">3</b
-                              ><b
-                                class="Popular_state__GYddq Popular_none__QaQ_V"
-                                ><span class="Popular_blind__VueMw"
-                                  >변동없음</span
-                                ></b
-                              >
-                            </div>
-                            <div class="Popular_info__qEnjm">
-                              <em class="Popular_hotelName__O95RW"
-                                >라마다 제주 시티 호텔</em
-                              >
-                              <div class="Popular_feature__x_TU5">
-                                <i class="Popular_score__khyaG">8.7</i
-                                ><span class="Popular_rating__ybJCh"
-                                  ><span class="Popular_star__X113Q"
-                                    >4급</span
-                                  ></span
-                                >
-                              </div>
-                              <b class="Popular_price__g5iRn"
-                                ><span class="Popular_amount__YEn39"
-                                  >79,660</span
-                                ><span class="Popular_txt__DN5hF">원~</span></b
-                              >
-                            </div>
-                          </div>
-                          <a
-                            class="Popular_anchor__att5h"
-                            rel="noreferrer"
-                            href="/hotels/N3120828?adultCnt=2&amp;childAges="
-                            target="_blank"
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <div class="Popular_PopularHotel__eJcbs">
-                          <figure class="Popular_thumb__m425I">
-                            <img
-                              draggable="false"
-                              class="Popular_img__IlKre"
-                              alt="베스트웨스턴 제주호텔"
-                              src="/images/noImg.png"
-                            />
-                          </figure>
-                          <div class="Popular_inner__JCj38">
-                            <div class="Popular_rank__cL6TY">
-                              <b class="Popular_num__M9KZR">4</b
-                              ><b
-                                class="Popular_state__GYddq Popular_increase__faTkz"
-                                ><span class="Popular_blind__VueMw"
-                                  >순위증가</span
-                                ></b
-                              >
-                            </div>
-                            <div class="Popular_info__qEnjm">
-                              <em class="Popular_hotelName__O95RW"
-                                >베스트웨스턴 제주호텔</em
-                              >
-                              <div class="Popular_feature__x_TU5">
-                                <i class="Popular_score__khyaG">8.7</i
-                                ><span class="Popular_rating__ybJCh"
-                                  ><span class="Popular_star__X113Q">4성급</span
-                                  ><i
-                                    class="Popular_label__DVT5y"
-                                    aria-label="성급인증"
-                                  ></i
-                                ></span>
-                              </div>
-                              <b class="Popular_price__g5iRn"
-                                ><span class="Popular_amount__YEn39"
-                                  >72,519</span
-                                ><span class="Popular_txt__DN5hF">원~</span></b
-                              >
-                            </div>
-                          </div>
-                          <a
-                            class="Popular_anchor__att5h"
-                            rel="noreferrer"
-                            href="/hotels/N1286958?adultCnt=2&amp;childAges="
-                            target="_blank"
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <div class="Popular_PopularHotel__eJcbs">
-                          <figure class="Popular_thumb__m425I">
-                            <img
-                              draggable="false"
-                              class="Popular_img__IlKre"
-                              alt="제주신라호텔"
-                              src="/images/noImg.png"
-                            />
-                          </figure>
-                          <div class="Popular_inner__JCj38">
-                            <div class="Popular_rank__cL6TY">
-                              <b class="Popular_num__M9KZR">5</b
-                              ><b
-                                class="Popular_state__GYddq Popular_decrease__1WHfG"
-                                ><span class="Popular_blind__VueMw"
-                                  >순위하락</span
-                                ></b
-                              >
-                            </div>
-                            <div class="Popular_info__qEnjm">
-                              <em class="Popular_hotelName__O95RW"
-                                >제주신라호텔</em
-                              >
-                              <div class="Popular_feature__x_TU5">
-                                <i class="Popular_score__khyaG">9.2</i
-                                ><span class="Popular_rating__ybJCh"
-                                  ><span class="Popular_star__X113Q"
-                                    >5급</span
-                                  ></span
-                                >
-                              </div>
-                              <b class="Popular_price__g5iRn"
-                                ><span class="Popular_amount__YEn39"
-                                  >300,663</span
-                                ><span class="Popular_txt__DN5hF">원~</span></b
-                              >
-                            </div>
-                          </div>
-                          <a
-                            class="Popular_anchor__att5h"
-                            rel="noreferrer"
-                            href="/hotels/N1496601?adultCnt=2&amp;childAges="
-                            target="_blank"
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <div class="Popular_PopularHotel__eJcbs">
-                          <figure class="Popular_thumb__m425I">
-                            <img
-                              draggable="false"
-                              class="Popular_img__IlKre"
-                              alt="호텔 휘슬락 바이 베스트웨스턴 시그니처 컬렉션"
-                              src="/images/noImg.png"
-                            /><i
-                              class="Popular_taAwards__L6n3R"
-                              aria-label="taAwards"
-                            ></i>
-                          </figure>
-                          <div class="Popular_inner__JCj38">
-                            <div class="Popular_rank__cL6TY">
-                              <b class="Popular_num__M9KZR">6</b
-                              ><b
-                                class="Popular_state__GYddq Popular_increase__faTkz"
-                                ><span class="Popular_blind__VueMw"
-                                  >순위증가</span
-                                ></b
-                              >
-                            </div>
-                            <div class="Popular_info__qEnjm">
-                              <em class="Popular_hotelName__O95RW"
-                                >호텔 휘슬락 바이 베스트웨스턴 시그니처
-                                컬렉션</em
-                              >
-                              <div class="Popular_feature__x_TU5">
-                                <i class="Popular_score__khyaG">8.5</i
-                                ><span class="Popular_rating__ybJCh"
-                                  ><span class="Popular_star__X113Q"
-                                    >4급</span
-                                  ></span
-                                >
-                              </div>
-                              <b class="Popular_price__g5iRn"
-                                ><span class="Popular_amount__YEn39"
-                                  >73,384</span
-                                ><span class="Popular_txt__DN5hF">원~</span></b
-                              >
-                            </div>
-                          </div>
-                          <a
-                            class="Popular_anchor__att5h"
-                            rel="noreferrer"
-                            href="/hotels/N3056897?adultCnt=2&amp;childAges="
-                            target="_blank"
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <div class="Popular_PopularHotel__eJcbs">
-                          <figure class="Popular_thumb__m425I">
-                            <img
-                              draggable="false"
-                              class="Popular_img__IlKre"
-                              alt="파르나스 호텔 제주"
-                              src="/images/noImg.png"
-                            />
-                          </figure>
-                          <div class="Popular_inner__JCj38">
-                            <div class="Popular_rank__cL6TY">
-                              <b class="Popular_num__M9KZR">7</b
-                              ><b
-                                class="Popular_state__GYddq Popular_decrease__1WHfG"
-                                ><span class="Popular_blind__VueMw"
-                                  >순위하락</span
-                                ></b
-                              >
-                            </div>
-                            <div class="Popular_info__qEnjm">
-                              <em class="Popular_hotelName__O95RW"
-                                >파르나스 호텔 제주</em
-                              >
-                              <div class="Popular_feature__x_TU5">
-                                <i
-                                  class="Popular_score__khyaG Popular_none__QaQ_V"
-                                  >평점없음</i
-                                ><span class="Popular_rating__ybJCh"
-                                  ><span class="Popular_star__X113Q">5성급</span
-                                  ><i
-                                    class="Popular_label__DVT5y"
-                                    aria-label="성급인증"
-                                  ></i
-                                ></span>
-                              </div>
-                              <b class="Popular_price__g5iRn"
-                                ><span class="Popular_amount__YEn39"
-                                  >311,047</span
-                                ><span class="Popular_txt__DN5hF">원~</span></b
-                              >
-                            </div>
-                          </div>
-                          <a
-                            class="Popular_anchor__att5h"
-                            rel="noreferrer"
-                            href="/hotels/N5287649?adultCnt=2&amp;childAges="
-                            target="_blank"
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <div class="Popular_PopularHotel__eJcbs">
-                          <figure class="Popular_thumb__m425I">
-                            <img
-                              draggable="false"
-                              class="Popular_img__IlKre"
-                              alt="해비치 호텔 &amp; 리조트 제주"
-                              src="/images/noImg.png"
-                            />
-                          </figure>
-                          <div class="Popular_inner__JCj38">
-                            <div class="Popular_rank__cL6TY">
-                              <b class="Popular_num__M9KZR">10</b
-                              ><b
-                                class="Popular_state__GYddq Popular_new__6mpf8"
-                                ><span class="Popular_blind__VueMw"
-                                  >진입</span
-                                ></b
-                              >
-                            </div>
-                            <div class="Popular_info__qEnjm">
-                              <em class="Popular_hotelName__O95RW"
-                                >해비치 호텔 &amp; 리조트 제주</em
-                              >
-                              <div class="Popular_feature__x_TU5">
-                                <i class="Popular_score__khyaG">9.0</i
-                                ><span class="Popular_rating__ybJCh"
-                                  ><span class="Popular_star__X113Q">5성급</span
-                                  ><i
-                                    class="Popular_label__DVT5y"
-                                    aria-label="성급인증"
-                                  ></i
-                                ></span>
-                              </div>
-                              <b class="Popular_price__g5iRn"
-                                ><span class="Popular_amount__YEn39"
-                                  >237,745</span
-                                ><span class="Popular_txt__DN5hF">원~</span></b
-                              >
-                            </div>
-                          </div>
-                          <a
-                            class="Popular_anchor__att5h"
-                            rel="noreferrer"
-                            href="/hotels/N1053576?adultCnt=2&amp;childAges="
-                            target="_blank"
-                          ></a>
-                        </div>
-                      </div>
+                      </th:block>
+
                     </div>
                   </div>
                 </div>
@@ -750,10 +392,6 @@
           </div>
           <p class="Footer_limitation__To1W3">
             네이버 호텔은 제휴사에서 제공하는 호텔정보 및 가격정보를 비교,
-            중개하는 서비스로서, 네이버(주)는 통신판매의 당사자가 아닙니다. 호텔
-            검색 결과 및 거래에 관한 의무와 책임은 판매자에게 있습니다. 외국인
-            관광 도시민박법에 따라 지정된 제주지역 외 국내 게스트하우스는
-            외국인만 투숙 가능합니다.
           </p>
           <details class="Footer_business__OvbUE">
             <summary class="Footer_summary__J-7Ys">
@@ -800,7 +438,53 @@
       </div>
     </div>
     <script src="/js/jquery.min.js"></script>
+    <script src="/js/hotelService.js"></script>
     <script th:inline="javascript">
+
+      $(".Popular_tab__A8XLT").on("click", function (e){
+        $(this).attr("aria-selected", "true");
+        $(".Popular_tab__A8XLT").not(this).attr("aria-selected", "false");
+          let local = $(this).text();
+          hotelService.showTop10Hotels(local,showTop10List);
+      })
+
+      function showTop10List(result){
+          let hotelsHtml = '';
+          $.each(result, function (index, hotel){
+            hotelsHtml += `
+              <div class="item">
+                  <div class="Popular_PopularHotel__eJcbs">
+                      <figure class="Popular_thumb__m425I">
+                          <img draggable="false" class="Popular_img__IlKre" alt="${hotel.hotelName}" src="/images/noImg.png"/>
+                      </figure>
+                      <div class="Popular_inner__JCj38">
+                          <div class="Popular_rank__cL6TY">
+                              <b class="Popular_num__M9KZR">${hotel.ranking}</b>
+                              <b class="Popular_state__GYddq Popular_increase__faTkz">
+                                  <span class="Popular_blind__VueMw">순위증가</span>
+                              </b>
+                          </div>
+                          <div class="Popular_info__qEnjm">
+                              <em class="Popular_hotelName__O95RW">${hotel.hotelName}</em>
+                              <div class="Popular_feature__x_TU5">
+                                  <i class="Popular_score__khyaG">9.3</i>
+                                  <span class="Popular_rating__ybJCh">
+                                      <span class="Popular_star__X113Q">${hotel.starRating} 성급</span>
+                                      <i class="Popular_label__DVT5y" aria-label="성급인증"></i>
+                                  </span>
+                              </div>
+                              <b class="Popular_price__g5iRn">
+                                  <span class="Popular_amount__YEn39">${hotel.lowPrice}</span>
+                                  <span class="Popular_txt__DN5hF">원~</span>
+                              </b>
+                          </div>
+                      </div>
+                      <a class="Popular_anchor__att5h" rel="noreferrer" href="/hotels/?adultCnt=2&childAges=" target="_blank"></a>
+                  </div>
+              </div>`;
+          });
+          $("#hotelContainer").html(hotelsHtml);
+      }
     </script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-package com.example.app.controller;
+package com.example.app.hotel.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
