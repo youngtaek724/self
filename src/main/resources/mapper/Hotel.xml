@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.app.hotel.mapper.HotelMapper">
+    <!--메인 페이지 Top10 호텔-->
+    <select id="selectTop10Hotels" resultType="top10HotelsVO">
+        <![CDATA[
+        select
+            hm.NAME AS hotelName,
+            COUNT(ri3.ROOM_ID) AS cnt,
+            MIN(ri3.PRICE) AS lowPrice,
+            hm.STAR_RATING as STAR_RATING
+        FROM
+            hotel_mst hm
+        JOIN
+        (
+            SELECT
+                ri.ROOM_ID,
+                ri2.HOTEL_ID,
+                ri2.PRICE
+            FROM
+                reservation_info ri
+            JOIN
+                room_info ri2 ON ri.ROOM_ID = ri2.ID
+            WHERE
+            (
+                MONTH(ri.CHECK_IN) >= MONTH(CURDATE()) - 1 AND MONTH(ri.CHECK_IN) <= MONTH(CURDATE()) + 1)
+                AND (
+                        MONTH(ri.CHECK_OUT) >= MONTH(CURDATE()) - 1 AND MONTH(ri.CHECK_OUT) <= MONTH(CURDATE()) + 1
+                    )
+        ) AS ri3 ON hm.ID = ri3.HOTEL_ID
+        WHERE
+            hm.CITY = #{local}
+        GROUP BY
+            hm.NAME
+        order by cnt desc
+        ]]>
+    </select>
+
+    <!-- update-->
+    <update id="update">
+
+    </update>
+
+
+
+    <!-- delete -->
+    <delete id="delete">
+
+    </delete>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

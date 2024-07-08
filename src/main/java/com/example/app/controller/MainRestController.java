@@ -1,20 +1,22 @@
 package com.example.app.controller;
 
 import com.example.app.hotel.service.HotelService;
+import com.example.app.hotel.vo.Top10HotelsVO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+import java.util.List;
+
+@RestController
 @RequiredArgsConstructor
 @RequestMapping("/main/*")
-public class MainController {
+public class MainRestController {
     private final HotelService hotelService;
-    @GetMapping("/home")
-    public void home(Model model){
-        model.addAttribute("top10Hotels", hotelService.showTop10Hotels("서울"));
+    @PostMapping("/home/{local}")
+    public List<Top10HotelsVO> showTop10Hotels(@PathVariable String local){
+        return hotelService.showTop10Hotels(local);
     }
 }
 
