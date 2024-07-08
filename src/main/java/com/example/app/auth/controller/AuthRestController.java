@@ -38,8 +38,11 @@ public class AuthRestController {
   @Operation(summary = "회원가입", description = "회원가입")
   public ResponseEntity<Void> signUp(@ModelAttribute @Valid UserInfoVO body) throws SeskException {
     authService.signUp(body);
+    // 테스트
     return new ResponseEntity<>(HttpStatus.OK);
   }
+
+  
 
   
 }
