@@ -33,7 +33,7 @@ public class AdminRestController {
   @PostMapping("/token")
   @Operation(summary = "01. 관리자 로그인", description = "관리자 로그인")
   public String login(@RequestBody @Valid AdminLoginVO body) throws SeskException {
-    // 변경점 확인
+    // 변경점 확인 222
     return adminService.login(body);
   }
   
