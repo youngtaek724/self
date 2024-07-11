@@ -34,6 +34,7 @@ public class AdminRestController {
   @Operation(summary = "01. 관리자 로그인", description = "관리자 로그인")
   public String login(@RequestBody @Valid AdminLoginVO body) throws SeskException {
     // 변경점 확인 222
+    // push test
     return adminService.login(body);
   }
   
