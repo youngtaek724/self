@@ -1,0 +1,34 @@
+# 가격 정보 필드 정규화
+(기존 : room_info에 가격필드 포함)
+
+24.07.10 변경사항
+# 상시가 테이블
+CREATE TABLE ROOM_PRICING_a (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    ROOM_ID INT,
+    PRICE_TYPE ENUM('WEEKDAY', 'WEEKEND', 'PEAK_SEASON', 'OFF_SEASON'),
+    PRICE INT,
+    START_DATE DATE,
+    END_DATE DATE,
+    FOREIGN KEY (ROOM_ID) REFERENCES ROOM_INFO(ID)
+);
+
+# 지정가격 테이블
+create table room_pricing_b(
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    ROOM_ID INT,
+	PRICE INT,
+	start_date date,
+	end_date date,
+	FOREIGN KEY (ROOM_ID) REFERENCES ROOM_INFO(ID)
+);
+
+# room_info 테이블에서 가격 삭제
+ALTER TABLE room_info DROP COLUMN price;
+
+# room_info 테이블에 체크인, 체크아웃 필드 추가
+ALTER TABLE room_info
+ADD COLUMN checkin_time TIME,
+ADD COLUMN checkout_time TIME;
+
+
