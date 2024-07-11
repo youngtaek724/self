@@ -5828,11 +5828,13 @@
     box-sizing: border-box;
     min-width: 320px
 }
+/*
+7월10일 일시정지
 
 .Summary_HotelSummary__DVJGE>*>* {
     max-width: min(100vw - (100vw*5/16 - 260px)*2,1110px);
     margin-inline:auto}
-
+*/
 @media only screen and (max-width: 767px) {
     .Summary_HotelSummary__DVJGE>*>* {
         padding-inline:20px
