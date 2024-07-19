@@ -20,7 +20,9 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Service
 public class JwtService {
 
@@ -32,7 +34,7 @@ public class JwtService {
     TokenData tokenData = new TokenData(claims.getSubject(), RoleType.valueOf((String) claims.get("role")));
 
     return tokenData;
-  } 
+  }
 
   public boolean isTokenValid(String token, String userDetails) {
     final TokenData tokenData = extractTokenData(token);
@@ -59,29 +61,28 @@ public class JwtService {
   private Date extractExpiration(String token) {
     return extractClaim(token, Claims::getExpiration);
   }
- 
+
   private Claims extractAllClaims(String token) {
     Claims cla = Jwts.parserBuilder()
-    .setSigningKey(getSigningKey())
-    .build()
-    .parseClaimsJws(token)
-    .getBody();
+        .setSigningKey(getSigningKey())
+        .build()
+        .parseClaimsJws(token)
+        .getBody();
     return cla;
-}
+  }
 
-private SecretKey getSigningKey() {
-  try {
+  private SecretKey getSigningKey() {
+    try {
       // 키를 Base64로 인코딩하여 바이트 배열로 변환
       byte[] encodedKeyBytes = Base64.getEncoder().encode(jwtSigningKey.getBytes());
       // HMAC-SHA 키 생성
       SecretKey secretKey = Keys.hmacShaKeyFor(encodedKeyBytes);
 
       return secretKey;
-  } catch (Exception e) {
+    } catch (Exception e) {
       throw new RuntimeException("Failed to generate HMAC-SHA key", e);
+    }
   }
-}
-
 
   /**
    * Generate token
@@ -91,6 +92,7 @@ private SecretKey getSigningKey() {
    * @return
    */
   public String generateToken(RoleType roleType, int id) {
+    log.info("roleType : " + roleType);
     return generateToken(roleType, String.valueOf(id));
   }
 
@@ -109,7 +111,6 @@ private SecretKey getSigningKey() {
     if (roleType.equals(RoleType.ADMIN) || roleType.equals(RoleType.USER)) {
       time = new Date(System.currentTimeMillis() + 6 * 60 * 60 * 1000); // 6시간
     }
-
     return generateToken(claims, userDetails, time);
   }
 }

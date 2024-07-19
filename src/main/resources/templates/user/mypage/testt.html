@@ -1,0 +1,290 @@
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>마이페이지</title>
+    <link rel="stylesheet" href="/css/myPageInfo.css">
+    <link rel="stylesheet" href="/css/myPageTest.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/1018dd7e055bc4cc.css">
+    <link rel="stylesheet" href="/css/6e77cb14485b3a18.css">
+    <link rel="stylesheet" href="/css/49ed35b58d7d245c.css">
+    <link rel="stylesheet" href="/css/40d91952aa12e1a0.css">
+    <link rel="stylesheet" href="/css/MyWidget.scss">
+</head>
+
+<body id="mainBody" class="bgother">
+    <header th:replace="/main/header.html :: div"></header>
+    <div id="wrap" class="wrap naverid">
+        <header class="header">
+            <div class="header_subindex" style="margin-top: 33px;">
+                <!--프로필-사진,아이디,메일주소-->
+                <div class="profile_area">
+                    <div class="profile_inner">
+                        <a href="#" onclick="changeImage()" class="photo" style="margin: 20px;">
+                            <img src="/images/noImg.png" width="84" height="84" alt="프로필 이미지">
+                            <span class="photo_edit"></span>
+                        </a>
+                        <div class="profile">
+                            <p class="useid" style="margin-bottom: 5px">최신형</p>
+                            <p class="usemail">tlsgudrhfem@naver.com</p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- end 프로필 -->
+                <div id="headerLeft" class="header_left" aria-hidden="false">
+                    <ul class="left_menu" role="menu">
+                        <li>
+                            <a href="/user2/help/myInfoV2?m=viewProfile&amp;lang=ko_KR" class="left_item"
+                                role="menuitem" onclick="nclk(this,'lnb.info','','',event)" aria-current="true">
+                                <div class="menu_text on">내 프로필</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/user2/help/myInfoV2?m=viewSecurity&amp;lang=ko_KR" class="left_item"
+                                role="menuitem" onclick="nclk(this,'lnb.protect','','',event)" aria-current="">
+                                <div class="menu_text ">예약 내역</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/user2/help/myInfoV2?m=viewManageHistory&amp;lang=ko_KR" class="left_item"
+                                role="menuitem" onclick="nclk(this,'lnb.history','','',event)" aria-current="">
+                                <div class="menu_text ">찜한 여행지</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/user2/help/myInfoV2?m=viewManageHistory&amp;lang=ko_KR" class="left_item"
+                                role="menuitem" onclick="nclk(this,'lnb.history','','',event)" aria-current="">
+                                <div class="menu_text ">리뷰 내역</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="left_link">
+                        <li>
+                            <a href="https://nca.naver.com/chat/account/view" class="left_item"
+                                onclick="nclk(this,'fot.smartbot','','',event)">
+                                <div class="link_text">문의하기</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- footerLeft -->
+                    <footer class="left_footer" role="contentinfo">
+                        <ul class="left_guide">
+                            <li><a href="javascript:;" onclick="logout()" class="left_item">
+                                    <div class="footer_text">로그아웃</div>
+                                </a></li>
+                            <li><a href="javascript:;" onclick="goHelpPage()" class="left_item">
+                                    <div class="footer_text">고객센터</div>
+                                </a></li>
+
+                        </ul>
+                        <div class="footer_logo"><span class="logo"><span class="blind">SESK</span></span></div>
+                    </footer>
+                    <!-- //footerLeft -->
+                </div>
+                <!--//-->
+            </div>
+        </header>
+
+        <div id="container" class="container">
+            <!-- container -->
+            <div id="content" class="content">
+                <div class="subindex_wrap" role="main">
+
+                    <div id="headerTop" class="path_area" aria-hidden="false">
+
+                    </div>
+                    <div class="subindex_item">
+                        <div class="subindex_greenbox">
+                            <div class="myprofile">
+                                <div class="info_title">
+                                    <h3 class="title_text">기본정보</h3>
+                                </div>
+                                <ul class="myinfo_area">
+                                    <li>
+                                        <div class="myphoto">
+                                            <img src="/images/noImg.png" width="56" height="56" alt="내 프로필 이미지">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="myaccount">
+                                            <div class="myname">
+                                                <div class="name_text">최신형</div>
+                                            </div>
+                                            <div class="myaddress">tlsgudrhfem@naver.com</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <ul class="subindex_row">
+                                <li>
+                                    <div id="phoneNoRegDiv" class="row_item phone ">
+                                        <span id="phoneNoRegSpan" class="item_text">+82 10-2***-3***</span>
+                                        <button type="button" id="phoneNoRegBtn" class="btn_edit"
+                                            onclick="showPhoneNumberChangePopUp()">
+                                            <span id="phoneNoRegBtnTxt" class="text">수정</span>
+                                        </button>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="row_item mail ">
+                                        <span id="myLetterEmailRegSpan" class="item_text">01******@h*******.net</span>
+                                        <button type="button" class="btn_edit" onclick="showMyLetterEmailChangePopUp()">
+                                            <span class="text">수정</span>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--//-->
+
+                    <!--프로모션 정보수신 동의-->
+                    <div class="subindex_item">
+                        <div class="head_title">
+                            <h2 class="subindex_title">프로모션 정보수신 동의</h2><span class="blind">도움말</span></a>
+
+                            <div id="info2ToolTip" class="info_tooltip" aria-hidden="true" style="display: none;">
+                                <strong class="info_head">동의 상태 안내</strong>
+                                <p class="info_desc">프로모션 정보 수신을 위해 개인정보 이용 동의가 필요합니다. 프로모션 정보 수신 동의를 하지 않으면 개인정보 이용에 대한
+                                    동의도 철회됩니다.</p>
+                                <strong class="info_head">개인정보 이용 동의</strong>
+                                <p class="info_desc">
+                                    네이버 및 제휴 서비스의 이벤트 혜택 등의 정보 발송을 위해 휴대전화번호(네이버 앱 알림 또는 문자), 이메일주소를 수집합니다. 휴대전화번호 및
+                                    이메일주소는 네이버 서비스 제공을 위한 필수 수집항목으로서 네이버 회원 가입 기간 동안 보관하나, 이벤트 혜택 정보 수신 동의를 철회하시면 본
+                                    목적으로의 개인정보 처리는 중지됩니다. 정보주체는 개인정보 수집 및 이용 동의를 거부하실 수 있으며, 미동의 시에도 서비스 이용은 가능합니다.<br>※
+                                    일부 서비스(별개의 회원체계 운영, 네이버 가입 후 추가 가입하는 서비스 등)의 경우, 수신에 대해 별도로 안내 드리며, 동의를 구합니다.
+                                </p>
+                                <strong class="info_head">프로모션</strong>
+                                <p class="info_desc">
+                                    네이버 서비스 및 제휴 이벤트, 혜택, 맞춤형 정보를 보내 드려요. 주요 공지, 보안, 이벤트 당첨에 대해서는 수신 동의 여부와 관계 없이 알려
+                                    드려요.<br>본 동의는 네이버 공통 서비스에 한해 유효하며, 개별로 수신 동의를 받는 일부 서비스는 해당 서비스의 동의 상태를 따릅니다. 수신 동의
+                                    상태는 최대 2일 이내에 반영됩니다.
+                                </p>
+                                <button type="button" id="infoExit2" class="btn_exit"><span
+                                        class="blind">닫기</span></button>
+                            </div>
+
+                        </div>
+                        <div class="subindex_box">
+                            <ul class="subindex_row">
+                                <li>
+                                    <div class="row_item phone">
+                                        <span class="item_text">휴대전화</span>
+                                        <div class="btn_switch">
+                                            <input type="checkbox" id="adMobileCheck" class="switch_checkbox">
+                                            <label for="adMobileCheck" class="switch_btn">
+                                                <span id="adMobileCheck_toggle_switch_on" class="switch_on"
+                                                    role="checkbox" aria-checked="false">ON</span>
+                                                <span id="adMobileCheck_toggle_switch_off" class="switch_off"
+                                                    role="checkbox" aria-checked="true">OFF</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="row_item mail">
+                                        <span class="item_text">이메일</span>
+                                        <div class="btn_switch">
+                                            <input type="checkbox" id="adEmailCheck" class="switch_checkbox">
+                                            <label for="adEmailCheck" class="switch_btn">
+                                                <span id="adEmailCheck_toggle_switch_on" class="switch_on"
+                                                    role="checkbox" aria-checked="false">ON</span>
+                                                <span id="adEmailCheck_toggle_switch_off" class="switch_off"
+                                                    role="checkbox" aria-checked="true">OFF</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <!--부가정보관리(생일, 배송지,개인정보이용내역)-->
+                    <div class="subindex_item">
+                        <div class="head_title">
+                            <h2 class="subindex_title">부가 정보 관리</h2>
+
+                            <div id="additionalInfoHelp" class="info_tooltip" aria-hidden="true" style="display: none;">
+                                <strong class="info_head">생일 관리</strong>
+                                <p class="info_desc">친구에게 보여줄 내 생일을 설정할 수 있어요.</p>
+                                <strong class="info_head">배송지 관리</strong>
+                                <p class="info_desc">쇼핑, 예약 등에서 사용하신 배송지를 관리할 수 있어요.</p>
+                                <strong class="info_head">개인정보 이용내역</strong>
+                                <p class="info_desc">내 개인정보가 어떻게 이용되고 있는지 확인할 수 있어요.</p>
+                                <button onclick="hideAdditionalInfoHelp()" type="button" class="btn_exit"><span
+                                        class="blind">닫기</span></button>
+                            </div>
+
+                        </div>
+                        <div class="subindex_box">
+                            <ul class="subindex_row">
+                                <li>
+                                    <div class="row_item birth">
+                                        <span class="item_text">생일 관리</span>
+                                        <button id="goFriendsManagement" type="button" class="btn_edit">
+                                            <span class="text">확인</span>
+                                        </button>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="row_item delivery">
+                                        <span class="item_text">배송지 관리</span>
+                                        <button id="goManageShippingAddr" type="button" class="btn_edit">
+                                            <span class="text">확인</span>
+                                        </button>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="row_item person">
+                                        <span class="item_text">개인정보 이용내역</span>
+                                        <button id="personalInfoHistoryButton" type="button" class="btn_edit">
+                                            <span class="text">확인</span>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--가입된 단체아이디 확인/회원탈퇴-->
+                    <div class="subindex_link">
+                        <div class="drop_link">
+                            <a href="javascript:;" class="btn_link" onclick="goMemberDelete()">
+                                <span class="text">회원탈퇴</span>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <!-- //container -->
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="/js/jquery.min.js"></script>
+
+</html>

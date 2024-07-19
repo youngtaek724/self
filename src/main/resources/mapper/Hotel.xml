@@ -3,7 +3,7 @@
 <mapper namespace="com.example.app.hotel.mapper.HotelMapper">
     <!--메인 페이지 Top10 호텔-->
     <select id="selectTop10Hotels" resultType="top10HotelsVO">
-        <![CDATA[
+        <!-- <![CDATA[
         select
             hm.NAME AS hotelName,
             COUNT(ri3.ROOM_ID) AS cnt,
@@ -33,7 +33,7 @@
         GROUP BY
             hm.NAME
         order by cnt desc
-        ]]>
+        ]]> -->
     </select>
 
     <!-- update-->

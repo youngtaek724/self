@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <link rel="stylesheet" href="/css/9efeb41d609df83e.css">
+  <link rel="stylesheet" href="/css/login.css">
+  <link rel="stylesheet" href="/css/1018dd7e055bc4cc.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div id="__next">
+    <!--*****header*****!-->
+    <header th:replace="/main/header.html :: div"></header>
+    <!--******body 시작*****!-->
+    <main class="css-1i6vue">
+      <section class="css-cvaybd">
+        <div class="css-7qdx4z">
+          <div class="css-1ktsezg">
+            <div class="css-1nm9gyu">
+              <div class="css-oan6e">
+                <button type="button" class="css-1krggrv">
+                  <span class="css-1ihsymv"><svg viewBox="0 0 24 24" class="css-t07f4u">
+                      <path fill="#171719"
+                        d="M16.1363 3.36297C16.4877 3.71444 16.4877 4.28429 16.1363 4.63576L8.77265 11.9994L16.1362 19.363C16.4877 19.7144 16.4877 20.2843 16.1362 20.6358C15.7848 20.9872 15.2149 20.9872 14.8635 20.6358L6.86346 12.6358C6.51199 12.2843 6.51199 11.7144 6.86346 11.363L14.8635 3.36297C15.2149 3.0115 15.7848 3.0115 16.1363 3.36297Z">
+                      </path>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="css-1iooy02">
+                <p data-testid="Typography" color="#000000" class="css-14qpgc6">
+                  로그인
+                </p>
+              </div>
+              <div class="css-1jxi7lq"></div>
+            </div>
+            <div class="css-ng7qrx">
+              <form class="css-e130a2" id="submitForm">
+                <div>
+                  <div class="css-14o8ny9">
+                    <div class="css-cssveg">
+                      <div class="css-env1z2">
+                        <label data-testid="Typography" color="rgba(55, 56, 60, 0.61)" for="userId"
+                          class="css-afh7p0">아이디</label>
+                      </div>
+                      <input type="text" placeholder="아이디를 입력해주세요." id="userId" data-testid="Input_userId" autofocus=""
+                        autocomplete="on" class="css-1sbrczv" value="" />
+                    </div>
+                  </div>
+                  <div class="css-1dxhdfz">
+                    <div class="css-env1z2">
+                      <label data-testid="Typography" color="rgba(55, 56, 60, 0.61)" for="password"
+                        class="css-afh7p0">비밀번호</label>
+                    </div>
+                    <input type="password" placeholder="비밀번호를 입력해주세요." id="password" data-testid="Input_password"
+                      autocomplete="on" class="css-1sbrczv" value="" />
+                    <div class="css-1ayr5qo">
+                      <input id="login_session" type="checkbox" aria-label="user_stay_login" />
+                    </div>
+                    <button type="button" class="css-15fzn57" id="togglePassword">
+                      <span class="css-1ihsymv"><svg viewBox="0 0 24 24" color="rgba(55, 56, 60, 0.61)"
+                          class="css-1h47l4s">
+                          <path fill-rule="evenodd" clip-rule="evenodd" fill="rgba(55, 56, 60, 0.61)"
+                            d="M3.52351 11.9996C5.13652 8.96552 8.32982 6.89961 12.0056 6.89961C15.6814 6.89961 18.8747 8.96552 20.4878 11.9996C18.8747 15.0336 15.6814 17.0996 12.0056 17.0996C8.32982 17.0996 5.13652 15.0336 3.52351 11.9996ZM22.3057 12.3914C22.4236 12.1435 22.4236 11.8557 22.3057 11.6078C20.4748 7.75959 16.5508 5.09961 12.0056 5.09961C7.46042 5.09961 3.53648 7.75959 1.70559 11.6078C1.58764 11.8557 1.58764 12.1435 1.70559 12.3914C3.53648 16.2396 7.46042 18.8996 12.0056 18.8996C16.5508 18.8996 20.4748 16.2396 22.3057 12.3914ZM9.90563 11.9996C9.90563 10.8398 10.8458 9.89961 12.0056 9.89961C13.1654 9.89961 14.1056 10.8398 14.1056 11.9996C14.1056 13.1594 13.1654 14.0996 12.0056 14.0996C10.8458 14.0996 9.90563 13.1594 9.90563 11.9996ZM12.0056 8.09961C9.85172 8.09961 8.10563 9.8457 8.10563 11.9996C8.10563 14.1535 9.85172 15.8996 12.0056 15.8996C14.1595 15.8996 15.9056 14.1535 15.9056 11.9996C15.9056 9.8457 14.1595 8.09961 12.0056 8.09961Z">
+                          </path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <button type="text" disabled="" data-testid="Button" id="submit_btn" class="css-1yzn4b"
+                    onclick="loginBtn()">
+                    <span data-testid="Typography" color="#000000" class="css-kfktv3">로그인</span>
+                  </button>
+                </div>
+                <div class="css-z0tt1n">
+                  <p data-testid="Typography" color="#000000" class="css-1q5pm8j">
+                    또는
+                  </p>
+                  <div>
+                    <button type="button" data-testid="Button" class="css-1akojk6" onclick="goRegister()">
+                      <span data-testid="Typography" color="#000000" class="css-kfktv3">회원가입</span></button>
+                    <button type="button" data-testid="Button" class="css-zzrlz5" onclick="goNewPw()">
+                      <span data-testid="Typography" color="#000000" class="css-1nosfqs">비밀번호 재설정</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="css-1rhbhpi"></footer>
+    </main>
+  </div>
+  <div class="css-1ylz32k">
+    <div data-testid="Toast" class="css-moo2y0">
+      <div class="css-l8brha">
+        <span class="css-1ihsymv"><svg viewBox="0 0 24 24" class="css-1h47l4s">
+            <path fill="#00BF40"
+              d="M19.6694 6.58096C20.1771 7.08864 20.1771 7.91175 19.6694 8.41943L10.6694 17.4194C10.1618 17.9271 9.33864 17.9271 8.83096 17.4194L4.33096 12.9194C3.82327 12.4118 3.82327 11.5886 4.33096 11.081C4.83864 10.5733 5.66175 10.5733 6.16943 11.081L9.7502 14.6617L17.831 6.58096C18.3386 6.07327 19.1618 6.07327 19.6694 6.58096Z">
+            </path>
+          </svg>
+        </span>
+      </div>
+      <div class="css-1rb9x0u">
+        <p data-testid="Typography" color="#F7F7F7" class="css-1i7so86"></p>
+      </div>
+    </div>
+  </div>
+  <script>
+
+    // 비밀번호 숨기기 버튼
+    document.getElementById('togglePassword').addEventListener('click', function () {
+      const passwordField = document.getElementById('password');
+      const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordField.setAttribute('type', type);
+      const icon = this.querySelector('svg');
+      if (type === 'text') {
+        icon.setAttribute('fill', 'rgba(55, 56, 60, 1.0)');
+      } else {
+        icon.setAttribute('fill', 'rgba(55, 56, 60, 0.61)');
+      }
+    });
+
+    // 로그인 버튼 활성화  
+    const userIdField = document.getElementById('userId');
+    const passwordField = document.getElementById('password');
+    const loginButton = document.getElementById('submit_btn');
+    const form = document.getElementById('submitForm');
+
+    function toggleLoginButton() {
+      const userId = userIdField.value.trim();
+      const password = passwordField.value.trim();
+      if (userId && password) {
+        loginButton.disabled = false;
+      } else {
+        loginButton.disabled = true;
+      }
+    }
+
+    userIdField.addEventListener('input', toggleLoginButton);
+    passwordField.addEventListener('input', toggleLoginButton);
+
+    // 로그인
+    function loginBtn() {
+
+
+      $.ajax({
+        url: "/user/token",
+        type: "post",
+        contentType: "application/x-www-form-urlencoded",
+        data: {
+          userId: $('#userId').val(),
+          password: $('#password').val(),
+        },
+        success: function (result) {
+          window.location.href = "/main/home";
+        },
+        error: function (xhr, status, error) {
+          console.error("로그인 오류:", error);
+          alert("로그인 중 오류가 발생했습니다.");
+        }
+      });
+    }
+
+    $(document).ready(function () {
+      $('#submitForm').submit(function (event) {
+        event.preventDefault();
+      });
+    });
+
+    // 회원가입 링크
+    function goRegister() {
+      window.location.href = "/login/register";
+    }
+
+
+  </script>
+</body>
+
+</html>

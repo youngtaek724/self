@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/register.css" />
+  <link rel="stylesheet" href="/css/9efeb41d609df83e.css" />
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/1018dd7e055bc4cc.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+</head>
+
+<body>
+  <div id="__next">
+    <!--*****header*****!-->
+    <header th:replace="/main/header.html :: div"></header>
+    <!--******body 시작*****!-->
+    <main class="css-1i6vue">
+      <section class="css-embvl1">
+        <div class="css-1ktsezg">
+          <div class="css-1nm9gyu">
+            <div class="css-oan6e">
+              <button type="button" class="css-1krggrv">
+                <p data-testid="Typography" color="#000000" class="css-1ub1oa4">
+                  취소
+                </p>
+              </button>
+            </div>
+            <div class="css-1iooy02">
+              <p data-testid="Typography" color="#000000" class="css-14qpgc6">
+                회원가입
+              </p>
+            </div>
+            <div class="css-1jxi7lq"></div>
+          </div>
+          <div class="css-ng7qrx">
+            <form class="css-1b2vfnn" id="signUpForm">
+              <!-- 아이디 -->
+              <div>
+                <div class="css-1ia1k3o">
+                  <div class="css-cssveg">
+                    <div class="css-env1z2">
+                      <label data-testid="Typography" color="rgba(55, 56, 60, 0.61)" for="userId"
+                        class="css-afh7p0">아이디</label>
+                    </div>
+                    <input type="text" placeholder="아이디를 입력해주세요." id="userId" data-testid="Input_userId"
+                      autocomplete="new-userId" class="css-1sbrczv" value="" />
+                  </div>
+                  <button type="button" data-testid="Button-userId" class="css-zzrlz5" onclick="checkId()">
+                    <span data-testid="Typography" color="#000000" class="css-htgykj">중복 확인</span>
+                  </button>
+                </div>
+                <div class="css-ut4l54">
+                  <p data-testid="Typography" color="#FF4242" class="css-depv0x" id="userIdError">
+                    영문, 숫자를 조합하여 8자 이상 12자 이하로 입력해주세요.
+                  </p>
+                </div>
+              </div>
+              <!-- end 아이디 -->
+              <!-- 비밀번호 -->
+              <div class="css-evy94o">
+                <div class="css-env1z2">
+                  <label data-testid="Typography" color="rgba(55, 56, 60, 0.61)" for="password">비밀번호</label>
+                </div>
+                <div class="css-evy94o">
+                  <input type="password" placeholder="비밀번호를 입력해주세요." id="password" data-testid="Input_password"
+                    autocomplete="on" class="css-1sbrczv" value="" />
+                  <p id="passwordError" data-testid="Typography" color="#FF4242" class="css-depv0x">
+                    영문, 숫자, 특수문자를 조합해 8 ~ 16자 이하로 입력해주세요.
+                  </p>
+                </div>
+                <input type="password" placeholder="비밀번호를 다시 한번 입력해주세요." id="passwordConfirm"
+                  data-testid="Input_passwordConfirm" autocomplete="on" class="css-1sbrczv" value="" />
+                <p id="passwordMismatchError" data-testid="Typography" color="#FF4242" class="css-depv0x">
+                  비밀번호가 일치하지 않습니다.
+                </p>
+              </div>
+              <!-- end 비밀번호 -->
+              <!-- 이름 -->
+              <div class="css-evy94o">
+                <div class="css-env1z2">
+                  <label data-testid="Typography" color="rgba(55, 56, 60, 0.61)" for="username"
+                    class="css-afh7p0">이름</label>
+                </div>
+                <input type="text" placeholder="이름을 입력해주세요." id="username" data-testid="Input_username"
+                  autocomplete="new-name" class="css-1sbrczv" value="" />
+                <p data-testid="Typography" color="#FF4242" class="css-depv0x" id="usernameError">
+                  이름에는 공백과 특수문자가 포함될 수 없습니다.
+                </p>
+              </div>
+              <!-- end 이름 -->
+              <!-- 주소 -->
+              <div>
+                <div class="css-env1z2">
+                  <label data-testid="Typography" color="rgba(55, 56, 60, 0.61)" for="mobile"
+                    class="css-afh7p0">주소</label>
+                </div>
+                <div class="css-14o8ny9">
+                  <div class="css-gjm025">
+                    <input type="text" pattern="" placeholder="우편번호" id="zipCode" data-testid="" autocomplete="on"
+                      class="css-1sbrczv" disabled />
+                    <input type="text" pattern="" placeholder="주소를 입력해주세요" id="default_addr" data-testid=""
+                      autocomplete="on" class="css-1sbrczv" disabled />
+                    <button type="button" data-testid="Button" class="css-3nuf1p" onclick="searchAddress()">
+                      <span data-testid="Typography" color="#000000" class="css-kfktv3">주소찾기</span>
+                    </button>
+                  </div>
+                  <div class="">
+                    <input type="text" placeholder="상세주소를 입력해주세요." id="detail_addr" data-testid="Input_detailAddr"
+                      autocomplete="new-detailAddr" class="css-1sbrczv" value="" />
+                  </div>
+                </div>
+              </div>
+              <!-- end 주소 -->
+              <!-- 이메일 -->
+              <div>
+                <div class="css-1ia1k3o">
+                  <div class="css-cssveg">
+                    <div class="css-env1z2">
+                      <label data-testid="Typography" color="rgba(55, 56, 60, 0.61)" for="email"
+                        class="css-afh7p0">이메일</label>
+                    </div>
+                    <!-- 잘못 입력한 경우 css-zf1cy7 이 css를 준다-->
+                    <input type="email" placeholder="이메일을 입력해주세요." id="email" data-testid="Input_email"
+                      autocomplete="new-email" class="css-1sbrczv" value="" />
+                  </div>
+                  <button type="button" data-testid="Button-email" class="css-zzrlz5" onclick="checkEmail()">
+                    <span data-testid="Typography" color="#000000" class="css-htgykj">중복 확인</span>
+                  </button>
+                </div>
+                <div class="css-ut4l54">
+                  <p data-testid="Typography" color="#FF4242" class="css-depv0x" id="emailError">
+                    올바른 이메일을 입력해주세요.
+                  </p>
+                </div>
+              </div>
+              <!-- end 이메일 -->
+              <!-- 연락처 -->
+              <div>
+                <div class="css-env1z2">
+                  <label data-testid="Typography" color="rgba(55, 56, 60, 0.61)" for="mobile" class="css-afh7p0">휴대폰
+                    번호</label>
+                </div>
+                <div class="css-14o8ny9">
+                  <div class="css-gjm025">
+                    <input type="text" pattern="[0-9]*" placeholder="(예시) 01013245768" id="mobile"
+                      data-testid="Input_mobile" autocomplete="on" class="css-1sbrczv" value="" />
+                    <button type="button" data-testid="Button_authNum" class="css-3nuf1p">
+                      <span data-testid="Typography_phone" color="#000000" class="css-kfktv3">인증번호 받기</span>
+                    </button>
+                  </div>
+                  <p data-testid="Typography_phoneNum" color="#FF4242" class="css-depv0x" id="mobileError">
+                    올바른 전화번호를 입력해주세요.
+                  </p>
+                  <div class="css-gjm025">
+                    <input type="number" pattern="[0-9]*" placeholder="인증번호를 입력해주세요." id="authCode"
+                      data-testid="Input_authCode" readonly="" autocomplete="on" class="css-1sbrczv" value="" />
+                  </div>
+                </div>
+              </div>
+              <!-- end 연락처 -->
+              <!-- 동의 -->
+
+              <div class="css-1n70r34">
+                <div class="css-5hccr8 checkbox-container">
+                  <div class="css-1axjas8" id="agree_parent"></div>
+                  <input type="checkbox" id="is_agree_all" data-testid="TermsOption_checkbox_is_agree_all"
+                    class="css-31p8kg" />
+                  <div class="css-1smbjja">
+                    <p data-testid="Typography" color="#171719" class="css-5iu2fa">
+                      전체 동의
+                    </p>
+                  </div>
+                </div>
+                <hr class="css-6cy68w" />
+                <div class="css-sfv171">
+                  <!-- 체크했을 때 파란버튼 -->
+                  <div class="css-5hccr8 checkbox-container">
+                    <div class="css-1axjas8"></div>
+                    <input type="checkbox" id="is_terms_conditions_1"
+                      data-testid="TermsOption_checkbox_is_terms_conditions_1" class="css-31p8kg" />
+                    <div class="css-1smbjja">
+                      <p data-testid="Typography" color="rgba(55, 56, 60, 0.61)" class="css-12qszhy">
+                        만 14세 이상입니다. (필수)
+                      </p>
+                    </div>
+                    <span id="termsAgree_1" class="css-1ihsymv checkmark unchecked">
+                      <svg viewBox="0 0 12 24" class="unchecked">
+                        <path fill="rgba(55, 56, 60, 0.28)"
+                          d="M2.86395 4.86346C2.51247 5.21493 2.51247 5.78478 2.86395 6.13625L8.72755 11.9999L2.86395 17.8635C2.51247 18.2149 2.51247 18.7848 2.86395 19.1362C3.21542 19.4877 3.78527 19.4877 4.13674 19.1362L10.6367 12.6362C10.9882 12.2848 10.9882 11.7149 10.6367 11.3635L4.13674 4.86346C3.78527 4.51199 3.21542 4.51199 2.86395 4.86346Z">
+                        </path>
+                      </svg>
+                      <svg viewBox="0 0 12 24" class="checked" style="display: none;">
+                        <path fill="#ffffff"
+                          d="M2.86395 4.86346C2.51247 5.21493 2.51247 5.78478 2.86395 6.13625L8.72755 11.9999L2.86395 17.8635C2.51247 18.2149 2.51247 18.7848 2.86395 19.1362C3.21542 19.4877 3.78527 19.4877 4.13674 19.1362L10.6367 12.6362C10.9882 12.2848 10.9882 11.7149 10.6367 11.3635L4.13674 4.86346C3.78527 4.51199 3.21542 4.51199 2.86395 4.86346Z">
+                        </path>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="css-5hccr8 checkbox-container">
+                    <div class="css-1axjas8"></div>
+                    <input type="checkbox" id="is_terms_conditions_2"
+                      data-testid="TermsOption_checkbox_is_terms_conditions_2" class="css-31p8kg" />
+                    <div class="css-1smbjja">
+                      <p data-testid="Typography" color="rgba(55, 56, 60, 0.61)" class="css-12qszhy">
+                        SESK 이용약관 동의 (필수)
+                      </p>
+                    </div>
+                    <span id="termsAgree_2" class="css-1ihsymv checkmark unchecked">
+                      <svg viewBox="0 0 12 24" class="unchecked">
+                        <path fill="rgba(55, 56, 60, 0.28)"
+                          d="M2.86395 4.86346C2.51247 5.21493 2.51247 5.78478 2.86395 6.13625L8.72755 11.9999L2.86395 17.8635C2.51247 18.2149 2.51247 18.7848 2.86395 19.1362C3.21542 19.4877 3.78527 19.4877 4.13674 19.1362L10.6367 12.6362C10.9882 12.2848 10.9882 11.7149 10.6367 11.3635L4.13674 4.86346C3.78527 4.51199 3.21542 4.51199 2.86395 4.86346Z">
+                        </path>
+                      </svg>
+                      <svg viewBox="0 0 12 24" class="checked" style="display: none;">
+                        <path fill="#ffffff"
+                          d="M2.86395 4.86346C2.51247 5.21493 2.51247 5.78478 2.86395 6.13625L8.72755 11.9999L2.86395 17.8635C2.51247 18.2149 2.51247 18.7848 2.86395 19.1362C3.21542 19.4877 3.78527 19.4877 4.13674 19.1362L10.6367 12.6362C10.9882 12.2848 10.9882 11.7149 10.6367 11.3635L4.13674 4.86346C3.78527 4.51199 3.21542 4.51199 2.86395 4.86346Z">
+                        </path>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="css-5hccr8 checkbox-container">
+                    <div class="css-1axjas8"></div>
+                    <input type="checkbox" id="is_collect_information"
+                      data-testid="TermsOption_checkbox_is_collect_information" class="css-31p8kg" />
+                    <div class="css-1smbjja">
+                      <p data-testid="Typography" color="rgba(55, 56, 60, 0.61)" class="css-12qszhy">
+                        SESK 개인정보 수집 및 이용 동의 (필수)
+                      </p>
+                    </div>
+                    <span id="infoAgree" class="css-1ihsymv checkmark unchecked">
+                      <svg viewBox="0 0 12 24" class="unchecked">
+                        <path fill="rgba(55, 56, 60, 0.28)"
+                          d="M2.86395 4.86346C2.51247 5.21493 2.51247 5.78478 2.86395 6.13625L8.72755 11.9999L2.86395 17.8635C2.51247 18.2149 2.51247 18.7848 2.86395 19.1362C3.21542 19.4877 3.78527 19.4877 4.13674 19.1362L10.6367 12.6362C10.9882 12.2848 10.9882 11.7149 10.6367 11.3635L4.13674 4.86346C3.78527 4.51199 3.21542 4.51199 2.86395 4.86346Z">
+                        </path>
+                      </svg>
+                      <svg viewBox="0 0 12 24" class="checked" style="display: none;">
+                        <path fill="#ffffff"
+                          d="M2.86395 4.86346C2.51247 5.21493 2.51247 5.78478 2.86395 6.13625L8.72755 11.9999L2.86395 17.8635C2.51247 18.2149 2.51247 18.7848 2.86395 19.1362C3.21542 19.4877 3.78527 19.4877 4.13674 19.1362L10.6367 12.6362C10.9882 12.2848 10.9882 11.7149 10.6367 11.3635L4.13674 4.86346C3.78527 4.51199 3.21542 4.51199 2.86395 4.86346Z">
+                        </path>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- end 동의 -->
+              <div class="css-1tbd2jx">
+                <div class="css-1csonyh"></div>
+                <div class="css-270vek"></div>
+                <button type="submit" data-testid="Button" class="css-1yzn4b">
+                  <span data-testid="Typography" color="#000000" class="css-kfktv3">가입하기</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="/js/register.js"></script>
+  <script src="/js/sessionManager.js"></script>
+
+
+  <script>
+
+    // 페이지 로드 시 토큰 초기화
+    window.onload = function () {
+      initializeToken();
+    };
+
+    //카카오 주소 api
+    function searchAddress() {
+      new daum.Postcode({
+        oncomplete: function (data) {
+          document.getElementById('default_addr').value = data.address;
+          document.getElementById('detail_addr').value = '';
+          document.getElementById('zipCode').value = data.zonecode;
+        }
+      }).open();
+    }
+
+
+    // 이메일 중복체크
+    var isEmailChecked = false;
+    var isIdChecked = false;
+
+    function checkEmail(callback, error) {
+      var emailInput = document.getElementById("email").value;
+
+      $.ajax({
+        url: "/auth/check/email",
+        type: "get",
+        data: { email: emailInput },
+        contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+        success: function (result) {
+          if (result) {
+            alert("중복된 이메일입니다.");
+            isEmailChecked = true;
+          } else {
+            alert("사용가능한 이메일입니다.");
+            isEmailChecked = true;
+          }
+        },
+        error: function (a, b, c) {
+          if (error) {
+            console.error(a, b, c);
+            error(a, b, c);
+          }
+        }
+      });
+    }
+
+    // 아이디 중복체크
+    function checkId(callback, error) {
+      var userIdInput = document.getElementById("userId").value;
+
+      $.ajax({
+        url: "/auth/check/id",
+        type: "get",
+        data: { userId: userIdInput },
+        contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+        success: function (result) {
+          if (result) {
+            alert("중복된 아이디입니다.");
+            isIdChecked = true;
+          } else {
+            alert("사용가능한 아이디입니다.");
+            isIdChecked = true;
+          }
+        },
+        error: function (a, b, c) {
+          if (error) {
+            console.error(a, b, c);
+            error(a, b, c);
+          }
+        }
+      });
+    }
+
+    function getTokenFromSessionStorage() {
+      return sessionStorage.getItem('accessToken');
+    }
+
+    $(document).ready(function () {
+      $('#signUpForm').submit(function (event) {
+        event.preventDefault();
+        // 중복 체크 여부 확인
+        if (!isEmailChecked || !isIdChecked) {
+          alert("이메일과 아이디 중복 체크를 해주세요.");
+          return;
+        }
+
+        // 회원가입 데이터 수집
+        var signUpBody = {
+          userId: $('#userId').val(),
+          password: $('#password').val(),
+          name: $('#username').val(),
+          defaultAddr: $('#default_addr').val(),
+          detailAddr: $('#detail_addr').val(),
+          zipCode: $('#zipCode').val(),
+          email: $('#email').val(),
+          phone: $('#mobile').val()
+        };
+
+        $.ajax({
+          url: "/auth/join",
+          type: "POST",
+          contentType: "application/json",
+          data: JSON.stringify(signUpBody),
+          success: function (result) {
+            alert("회원가입이 완료되었습니다.");
+            window.location.href = "/main/home";
+          },
+          error: function (xhr, status, error) {
+            console.error("회원가입 오류:", error);
+            alert("회원가입 중 오류가 발생했습니다.");
+          }
+        });
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

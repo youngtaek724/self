@@ -31,17 +31,16 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
   @Override
   protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
-                                  FilterChain filterChain) throws ServletException, IOException {
+      FilterChain filterChain) throws ServletException, IOException {
     final String authHeader = request.getHeader("Authorization");
 
-    if (!StringUtils.hasText(authHeader) || !StringUtils.startsWithIgnoreCase(authHeader, "Bearer ")) {
+    if (!StringUtils.hasText(authHeader) || !StringUtils.startsWithIgnoreCase(authHeader, "Barer ")) {
       filterChain.doFilter(request, response);
       return;
     }
 
     final String jwt = authHeader.substring(7);
-    final TokenData tokenData = jwtService.extractTokenData(jwt); // id = admin
-
+    final TokenData tokenData = jwtService.extractTokenData(jwt);
 
     if (tokenData != null && SecurityContextHolder.getContext().getAuthentication() == null) {
       UserDetails userDetails = userDetailsService.loadUserByUsername(tokenData.getRole() + ":" + tokenData.getId());

@@ -1,210 +1,142 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>메인페이지</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/1018dd7e055bc4cc.css">
-    <link rel="stylesheet" href="/css/6e77cb14485b3a18.css">
-    <link rel="stylesheet" href="/css/49ed35b58d7d245c.css">
-    <link rel="stylesheet" href="/css/40d91952aa12e1a0.css">
-  </head>
-  <body>
-    <div id="__next">
-      <div class="hotel" data-current="main">
-        <!--*****header*****!-->
-        <header th:replace="/main/header.html :: div"></header>
-        <!--******body 시작*****!-->
-        <div class="main_Main__PBiVQ">
-          <div class="MainIntro_Intro__pMGK3">
-            <div class="MainIntro_spot__ECzte">
-              <div class="MainIntro_bg__tpRZQ"></div>
-              <div class="MainIntro_obj1__I9cq7"></div>
-            </div>
-            <div class="MainIntro_flick__QHEev">
-              <div
-                class="flicking-viewport MainIntro_flicking__ihcQ1"
-                style="
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>메인페이지</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/1018dd7e055bc4cc.css">
+  <link rel="stylesheet" href="/css/6e77cb14485b3a18.css">
+  <link rel="stylesheet" href="/css/49ed35b58d7d245c.css">
+  <link rel="stylesheet" href="/css/40d91952aa12e1a0.css">
+</head>
+
+<body>
+  <div id="__next">
+    <div class="hotel" data-current="main">
+      <!--*****header*****!-->
+      <header th:replace="/main/header.html :: div"></header>
+      <!--******body 시작*****!-->
+      <div class="main_Main__PBiVQ">
+        <div class="MainIntro_Intro__pMGK3">
+          <div class="MainIntro_spot__ECzte">
+            <div class="MainIntro_bg__tpRZQ"></div>
+            <div class="MainIntro_obj1__I9cq7"></div>
+          </div>
+          <div class="MainIntro_flick__QHEev">
+            <div class="flicking-viewport MainIntro_flicking__ihcQ1" style="
                   user-select: none;
                   -webkit-user-drag: none;
                   touch-action: pan-y;
-                "
-              >
-                <div
-                  class="flicking-camera"
-                  style="transform: translate(-5086px)"
-                >
-                  <div class="MainIntro_panel__yHDeH">
-                    <b class="MainIntro_tit__N7kDZ">힐링 호캉스 패키지는</b
-                    ><i class="MainIntro_sub__n04Qh">네이버 객실 패키지로!</i>
-                  </div>
-                  <div class="MainIntro_panel__yHDeH">
-                    <b class="MainIntro_tit__N7kDZ">여행가기 전 확인 필수!</b
-                    ><i class="MainIntro_sub__n04Qh">다양한 할인/적립!</i>
-                  </div>
-                  <div class="MainIntro_panel__yHDeH">
-                    <b class="MainIntro_tit__N7kDZ">전세계 예약사이트 요금</b
-                    ><i class="MainIntro_sub__n04Qh">한번에 비교!</i>
-                  </div>
-                  <div class="MainIntro_panel__yHDeH">
-                    <b class="MainIntro_tit__N7kDZ">알아두면 도움 되는</b
-                    ><i class="MainIntro_sub__n04Qh">생생한 숙박후기</i>
-                  </div>
+                ">
+              <div class="flicking-camera" style="transform: translate(-5086px)">
+                <div class="MainIntro_panel__yHDeH">
+                  <b class="MainIntro_tit__N7kDZ">힐링 호캉스 패키지는</b><i class="MainIntro_sub__n04Qh">네이버 객실 패키지로!</i>
                 </div>
-              </div>
-              <div class="MainIntro_indicator__NA6b2">
-                <button
-                  type="button"
-                  class="MainIntro_dot__YnG7R"
-                  aria-current="true"
-                ></button
-                ><button
-                  type="button"
-                  class="MainIntro_dot__YnG7R"
-                  aria-current="false"
-                ></button
-                ><button
-                  type="button"
-                  class="MainIntro_dot__YnG7R"
-                  aria-current="false"
-                ></button
-                ><button
-                  type="button"
-                  class="MainIntro_dot__YnG7R"
-                  aria-current="false"
-                ></button>
-              </div>
-            </div>
-          </div>
-          <div class="SearchBox_SearchBox__OMk4Y">
-            <div class="SearchBox_inner__xkqUq">
-              <div class="SearchBox_search_area__YoOwW">
-                <div class="SearchBox_select_area__Xnvj8">
-                  <div class="SearchBox_select_location__eSmdg">
-                    <button type="button" class="SearchBox_btn_location__AMvC8" aria-selected="false">어디로 가시나요?</button>
-                  </div>
-                  <div class="SearchBox_select_checkinout__UYttl _calendar">
-                    <button type="button" class="SearchBox_btn_checkin__MdsBo" aria-selected="false">
-                      <span class="SearchBox_datetxt__WkJlX">체크인</span
-                      ><span class="SearchBox_datetxt__WkJlX">체크아웃</span>
-                    </button>
-                  </div>
-                  <div class="SearchBox_select_people__DhM2N">
-                    <button type="button" class="SearchBox_btn_people__kqLBO" aria-selected="false">성인2</button>
-                  </div>
-                  <div class="SearchBox_select_biz__WEe2G">
-                    <button
-                      class="SearchBox_btn_biz__QRI3s"
-                      type="button"
-                      aria-checked="false"
-                      aria-disabled="true"
-                    >
-                      해외출장</button
-                    ><button
-                      class="SearchBox_info__pJA28"
-                      aria-label="정보"
-                      type="button"
-                    ></button>
-                  </div>
+                <div class="MainIntro_panel__yHDeH">
+                  <b class="MainIntro_tit__N7kDZ">여행가기 전 확인 필수!</b><i class="MainIntro_sub__n04Qh">다양한 할인/적립!</i>
                 </div>
-                <button type="submit" class="SearchBox_search__0Suoj">
-                  <span class="SearchBox_blind__HPevE">호텔 </span>검색
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="main_my_widget_container__XS2Gq">
-            <div class="inner">
-              <div
-                class="MyWidget_MyWidget__HrU4y"
-                data-service="hotel"
-                data-current="main"
-              >
-                <div class="MyWidget_travelclub__DI1-O">
-                  <a
-                    href="https://nid.naver.com/nidlogin.login?svctype=262144&amp;url=https://hotels.naver.com/%3Fpopup%3Dopen"
-                    class="MyWidget_login__BzceU"
-                    ><span class="MyWidget_travelclub_logo__coRJz"
-                      ><span class="MyWidget_blind__rfjv9"
-                        >트래블클럽</span
-                      ></span
-                    ><span class="MyWidget_emphasis__ZZgNt"
-                      >로그인 후 등급확인</span
-                    ><span class="MyWidget_text__-tKg7"> 하세요</span></a
-                  >
+                <div class="MainIntro_panel__yHDeH">
+                  <b class="MainIntro_tit__N7kDZ">전세계 예약사이트 요금</b><i class="MainIntro_sub__n04Qh">한번에 비교!</i>
                 </div>
-                <div class="MyWidget_links__bq55B">
-                  <a
-                    href="https://shoppinglive.naver.com/channels/66400"
-                    class="MyWidget_link__2tf47"
-                    target="_blank"
-                    ><span class="MyWidget_live_link__eT9D8"
-                      ><span class="MyWidget_live_logo__1fSzI"
-                        ><span class="MyWidget_blind__rfjv9"
-                          >쇼핑 라이브</span
-                        ></span
-                      ></span
-                    ></a
-                  ><a
-                    href="https://travel-event.naver.com/promotion/secretcoupon"
-                    target="_blank"
-                    class="MyWidget_link__2tf47"
-                    ><span class="MyWidget_coupon_link__hsMxf"
-                      ><span class="MyWidget_text__-tKg7">쿠폰</span></span
-                    ></a
-                  >
+                <div class="MainIntro_panel__yHDeH">
+                  <b class="MainIntro_tit__N7kDZ">알아두면 도움 되는</b><i class="MainIntro_sub__n04Qh">생생한 숙박후기</i>
                 </div>
               </div>
             </div>
+            <div class="MainIntro_indicator__NA6b2">
+              <button type="button" class="MainIntro_dot__YnG7R" aria-current="true"></button><button type="button"
+                class="MainIntro_dot__YnG7R" aria-current="false"></button><button type="button"
+                class="MainIntro_dot__YnG7R" aria-current="false"></button><button type="button"
+                class="MainIntro_dot__YnG7R" aria-current="false"></button>
+            </div>
           </div>
-          <div class="Popular_Popular__LYOT5">
-            <div class="Popular_inner__JCj38">
-              <h3 class="Popular_title__rin5Y">
-                <strong class="Popular_txt__DN5hF">호텔 Best 차트</strong>
-                <div class="Popular_dsc__4CGX7" aria-expanded="false">
-                  <button
-                    class="Popular_button__k6mNv"
-                    type="button"
-                    aria-label="인기호텔 선정 기준"
-                  ></button>
+        </div>
+        <div class="SearchBox_SearchBox__OMk4Y">
+          <div class="SearchBox_inner__xkqUq">
+            <div class="SearchBox_search_area__YoOwW">
+              <div class="SearchBox_select_area__Xnvj8">
+                <div class="SearchBox_select_location__eSmdg">
+                  <button type="button" class="SearchBox_btn_location__AMvC8" aria-selected="false">어디로 가시나요?</button>
                 </div>
-                <button
-                  class="Popular_toggle__2Yy9o"
-                  aria-checked="true"
-                  type="button"
-                >
-                  <span class="Popular_domestic__e1g1H">국내</span
-                  ><span class="Popular_overseas__YIJs5">해외</span>
-                </button>
-              </h3>
-              <div class="Popular_PopularPlaces__hDLt2" aria-expanded="false">
-                <div class="Popular_tabs__KhhaB" role="tablist" style="
+                <div class="SearchBox_select_checkinout__UYttl _calendar">
+                  <button type="button" class="SearchBox_btn_checkin__MdsBo" aria-selected="false">
+                    <span class="SearchBox_datetxt__WkJlX">체크인</span><span class="SearchBox_datetxt__WkJlX">체크아웃</span>
+                  </button>
+                </div>
+                <div class="SearchBox_select_people__DhM2N">
+                  <button type="button" class="SearchBox_btn_people__kqLBO" aria-selected="false">성인2</button>
+                </div>
+                <div class="SearchBox_select_biz__WEe2G">
+                  <button class="SearchBox_btn_biz__QRI3s" type="button" aria-checked="false" aria-disabled="true">
+                    해외출장</button><button class="SearchBox_info__pJA28" aria-label="정보" type="button"></button>
+                </div>
+              </div>
+              <button type="submit" class="SearchBox_search__0Suoj">
+                <span class="SearchBox_blind__HPevE">호텔 </span>검색
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="main_my_widget_container__XS2Gq">
+          <div class="inner">
+            <div class="MyWidget_MyWidget__HrU4y" data-service="hotel" data-current="main">
+              <div class="MyWidget_travelclub__DI1-O">
+                <a href="https://nid.naver.com/nidlogin.login?svctype=262144&amp;url=https://hotels.naver.com/%3Fpopup%3Dopen"
+                  class="MyWidget_login__BzceU"><span class="MyWidget_travelclub_logo__coRJz"><span
+                      class="MyWidget_blind__rfjv9">트래블클럽</span></span><span class="MyWidget_emphasis__ZZgNt">로그인 후
+                    등급확인</span><span class="MyWidget_text__-tKg7"> 하세요</span></a>
+              </div>
+              <div class="MyWidget_links__bq55B">
+                <a href="https://shoppinglive.naver.com/channels/66400" class="MyWidget_link__2tf47"
+                  target="_blank"><span class="MyWidget_live_link__eT9D8"><span class="MyWidget_live_logo__1fSzI"><span
+                        class="MyWidget_blind__rfjv9">쇼핑 라이브</span></span></span></a><a
+                  href="https://travel-event.naver.com/promotion/secretcoupon" target="_blank"
+                  class="MyWidget_link__2tf47"><span class="MyWidget_coupon_link__hsMxf"><span
+                      class="MyWidget_text__-tKg7">쿠폰</span></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Popular_Popular__LYOT5">
+          <div class="Popular_inner__JCj38">
+            <h3 class="Popular_title__rin5Y">
+              <strong class="Popular_txt__DN5hF">호텔 Best 차트</strong>
+              <div class="Popular_dsc__4CGX7" aria-expanded="false">
+                <button class="Popular_button__k6mNv" type="button" aria-label="인기호텔 선정 기준"></button>
+              </div>
+              <button class="Popular_toggle__2Yy9o" aria-checked="true" type="button">
+                <span class="Popular_domestic__e1g1H">국내</span><span class="Popular_overseas__YIJs5">해외</span>
+              </button>
+            </h3>
+            <div class="Popular_PopularPlaces__hDLt2" aria-expanded="false">
+              <div class="Popular_tabs__KhhaB" role="tablist" style="
                     user-select: none;
                     -webkit-user-drag: none;
                     touch-action: auto;
                   ">
-                  <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="true">서울</button>
-                  <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">제주</button>
-                  <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">부산</button>
-                  <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">강원</button>
-                  <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">인천</button>
-                  <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">강릉</button>
-                  <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">속초</button>
-                  <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">여수</button>
-                  <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">경주</button>
-                  <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">대전</button>
-                </div>
+                <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="true">서울</button>
+                <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">제주</button>
+                <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">부산</button>
+                <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">강원</button>
+                <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">인천</button>
+                <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">강릉</button>
+                <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">속초</button>
+                <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">여수</button>
+                <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">경주</button>
+                <button type="button" class="Popular_tab__A8XLT" role="tab" aria-selected="false">대전</button>
               </div>
-              <div class="Popular_PopularHotels__AaZK5">
-                <div class="flicking-viewport" style="
+            </div>
+            <div class="Popular_PopularHotels__AaZK5">
+              <div class="flicking-viewport" style="
                     user-select: none;
                     -webkit-user-drag: none;
                     touch-action: pan-y;
                   ">
-                  <div class="flicking-camera" style="transform: translate(0px)">
-                    <div class="Popular_hotel_list__vIw4R" id="hotelContainer" style="width: 1110px">
-                      <!--
+                <div class="flicking-camera" style="transform: translate(0px)">
+                  <div class="Popular_hotel_list__vIw4R" id="hotelContainer" style="width: 1110px">
+                    <!--
                           1. 순위증가 css
                           <b class="Popular_state__GYddq Popular_increase__faTkz">
                             <span class="Popular_blind__VueMw">순위증가</span>
@@ -223,235 +155,152 @@
                           </b>
                       -->
 
-                      <th:block th:each="top10Hotel : ${top10Hotels}">
-                        <div class="item" th:object="${top10Hotel}">
-                          <div class="Popular_PopularHotel__eJcbs">
-                            <figure class="Popular_thumb__m425I">
-                              <img draggable="false" class="Popular_img__IlKre" alt="그랜드 조선 제주" src="/images/noImg.png"/>
-                            </figure>
-                            <div class="Popular_inner__JCj38">
-                              <div class="Popular_rank__cL6TY">
-                                <b class="Popular_num__M9KZR" th:text="*{ranking}"></b>
-                                <b class="Popular_state__GYddq Popular_increase__faTkz">
-                                  <span class="Popular_blind__VueMw">순위증가</span>
-                                </b>
-                              </div>
-                              <div class="Popular_info__qEnjm">
-                                <em class="Popular_hotelName__O95RW" th:text="*{hotelName}"></em>
-                                <div class="Popular_feature__x_TU5">
-                                  <i class="Popular_score__khyaG">9.3</i>
-                                  <span class="Popular_rating__ybJCh">
-                                    <span class="Popular_star__X113Q" th:text="*{starRating} + ' 성급'"></span>
-                                      <i class="Popular_label__DVT5y" aria-label="성급인증"></i>
-                                    </span>
-                                </div>
-                                <b class="Popular_price__g5iRn">
-                                  <span class="Popular_amount__YEn39" th:text="*{lowPrice}"></span>
-                                  <span class="Popular_txt__DN5hF">원~</span>
-                                </b>
-                              </div>
+                    <th:block th:each="top10Hotel : ${top10Hotels}">
+                      <div class="item" th:object="${top10Hotel}">
+                        <div class="Popular_PopularHotel__eJcbs">
+                          <figure class="Popular_thumb__m425I">
+                            <img draggable="false" class="Popular_img__IlKre" alt="그랜드 조선 제주" src="/images/noImg.png" />
+                          </figure>
+                          <div class="Popular_inner__JCj38">
+                            <div class="Popular_rank__cL6TY">
+                              <b class="Popular_num__M9KZR" th:text="*{ranking}"></b>
+                              <b class="Popular_state__GYddq Popular_increase__faTkz">
+                                <span class="Popular_blind__VueMw">순위증가</span>
+                              </b>
                             </div>
-                            <a class="Popular_anchor__att5h" rel="noreferrer" th:href="'/hotels/'  + '?adultCnt=2&childAges='" target="_blank"></a>
+                            <div class="Popular_info__qEnjm">
+                              <em class="Popular_hotelName__O95RW" th:text="*{hotelName}"></em>
+                              <div class="Popular_feature__x_TU5">
+                                <i class="Popular_score__khyaG">9.3</i>
+                                <span class="Popular_rating__ybJCh">
+                                  <span class="Popular_star__X113Q" th:text="*{starRating} + ' 성급'"></span>
+                                  <i class="Popular_label__DVT5y" aria-label="성급인증"></i>
+                                </span>
+                              </div>
+                              <b class="Popular_price__g5iRn">
+                                <span class="Popular_amount__YEn39" th:text="*{lowPrice}"></span>
+                                <span class="Popular_txt__DN5hF">원~</span>
+                              </b>
+                            </div>
                           </div>
+                          <a class="Popular_anchor__att5h" rel="noreferrer"
+                            th:href="'/hotels/'  + '?adultCnt=2&childAges='" target="_blank"></a>
                         </div>
-                      </th:block>
+                      </div>
+                    </th:block>
 
-                    </div>
                   </div>
                 </div>
-                <div class="Popular_pages__rHBDh flicking-pagination-bullets">
-                  <span
-                    class="Popular_page__mnHGg flicking-pagination-bullet-active"
-                    aria-label="0"
-                  ></span>
-                </div>
-                <button
-                  class="Popular_prev__yYHO0 Popular_hide__qhCVE"
-                  type="button"
-                  aria-label="이전"
-                ></button
-                ><button
-                  class="Popular_next__aCFY8 Popular_hide__qhCVE"
-                  type="button"
-                  aria-label="다음"
-                ></button>
               </div>
-            </div>
-          </div>
-          <div class="OtaArea_OtaArea__5dgFv"></div>
-          <div class="sideBanner_SideBanner__g7jsK" data-position="main">
-            <div class="sideBanner_inner__LCNg5">
-              <h5 class="sideBanner_header__AY2ab">
-                <span data-media="narrow">여행 전 체크</span
-                ><span data-media="full">여행 전에 필수 체크!</span>
-              </h5>
-              <menu class="sideBanner_list__Q7JG4"
-                ><li class="sideBanner_item__WP9RQ" data-type="biztrip">
-                  <a
-                    href="https://biztrip.naver.com"
-                    class="sideBanner_anchor__cE2iK"
-                    target="_blank"
-                    rel="noreferrer"
-                    ><b class="sideBanner_title__qmTlL"
-                      ><span data-media="narrow">출장 항공권</span
-                      ><span data-media="full">해외출장 가시나요?</span></b
-                    ><span class="sideBanner_desc__c9Bba" data-media="full"
-                      >출장 선호 호텔을 알려드려요</span
-                    ></a
-                  >
-                </li>
-                <li class="sideBanner_item__WP9RQ" data-type="secretcoupon">
-                  <a
-                    href="https://travel-event.naver.com/promotion/secretcoupon"
-                    class="sideBanner_anchor__cE2iK"
-                    target="_blank"
-                    rel="noreferrer"
-                    ><b class="sideBanner_title__qmTlL"
-                      ><span data-media="narrow">호텔 할인쿠폰</span
-                      ><span data-media="full"
-                        >항공 구매시 호텔 15% 할인</span
-                      ></b
-                    ><span class="sideBanner_desc__c9Bba" data-media="full"
-                      >여행 출발 전 언제든 사용 가능</span
-                    ></a
-                  >
-                </li>
-                <li class="sideBanner_item__WP9RQ" data-type="travelclub">
-                  <a
-                    href="https://travel-event.naver.com/promotion/travelclub"
-                    class="sideBanner_anchor__cE2iK"
-                    target="_blank"
-                    rel="noreferrer"
-                    ><b class="sideBanner_title__qmTlL"
-                      ><span data-media="narrow">멤버십 혜택</span
-                      ><span data-media="full">멤버십 혜택 챙기셨나요?</span></b
-                    ><span class="sideBanner_desc__c9Bba" data-media="full"
-                      >할인은 기본, 적립은 중복으로</span
-                    ></a
-                  >
-                </li></menu
-              >
+              <div class="Popular_pages__rHBDh flicking-pagination-bullets">
+                <span class="Popular_page__mnHGg flicking-pagination-bullet-active" aria-label="0"></span>
+              </div>
+              <button class="Popular_prev__yYHO0 Popular_hide__qhCVE" type="button" aria-label="이전"></button><button
+                class="Popular_next__aCFY8 Popular_hide__qhCVE" type="button" aria-label="다음"></button>
             </div>
           </div>
         </div>
-        <footer role="contentinfo" class="Footer_footer__NGm3A">
-          <div class="Footer_btns__mfPDb">
-            <button
-              type="button"
-              class="btn as_share naver-splugin spi_sns_share"
-              data-evkey="hotel"
-              data-service-name="네이버 호텔"
-              data-title="검색부터 예약까지, 네이버 호텔에서 편리하게!"
-              data-style="type_a"
-              data-option='{"layerPosition":"outside-top","align":"right"}'
-              splugin-id="8482588535"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="15"
-                class="svg"
-              >
-                <g fill="#5398F5">
-                  <path
-                    d="M11.8 2.826V.539c0-.389.5-.588.801-.32l4.605 4.094a.42.42 0 0 1 0 .639l-4.605 4.094c-.301.268-.801.069-.801-.32V6.439H9.762c-1.555 0-2.745.432-3.633 1.15-.308.25-.557.516-.75.78-.113.155-.18.27-.206.325-.218.456-.954.279-.906-.218.305-3.212 2.503-5.65 5.596-5.65H11.8zm4.391 1.806-3.443-3.06v1.696c0 .244-.212.442-.474.442h-2.41c-1.988 0-3.55 1.253-4.263 3.138 1.046-.81 2.425-1.293 4.161-1.293h2.512c.262 0 .474.198.474.442v1.696l3.443-3.06z"
-                  ></path>
-                  <path
-                    d="M12.996 13.996v-3.408h1v4.408H0V3.003h4.912v1H1v9.993z"
-                  ></path>
-                </g></svg>공유하기
-            </button>
-            <button type="button" class="btn as_top">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="11"
-                height="18"
-                class="svg"
-              >
-                <g fill="none" fill-rule="evenodd">
-                  <path d="M0 18V0h11v18z"></path>
-                  <path
-                    stroke="#5398F5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m.5 6.5 5-5 5 5m-5 8v-12"
-                  ></path>
-                </g></svg>맨위로
-            </button>
+        <div class="OtaArea_OtaArea__5dgFv"></div>
+        <div class="sideBanner_SideBanner__g7jsK" data-position="main">
+          <div class="sideBanner_inner__LCNg5">
+            <h5 class="sideBanner_header__AY2ab">
+              <span data-media="narrow">여행 전 체크</span><span data-media="full">여행 전에 필수 체크!</span>
+            </h5>
+            <menu class="sideBanner_list__Q7JG4">
+              <li class="sideBanner_item__WP9RQ" data-type="biztrip">
+                <a href="https://biztrip.naver.com" class="sideBanner_anchor__cE2iK" target="_blank" rel="noreferrer"><b
+                    class="sideBanner_title__qmTlL"><span data-media="narrow">출장 항공권</span><span data-media="full">해외출장
+                      가시나요?</span></b><span class="sideBanner_desc__c9Bba" data-media="full">출장 선호 호텔을 알려드려요</span></a>
+              </li>
+              <li class="sideBanner_item__WP9RQ" data-type="secretcoupon">
+                <a href="https://travel-event.naver.com/promotion/secretcoupon" class="sideBanner_anchor__cE2iK"
+                  target="_blank" rel="noreferrer"><b class="sideBanner_title__qmTlL"><span data-media="narrow">호텔
+                      할인쿠폰</span><span data-media="full">항공 구매시 호텔 15% 할인</span></b><span class="sideBanner_desc__c9Bba"
+                    data-media="full">여행 출발 전 언제든 사용 가능</span></a>
+              </li>
+              <li class="sideBanner_item__WP9RQ" data-type="travelclub">
+                <a href="https://travel-event.naver.com/promotion/travelclub" class="sideBanner_anchor__cE2iK"
+                  target="_blank" rel="noreferrer"><b class="sideBanner_title__qmTlL"><span data-media="narrow">멤버십
+                      혜택</span><span data-media="full">멤버십 혜택 챙기셨나요?</span></b><span class="sideBanner_desc__c9Bba"
+                    data-media="full">할인은 기본, 적립은 중복으로</span></a>
+              </li>
+            </menu>
           </div>
-          <div class="Footer_service__r5u53">
-            <a
-              class="Footer_anchor__soMtx"
-              href="https://nid.naver.com/nidlogin.login?svctype=262144&amp;url=https%3A%2F%2Fhotels.naver.com%2F"
-              >로그인</a
-            ><a
-              class="Footer_anchor__soMtx"
-              href="https://m.naver.com/services.html"
-              >전체서비스</a
-            >
-          </div>
-          <p class="Footer_limitation__To1W3">
-            네이버 호텔은 제휴사에서 제공하는 호텔정보 및 가격정보를 비교,
-          </p>
-          <details class="Footer_business__OvbUE">
-            <summary class="Footer_summary__J-7Ys">
-              네이버㈜ 사업자 정보<svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="8"
-                height="6"
-                class="svg"
-              >
-                <path
-                  fill="#A7AAAC"
-                  d="m.72.789-.72.76 3.985 4.208L8 1.517l-.72-.76-3.295 3.48z"
-                ></path>
-              </svg>
-            </summary>
-          </details>
-          <nav class="Footer_nav__Cm24I">
-            <div class="Footer_row__FwRK8">
-              <a
-                class="Footer_anchor__soMtx"
-                href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2208162517"
-                target="_blank"
-                >사업자정보 공개</a
-              ><a
-                class="Footer_anchor__soMtx"
-                href="https://policy.naver.com/policy/service.html"
-                target="_blank"
-                >이용약관</a
-              ><a
-                class="Footer_anchor__soMtx"
-                href="https://policy.naver.com/policy/privacy.html"
-                target="_blank"
-                ><strong>개인정보처리방침</strong></a
-              ><a
-                class="Footer_anchor__soMtx"
-                href="https://help.naver.com/alias/contents2/navertravel/travel.naver"
-                target="_blank"
-                >고객센터</a
-              >
-            </div>
-          </nav>
-          <b class="Footer_company__uiiQU">ⓒ NAVER corp.</b>
-        </footer>
+        </div>
       </div>
+      <footer role="contentinfo" class="Footer_footer__NGm3A">
+        <div class="Footer_btns__mfPDb">
+          <button type="button" class="btn as_share naver-splugin spi_sns_share" data-evkey="hotel"
+            data-service-name="네이버 호텔" data-title="검색부터 예약까지, 네이버 호텔에서 편리하게!" data-style="type_a"
+            data-option='{"layerPosition":"outside-top","align":"right"}' splugin-id="8482588535">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" class="svg">
+              <g fill="#5398F5">
+                <path
+                  d="M11.8 2.826V.539c0-.389.5-.588.801-.32l4.605 4.094a.42.42 0 0 1 0 .639l-4.605 4.094c-.301.268-.801.069-.801-.32V6.439H9.762c-1.555 0-2.745.432-3.633 1.15-.308.25-.557.516-.75.78-.113.155-.18.27-.206.325-.218.456-.954.279-.906-.218.305-3.212 2.503-5.65 5.596-5.65H11.8zm4.391 1.806-3.443-3.06v1.696c0 .244-.212.442-.474.442h-2.41c-1.988 0-3.55 1.253-4.263 3.138 1.046-.81 2.425-1.293 4.161-1.293h2.512c.262 0 .474.198.474.442v1.696l3.443-3.06z">
+                </path>
+                <path d="M12.996 13.996v-3.408h1v4.408H0V3.003h4.912v1H1v9.993z"></path>
+              </g>
+            </svg>공유하기
+          </button>
+          <button type="button" class="btn as_top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="18" class="svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M0 18V0h11v18z"></path>
+                <path stroke="#5398F5" stroke-linecap="round" stroke-linejoin="round" d="m.5 6.5 5-5 5 5m-5 8v-12">
+                </path>
+              </g>
+            </svg>맨위로
+          </button>
+        </div>
+        <div class="Footer_service__r5u53">
+          <a class="Footer_anchor__soMtx"
+            href="https://nid.naver.com/nidlogin.login?svctype=262144&amp;url=https%3A%2F%2Fhotels.naver.com%2F">로그인</a><a
+            class="Footer_anchor__soMtx" href="https://m.naver.com/services.html">전체서비스</a>
+        </div>
+        <p class="Footer_limitation__To1W3">
+          네이버 호텔은 제휴사에서 제공하는 호텔정보 및 가격정보를 비교,
+        </p>
+        <details class="Footer_business__OvbUE">
+          <summary class="Footer_summary__J-7Ys">
+            네이버㈜ 사업자 정보<svg xmlns="http://www.w3.org/2000/svg" width="8" height="6" class="svg">
+              <path fill="#A7AAAC" d="m.72.789-.72.76 3.985 4.208L8 1.517l-.72-.76-3.295 3.48z"></path>
+            </svg>
+          </summary>
+        </details>
+        <nav class="Footer_nav__Cm24I">
+          <div class="Footer_row__FwRK8">
+            <a class="Footer_anchor__soMtx" href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2208162517"
+              target="_blank">사업자정보 공개</a><a class="Footer_anchor__soMtx"
+              href="https://policy.naver.com/policy/service.html" target="_blank">이용약관</a><a
+              class="Footer_anchor__soMtx" href="https://policy.naver.com/policy/privacy.html"
+              target="_blank"><strong>개인정보처리방침</strong></a><a class="Footer_anchor__soMtx"
+              href="https://help.naver.com/alias/contents2/navertravel/travel.naver" target="_blank">고객센터</a>
+          </div>
+        </nav>
+        <b class="Footer_company__uiiQU">ⓒ NAVER corp.</b>
+      </footer>
     </div>
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/hotelService.js"></script>
-    <script th:inline="javascript">
+  </div>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/hotelService.js"></script>
+  <script src="/js/sessionManager.js"></script>
 
-      $(".Popular_tab__A8XLT").on("click", function (e){
-        $(this).attr("aria-selected", "true");
-        $(".Popular_tab__A8XLT").not(this).attr("aria-selected", "false");
-          let local = $(this).text();
-          hotelService.showTop10Hotels(local,showTop10List);
-      })
+  <script th:inline="javascript">
+    window.onload = function () {
+      initializeToken();
+    };
 
-      function showTop10List(result){
-          let hotelsHtml = '';
-          $.each(result, function (index, hotel){
-            hotelsHtml += `
+    $(".Popular_tab__A8XLT").on("click", function (e) {
+      $(this).attr("aria-selected", "true");
+      $(".Popular_tab__A8XLT").not(this).attr("aria-selected", "false");
+      let local = $(this).text();
+      hotelService.showTop10Hotels(local, showTop10List);
+    })
+
+    function showTop10List(result) {
+      let hotelsHtml = '';
+      $.each(result, function (index, hotel) {
+        hotelsHtml += `
               <div class="item">
                   <div class="Popular_PopularHotel__eJcbs">
                       <figure class="Popular_thumb__m425I">
@@ -482,9 +331,10 @@
                       <a class="Popular_anchor__att5h" rel="noreferrer" href="/hotels/?adultCnt=2&childAges=" target="_blank"></a>
                   </div>
               </div>`;
-          });
-          $("#hotelContainer").html(hotelsHtml);
-      }
-    </script>
-  </body>
+      });
+      $("#hotelContainer").html(hotelsHtml);
+    }
+  </script>
+</body>
+
 </html>

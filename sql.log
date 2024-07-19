@@ -1,6 +1,19 @@
 # 가격 정보 필드 정규화
 (기존 : room_info에 가격필드 포함)
 
+-- DB 수정할 경우 필수 작성
+-- 작성한 날짜도 적어주세요
+* 7월4일 호텔 Master 테이블 성급 필드 추가
+ALTER TABLE HOTEL_MST
+ADD COLUMN STAR_RATING INTEGER COMMENT '성급';
+
+*7월 4일 Coupon_info에서 User_ID(FK) 삭제
+ALTER TABLE COUPON_INFO
+DROP FOREIGN KEY coupon_info_ibfk_1;
+
+ALTER TABLE COUPON_INFO
+DROP COLUMN USER_ID;
+
 24.07.10 변경사항
 # 상시가 테이블
 CREATE TABLE ROOM_PRICING_a (

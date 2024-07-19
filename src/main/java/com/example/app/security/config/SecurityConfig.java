@@ -1,6 +1,5 @@
 package com.example.app.security.config;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -35,14 +34,30 @@ public class SecurityConfig {
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
-            .authorizeHttpRequests(authorize -> authorize
-                .antMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-resources/**", "/swagger-ui.html").permitAll()
-                .antMatchers("/guest/token", "/admin/token", "/test/**","/main/**","/**/**").permitAll()
-                .anyRequest().authenticated()
-            )
-            .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-            .authenticationProvider(authenticationProvider())
-            .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+                .authorizeHttpRequests(authorize -> authorize
+                        .antMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-resources/**",
+                                "/swagger-ui.html")
+                        .permitAll()
+                        .antMatchers("/guest/token", "/admin/token", "/**/**").permitAll()
+                        .anyRequest().authenticated())
+                .sessionManagement(manager -> manager.sessionCreationPolicy(
+                        SessionCreationPolicy.STATELESS))
+                .authenticationProvider(authenticationProvider()).addFilterBefore(
+                        jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+
+        // http.csrf(AbstractHttpConfigurer::disable)
+        // .authorizeHttpRequests(request -> request.requestMatchers("/v3/api-docs/**",
+        // "/swagger-ui/**",
+        // "/swagger-resources/**").permitAll())
+        // .authorizeHttpRequests(
+        // request -> request
+        // .requestMatchers("/guest/token", "/admin/token", "/user/token")
+        // .permitAll().anyRequest().authenticated())
+        // .sessionManagement(manager -> manager.sessionCreationPolicy(
+        // SessionCreationPolicy.STATELESS))
+        // .authenticationProvider(authenticationProvider()).addFilterBefore(
+        // jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+
         return http.build();
     }
 

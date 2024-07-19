@@ -12,31 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/main/*")
 public class MainController {
     private final HotelService hotelService;
+
     @GetMapping("/home")
-    public void home(Model model){
+    public void home(Model model) {
         model.addAttribute("top10Hotels", hotelService.showTop10Hotels("서울"));
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

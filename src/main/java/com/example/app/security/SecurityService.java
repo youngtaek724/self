@@ -14,12 +14,11 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class SecurityService implements UserDetailsService {
-  
+
   @Autowired
   private AdminMapper adminMapper;
-  
-  // admin
 
+  // admin
 
   // user
   @Override
@@ -42,6 +41,18 @@ public class SecurityService implements UserDetailsService {
       } catch (NumberFormatException e) {
         throw new UsernameNotFoundException("Invalid ID format: " + id, e);
       }
+    } else if (findRole.equals("USER")) {
+      try {
+
+        // userDetails = adminMapper.getAdminLoginData(findId);
+        if (userDetails == null) {
+          throw new UsernameNotFoundException(id);
+        }
+        userDetails.setRoleType(RoleType.USER);
+      } catch (NumberFormatException e) {
+        throw new UsernameNotFoundException("Invalid ID format: " + id, e);
+      }
+
     } else {
       throw new UsernameNotFoundException("Role not found for ID: " + id);
     }

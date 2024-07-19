@@ -14,10 +14,13 @@ public enum ExceptionCode {
   DUPLICATED("error.duplicated", "중복된 데이터가 존재합니다."),
   FORBIDDEN("error.forbidden", "권한이 없습니다."),
   UNAUTHORIZED("error.unauthorized", "인증이 필요합니다."),
-  LOGIN_FAIL("error.login.fail", "아이디 또는 비밀번호가 맞지 않습니다."),
-  ERROR_NOT_MATCH_PASSWORD("error.not.match.password", "비밀번호가 일치하지 않습니다.")
-  
+  LOGIN_FAIL("error.login.fail", "아이디 또는 비밀번호가 일치하지 않습니다."),
+  ERROR_NOT_MATCH_PASSWORD("error.not.match.password", "비밀번호가 일치하지 않습니다."),
+  DUPLICATED_EMAIL("error.duplicated.email", "이메일 중복체크를 해주세요"),
+  DUPLICATED_ID("error.duplicated.id", "아이디 중복체크를 해주세요"),
+  USER_NOT_FOUND("error.user.not.found", "계정을 사용할 수 없습니다."),
   ;
+
   private final String code;
   private final String message;
 }

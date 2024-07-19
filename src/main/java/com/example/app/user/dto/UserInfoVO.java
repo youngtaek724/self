@@ -31,7 +31,7 @@ public class UserInfoVO {
 
     @Builder
     public UserInfoVO(int id, String userId, String password, String name, String phone,
-                    String defaultAddr, String detailAddr, String zipCode, String email,
+           String defaultAddr, String detailAddr, String zipCode, String email,
                     UserType type, Timestamp rgstDate, Timestamp updateDate, UserStatus status, int rankId) {
         this.id = id;
         this.userId = userId;
