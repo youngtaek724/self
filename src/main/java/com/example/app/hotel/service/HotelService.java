@@ -1,11 +1,15 @@
 package com.example.app.hotel.service;
 
-import com.example.app.hotel.mapper.HotelMapper;
-import com.example.app.hotel.vo.Top10HotelsVO;
-import lombok.RequiredArgsConstructor;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.example.app.domain.vo.HotelMstVO;
+import com.example.app.hotel.mapper.HotelMapper;
+import com.example.app.hotel.vo.Top10HotelsVO;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
 @RequiredArgsConstructor
@@ -23,5 +27,15 @@ public class HotelService {
 
     // return list;
     return null;
+  }
+
+  /*********************************************************
+   * 호텔리스트 보기(지도) - TODO: 검색조건 추가하여 지역별 표시
+   * 
+   * @return
+   */
+  public List<HotelMstVO> showHotelList() {
+    List<HotelMstVO> list = hotelMapper.showHotelList();
+    return list;
   }
 }

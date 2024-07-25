@@ -3,7 +3,13 @@ package com.example.app.auth.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.example.app.auth.dto.AuthSignVO;
 import com.example.app.auth.service.AuthService;
@@ -27,7 +33,7 @@ public class AuthRestController {
    * @throws SeskException
    */
   @PostMapping("/join")
-  // @PreAuthorize("@securityChecker.checkLevel('GUEST')")
+  @PreAuthorize("@securityChecker.checkLevel('GUEST')")
   @Operation(summary = "회원가입", description = "회원가입")
   public ResponseEntity<Boolean> signUp(@RequestBody AuthSignVO body) throws SeskException {
     boolean result = authService.signUp(body);
@@ -42,7 +48,7 @@ public class AuthRestController {
    * @throws SeskException
    */
   @GetMapping("/check/email")
-  // @PreAuthorize("@securityChecker.checkLevel('GUEST')")
+  @PreAuthorize("@securityChecker.checkLevel('GUEST')")
   @Operation(summary = "이메일 중복체크", description = "이메일 중복체크")
   public ResponseEntity<Boolean> checkEmail(@RequestParam("email") String email) throws SeskException {
     boolean check = authService.checkEmail(email);
@@ -56,11 +62,10 @@ public class AuthRestController {
    * @throws SeskException
    */
   @GetMapping("/check/id")
-  // @PreAuthorize("@securityChecker.checkLevel('GUEST')")
+  @PreAuthorize("@securityChecker.checkLevel('GUEST')")
   @Operation(summary = "아이디 중복체크", description = "아이디 중복체크")
   public ResponseEntity<Boolean> isDuplicatedId(@RequestParam("userId") String userId) throws SeskException {
     boolean check = authService.checkId(userId);
     return new ResponseEntity<>(check, HttpStatus.OK);
   }
-
 }

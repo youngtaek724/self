@@ -1,191 +1,192 @@
-<html class="no-js" lang="ko">
+<html lang="ko">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>MY페이지 : 네이버 항공권/호텔</title>
-    <meta name="description" content="">
-    <link rel="stylesheet" href="/css/mypage.css">
+    <title>마이페이지</title>
+    <link rel="stylesheet" href="/css/myPageInfo.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/1018dd7e055bc4cc.css">
 </head>
 
-<body aria-haspopup="false">
-    <div id="app">
-        <div class="wrap">
-            <!--*****header*****!-->
-            <header th:replace="/main/header.html :: div"></header>
-            <!--******body 시작*****!-->
-            <div class="my_pc">
-                <div class="info_section">
-                    <div class="profile_area">
-                        <div class="img_profile"><img
-                                src="https://phinf.pstatic.net/contact/20210919_171/1632050475539NE3fj_JPEG/C5B2FB83-444F-4EE3-A585-88EB6954E074.jpeg"
-                                alt="프로필 이미지">
-                            <div style="display: none;"></div>
+<body id="mainBody" class="bgother">
+    <header th:replace="/main/header.html :: div"></header>
+    <div id="wrap" class="wrap naverid">
+        <header class="header">
+            <div class="header_subindex" style="margin-top: 33px;">
+                <!--프로필-사진,아이디,메일주소-->
+                <div class="profile_area">
+                    <div class="profile_inner">
+                        <a href="#" onclick="changeImage()" class="photo" style="margin: 20px;">
+                            <img src="/images/noImg.png" width="84" height="84" alt="프로필 이미지">
+                            <span class="photo_edit"></span>
+                        </a>
+                        <div class="profile">
+                            <p class="useid" style="margin-bottom: 5px">최신형</p>
+                            <p class="usemail">tlsgudrhfem@naver.com</p>
                         </div>
-                        <div class="txt_profile"><strong class="txt_name">최신형</strong><span
-                                class="txt_id">tl***********</span></div>
+
                     </div>
-                    <div class="event_list">
-                        <div class="Coupons">
-                            <h5 class="title"><button class="button" aria-expanded="false"><span class="name">사용 가능한 쿠폰
-                                        0장</span></button></h5>
-                        </div>
-                    </div>
-                    <nav class="my_nav">
-                        <ul class="nav_tabs">
-                            <li class="nav_tab as_flight">
-                                <button class="tab myinfo" data-target="info">내 정보</button>
-                            </li>
-                            <li class="nav_tab as_flight">
-                                <button class="tab reserve">예약 내역</button>
-                            </li>
-                            <li class="nav_tab as_dibs">
-                                <button class="tab wish">찜한 여행지</button>
-                            </li>
-                            <li class="nav_tab as_dibs">
-                                <button class="tab review">리뷰</button>
-                            </li>
-                        </ul>
-                    </nav>
                 </div>
-                <div class="content as_hotel">
-                    <div class="content">
-                        <div>
-                            <div class="filter_area">
-                                <div class="txt_filter"><strong>전체 1개</strong>&nbsp;찜한 목록입니다.</div>
-                            </div>
-                        </div>
-                        <div style="display: none;"></div>
-                        <div style="display: none;"></div>
-                        <div style="display: none;"></div>
-                        <div class="list_area">
-                            <ul class="list_selected">
-                                <li class="type_hotel">
-                                    <div class="info_title type_korea"><a class="link_area " href="javascript:;">
-                                            <div class="img_travel is_none"><img src="" alt="여행지 이미지"></div>
-                                            <div class="travel_info">
-                                                <div class="trip"><span class="txt_hotel">서귀포시</span></div><span
-                                                    class="trip_period">2024.06.26.수 - 2024.06.27.목</span><span
-                                                    class="trip_info">1박, 성인 2명</span><span class="trip_room">객실
-                                                    1개</span>
-                                            </div>
-                                        </a>
-                                        <div class="btn_area">
-                                            <div style="display: none;"></div><a class="btn_delete"
-                                                href="javascript:;"><span class="blind">삭제</span></a>
-                                        </div><a href="javascript:;" class="btn_expand is_fold"><span
-                                                class="blind">펼치기</span></a>
-                                    </div>
-                                    <div class="info_detail is_active">
-                                        <div>
-                                            <div class="hotel_detail" style="min-height: 0; margin: 0;">
-                                                <div class="hotel_checkout_area" style="min-height: 0;">
-                                                    <div class="hotel_checkout">
-                                                        <div class="hotel_checkout_item" style="width: auto;"><span
-                                                                class="hotel_day_price">
-                                                                1박 (세금 미포함) </span><span class="hotel_price">1박
-                                                                <strong>230,578원~</strong></span><a class="btn_update"
-                                                                href="javascript:;">업데이트</a>
-                                                            <div class="btn_area"><a class="btn_share naver-splugin"
-                                                                    href="javascript:;"
-                                                                    data-url="https://hotels.naver.com/hotels/N5279751?adultCnt=2&amp;childAges=&amp;checkIn=2024-06-26&amp;checkOut=2024-06-27&amp;includeTax=false"
-                                                                    data-style="type_a" data-evkey="hotel"
-                                                                    data-service-name="호텔" data-title="네이버 호텔"
-                                                                    splugin-id="3520718251"><span
-                                                                        class="blind">공유하기</span></a><a
-                                                                    class="btn_delete" href="javascript:;"><span
-                                                                        class="blind">삭제</span></a></div>
-                                                            <div class="loading false"><img
-                                                                    src="/voyage/assets/pc/mypage/images/ico_loading_32x8.gif"
-                                                                    alt="로딩중"></div>
-                                                        </div>
-                                                    </div>
-                                                </div><a class="link_detail_area" href="javascript:;">
-                                                    <div class="hotel_info">
-                                                        <div class="img_hotel"><img
-                                                                src="https://search.pstatic.net/common/?src=https://content.r9cdn.net/himg/18/e5/42/revato-3599270-13288038-672690.jpg&amp;type=f80_80"
-                                                                width="75" height="75" alt="호텔 이미지">
-                                                            <div style="display: none;"></div>
-                                                        </div>
-                                                        <div class="info_wrap"><span class="hotel_name">그랜드 조선
-                                                                제주</span><span class="hotel_name_en">Grand Josun
-                                                                Jeju</span><span class="sub_info"><span
-                                                                    class="grade">5성급</span>
-                                                                <div style="display: none;"></div>
-                                                                <div style="display: none;"></div>
-                                                            </span>
-                                                            <div class="rating_review_area"><span class="rating"><span
-                                                                        class="sp_hotel star"></span><span
-                                                                        class="star_txt">9.3</span><span class="txt">매우
-                                                                        좋음</span></span>
-                                                                <div style="display: none;"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
+                <!-- end 프로필 -->
+                <div id="headerLeft" class="header_left" aria-hidden="false">
+                    <ul class="left_menu" role="menu">
+                        <li>
+                            <a href="/user/mypage/info" class="left_item" role="menuitem" aria-current="true">
+                                <div class="menu_text">내 프로필</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/user/mypage/reserve" class="left_item" role="menuitem" aria-current="">
+                                <div class="menu_text ">예약 내역</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/user/mypage/wish" class="left_item" role="menuitem" aria-current="">
+                                <div class="menu_text on">찜한 여행지</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/user/mypage/review" class="left_item" role="menuitem" aria-current="">
+                                <div class="menu_text">리뷰 내역</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="left_link">
+                        <li>
+                            <a href="https://nca.naver.com/chat/account/view" class="left_item"
+                                onclick="nclk(this,'fot.smartbot','','',event)">
+                                <div class="link_text">문의하기</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- footerLeft -->
+                    <footer class="left_footer" role="contentinfo">
+                        <ul class="left_guide">
+                            <li><a href="javascript:;" onclick="logout()" class="left_item">
+                                    <div class="footer_text">로그아웃</div>
+                                </a></li>
+                            <li><a href="javascript:;" onclick="goHelpPage()" class="left_item">
+                                    <div class="footer_text">고객센터</div>
+                                </a></li>
+
+                        </ul>
+                        <div class="footer_logo"><span class="logo"><span class="blind">SESK</span></span></div>
+                    </footer>
+                    <!-- //footerLeft -->
+                </div>
+                <!--//-->
+            </div>
+        </header>
+        <div id="container" class="container">
+            <!-- container -->
+            <div id="content" class="content">
+                <div class="subindex_wrap" role="main">
+                    <div id="headerTop" class="path_area" aria-hidden="false">
+                    </div>
+                    <div class="info_title" style="margin-bottom: 20px;">
+                        <h2 class="title_text">전체 2개 찜한 목록입니다.</h2>
+                    </div>
+                    <div class="subindex_item">
+                        <div class="subindex_greenbox" style="box-shadow: 1px 1px 10px 0 rgba(72, 75, 108, 0.08);
+    border: solid 1px #e3e9ed;">
+                            <div class="myprofile">
+                                <ul class="myinfo_area">
+                                    <li>
+                                        <div class="myphoto">
+                                            <img src="/images/noImg.png" width="56" height="56" alt="내 프로필 이미지">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="myaccount">
+                                            <div class="myname">
+                                                <div class="name_text">테스트 서울 호텔</div>
+                                                <span id="phoneNoRegSpan" class="item_text">2024.07.19 (금) ~ 2024.07.20
+                                                    (토) | 1박, 성인 2명 | 객실 1개</span>
+
                                             </div>
                                         </div>
-                                        <div style="display: none;"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="subindex_row">
+                                <li>
+                                    <div class="row_item mail ">
+                                        <span id="myLetterEmailRegSpan" class="item_text">평점 9.3 매우 좋음</span>
                                     </div>
                                 </li>
-
+                                <li>
+                                    <div id="phoneNoRegDiv" class="row_item phone ">
+                                        <span id="phoneNoRegSpan" class="item_text">1박(세금 미포함) : 230,578원 ~ </span>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
-                        <div style="display: none;"></div>
                     </div>
+
+
+                    <!--//-->
+                    <!--프로모션 정보수신 동의-->
+                    <div class="subindex_item">
+
+                        <!-- <div class="subindex_box">
+                            <ul class="subindex_row">
+                                <li>
+                                    <div class="row_item phone">
+                                        <span class="item_text">가입일 : 2024-07-18</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row_item mail">
+                                        <span class="item_text">랭크 : BRONZE</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> -->
+                        <div class="subindex_item">
+                            <div class="subindex_greenbox" style="box-shadow: 1px 1px 10px 0 rgba(72, 75, 108, 0.08);
+    border: solid 1px #e3e9ed;">
+                                <div class="myprofile">
+                                    <ul class="myinfo_area">
+                                        <li>
+                                            <div class="myphoto">
+                                                <img src="/images/noImg.png" width="56" height="56" alt="내 프로필 이미지">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="myaccount">
+                                                <div class="myname">
+                                                    <div class="name_text">테스트 서울 호텔</div>
+                                                    <span id="phoneNoRegSpan" class="item_text">2024.07.19 (금) ~
+                                                        2024.07.20
+                                                        (토) | 1박, 성인 2명 | 객실 1개</span>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="subindex_row">
+                                    <li>
+                                        <div class="row_item mail ">
+                                            <span id="myLetterEmailRegSpan" class="item_text">평점 9.3 매우 좋음</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div id="phoneNoRegDiv" class="row_item phone ">
+                                            <span id="phoneNoRegSpan" class="item_text">1박(세금 미포함) : 230,578원 ~ </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+            <!-- //container -->
         </div>
-        </ul>
-    </div>
-    <div style="display: none;"></div>
-    </div>
-    </div>
-    <div class="Toast" aria-hidden="true"></div>
-    </div>
-    <div class="footer">
-        <div class="footer_box">
-            <ul class="info_site_list">
-                <li class="sp_flight_pc info_site_item"><a class="lin_info" target="_blank"
-                        href="http://www.naver.com/rules/service.html">이용약관</a></li>
-                <li class="sp_flight_pc info_site_item"><a class="lin_info" target="_blank"
-                        href="http://www.naver.com/rules/privacy.html"><strong>개인정보처리방침</strong></a></li>
-                <li class="sp_flight_pc info_site_item"><a class="lin_info" target="_blank"
-                        href="http://www.naver.com/rules/disclaimer.html">책임의 한계와 법적고지</a></li>
-                <li class="sp_flight_pc info_site_item"><a class="lin_info" target="_blank"
-                        href="https://help.naver.com/alias/contents2/navertravel/travel.naver">고객센터</a></li>
-            </ul>
-            <address class="address_box">사업자등록번호 : 220-81-62517&nbsp;<span class="co_bar">|</span>&nbsp;통신판매업신고번호 :
-                제2006-경기성남-692호&nbsp;<span class="co_bar">|</span>&nbsp;대표이사 : 최수연&nbsp;<span class="co_bar">|</span><a
-                    class="lin_info" target="_blank"
-                    href="http://www.ftc.go.kr/info/bizinfo/communicationList.jsp">&nbsp;사업자등록정보확인</a>
-                <address>주소 :
-                    경기도 성남시 분당구 정자일로 95, NAVER 1784, 13561&nbsp;<span class="co_bar">|</span>&nbsp;대표전화 : 1588-3820
-                </address>
-                <p class="copyright_box"><a class="sp_flight_pc lin_info logo" target="_blank"
-                        href="http://www.naver.com/">NAVER</a>Copyright ©<strong><a class="lin_info lin_info_corp"
-                            target="_blank" href="http://www.navercorp.com/">NAVER Corp.</a></strong> All Rights
-                    Reserved.</p>
-            </address>
-        </div>
-    </div>
     </div>
 </body>
 <script src="/js/jquery.min.js"></script>
-<script th:inline="javascript">
-    $(".myinfo").on("click", function (){
-        location.href = "/mypage/mypageInfo";
-    })
-    $(".reserve").on("click", function (){
-        location.href = "/mypage/mypageReserve";
-    })
-    $(".review").on("click", function (){
-        location.href = "/mypage/mypageReview";
-    })
-    $(".wish").on("click", function (){
-        location.href = "/mypage/mypageWish";
-    })
-</script>
+
 </html>

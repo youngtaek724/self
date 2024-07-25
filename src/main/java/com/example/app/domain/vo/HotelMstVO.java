@@ -1,4 +1,5 @@
 package com.example.app.domain.vo;
+
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,20 +10,21 @@ import org.springframework.stereotype.Component;
 @NoArgsConstructor
 public class HotelMstVO {
 
-    private int id;                   // 기본 키
-    private String name;              // 호텔명
-    private String tel;               // 전화번호
-    private String defaultAddr;       // 기본 주소
-    private String detailAddr;        // 상세 주소
-    private String city;              // 지역
-    private String state;             // 상태: 1, 2, 3
-    private String zipCode;           // 우편번호
-    private String country;           // 나라
-    private String category;          // 카테고리
+    private int id; // 기본 키
+    private String name; // 호텔명
+    private String tel; // 전화번호
+    private String defaultAddr; // 기본 주소
+    private String detailAddr; // 상세 주소
+    private String city; // 지역
+    private String state; // 상태: 1, 2, 3
+    private String zipCode; // 우편번호
+    private String country; // 나라
+    private String category; // 카테고리
+    private String starRating; // 별점
 
     @Builder
     public HotelMstVO(int id, String name, String tel, String defaultAddr, String detailAddr,
-                      String city, String state, String zipCode, String country, String category) {
+            String city, String state, String zipCode, String country, String category, String starRating) {
         this.id = id;
         this.name = name;
         this.tel = tel;
@@ -33,5 +35,6 @@ public class HotelMstVO {
         this.zipCode = zipCode;
         this.country = country;
         this.category = category;
+        this.starRating = starRating;
     }
 }

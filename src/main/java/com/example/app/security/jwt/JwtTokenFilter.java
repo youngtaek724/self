@@ -20,6 +20,9 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.example.app.security.dto.TokenData;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Component
 public class JwtTokenFilter extends OncePerRequestFilter {
 
@@ -32,13 +35,14 @@ public class JwtTokenFilter extends OncePerRequestFilter {
   @Override
   protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
       FilterChain filterChain) throws ServletException, IOException {
+
     final String authHeader = request.getHeader("Authorization");
 
-    if (!StringUtils.hasText(authHeader) || !StringUtils.startsWithIgnoreCase(authHeader, "Barer ")) {
+    if (!StringUtils.hasText(authHeader) || !StringUtils.startsWithIgnoreCase(authHeader, "Bearer ")) {
       filterChain.doFilter(request, response);
+
       return;
     }
-
     final String jwt = authHeader.substring(7);
     final TokenData tokenData = jwtService.extractTokenData(jwt);
 

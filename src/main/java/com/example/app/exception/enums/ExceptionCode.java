@@ -19,6 +19,8 @@ public enum ExceptionCode {
   DUPLICATED_EMAIL("error.duplicated.email", "이메일 중복체크를 해주세요"),
   DUPLICATED_ID("error.duplicated.id", "아이디 중복체크를 해주세요"),
   USER_NOT_FOUND("error.user.not.found", "계정을 사용할 수 없습니다."),
+  ERROR_TRY_AGAIN("error.try.again", "다시 시도해주세요."),
+  ERROR_DUPLICATION_AUTH_NUMBER("error.duplication.auth.number", "중복된 인증번호입니다. "),
   ;
 
   private final String code;
