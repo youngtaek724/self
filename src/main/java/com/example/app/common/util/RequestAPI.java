@@ -83,7 +83,6 @@ public class RequestAPI {
      * @return
      */
     public static Map<String, Object> map2Map(Map<String, Object> map) {
-        log.info("*************map2map************");
         Map<String, Object> items = null;
         Map<String, Object> response = castToMap(map.get("response"));
         if (response != null) {
