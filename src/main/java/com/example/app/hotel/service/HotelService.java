@@ -1,5 +1,10 @@
 package com.example.app.hotel.service;
 
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.example.app.domain.vo.HotelMstVO;
 import com.example.app.admin.mapper.AdminMapper;
 import com.example.app.admin.vo.AdminLoginVO;
 import com.example.app.common.util.RequestAPI;
@@ -11,9 +16,11 @@ import com.example.app.controller.ApiController;
 import com.example.app.hotel.mapper.HotelMapper;
 import com.example.app.hotel.vo.HotelsInfoVO;
 import com.example.app.hotel.vo.Top10HotelsVO;
+
 import com.example.app.security.enums.RoleType;
 import com.example.app.security.jwt.JwtService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
@@ -68,4 +75,17 @@ public class HotelService {
         });
         String priceType = "a";
     }
+    // return list;
+    return null;
+  }
+
+  /*********************************************************
+   * 호텔리스트 보기(지도) - TODO: 검색조건 추가하여 지역별 표시
+   *
+   * @return
+   */
+  public List<HotelMstVO> showHotelList() {
+    List<HotelMstVO> list = hotelMapper.showHotelList();
+    return list;
+  }
 }

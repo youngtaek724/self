@@ -8,15 +8,21 @@ import org.springframework.stereotype.Service;
 import com.example.app.admin.mapper.AdminMapper;
 import com.example.app.security.dto.CustomUserDetails;
 import com.example.app.security.enums.RoleType;
+import com.example.app.user.mapper.UserMapper;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class SecurityService implements UserDetailsService {
 
   @Autowired
   private AdminMapper adminMapper;
+
+  @Autowired
+  private UserMapper userMapper;
 
   // admin
 
@@ -25,6 +31,9 @@ public class SecurityService implements UserDetailsService {
   public CustomUserDetails loadUserByUsername(String id) throws UsernameNotFoundException {
     String findRole = id.split(":")[0];
     String findId = id.split(":")[1];
+
+    log.info("findRole : " + findRole);
+    log.info("findId : " + findId);
 
     CustomUserDetails userDetails = null;
 
@@ -43,8 +52,7 @@ public class SecurityService implements UserDetailsService {
       }
     } else if (findRole.equals("USER")) {
       try {
-
-        // userDetails = adminMapper.getAdminLoginData(findId);
+        userDetails = userMapper.getUserLoginData(findId);
         if (userDetails == null) {
           throw new UsernameNotFoundException(id);
         }

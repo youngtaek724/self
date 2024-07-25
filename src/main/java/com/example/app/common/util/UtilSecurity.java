@@ -4,7 +4,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 
 import com.example.app.security.dto.CustomUserDetails;
 
-
+import lombok.extern.slf4j.Slf4j;
 
 public class UtilSecurity {
   public static CustomUserDetails getLoginSession() {

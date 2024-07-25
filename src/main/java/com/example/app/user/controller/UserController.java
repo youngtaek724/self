@@ -1,10 +1,11 @@
 package com.example.app.user.controller;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import lombok.RequiredArgsConstructor;
 
 @Controller
 @RequiredArgsConstructor
@@ -30,15 +31,14 @@ public class UserController {
      * 마이페이지 > 내 정보 (USER)
      */
     @GetMapping("/mypage/info")
-    public void mypageInfo(Model model) {
-
+    public void mypageInfo() {
     }
 
     /************************************************************************
      * 마이페이지 > 예약내역 (USER)
      */
     @GetMapping("/mypage/reserve")
-    public void mypageReserve(Model model) {
+    public void mypageReserve() {
 
     }
 

@@ -9,6 +9,7 @@ import com.example.app.security.enums.RoleType;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Component
 @RequiredArgsConstructor
 public class SecurityChecker {
@@ -21,6 +22,10 @@ public class SecurityChecker {
    */
   public boolean checkLevel(RoleType roleType) {
     CustomUserDetails loginSession = UtilSecurity.getLoginSession();
+
+    log.info("roleType : " + roleType);
+    log.info("loginSession.RoleType : " + loginSession);
+
     if (loginSession == null)
       return false;
 

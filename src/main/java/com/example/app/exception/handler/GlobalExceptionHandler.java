@@ -23,8 +23,6 @@ import com.example.app.exception.enums.ExceptionCode;
 
 import lombok.extern.slf4j.Slf4j;
 
-
-
 @Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler {
@@ -34,34 +32,33 @@ public class GlobalExceptionHandler {
    * 
    * @param ex
    */
- public ResponseEntity<ParameterExceptionResponse> parameterConflict(Exception ex) {
-        List<ParameterExceptionData> errors = new ArrayList<>();
+  public ResponseEntity<ParameterExceptionResponse> parameterConflict(Exception ex) {
+    List<ParameterExceptionData> errors = new ArrayList<>();
 
-        if (ex instanceof BindException) {
-            BindException bindException = (BindException) ex;
+    if (ex instanceof BindException) {
+      BindException bindException = (BindException) ex;
 
-            for (FieldError error : bindException.getFieldErrors()) {
-                ParameterExceptionData errorData = new ParameterExceptionData(error.getField(), error.getDefaultMessage());
-                errors.add(errorData);
-            }
-        } else if (ex instanceof MissingServletRequestParameterException) {
-            MissingServletRequestParameterException missingServletRequestParameterException = (MissingServletRequestParameterException) ex;
-            ParameterExceptionData errorData = new ParameterExceptionData(
-                    missingServletRequestParameterException.getParameterName(),
-                    missingServletRequestParameterException.getMessage());
-            errors.add(errorData);
-        } else if (ex instanceof MethodArgumentNotValidException) {
-            MethodArgumentNotValidException methodArgumentNotValidException = (MethodArgumentNotValidException) ex;
-            for (FieldError error : methodArgumentNotValidException.getBindingResult().getFieldErrors()) {
-                ParameterExceptionData errorData = new ParameterExceptionData(error.getField(),
-                        error.getDefaultMessage());
-                errors.add(errorData);
-            }
-        }
-
-        return new ResponseEntity<>(new ParameterExceptionResponse(errors), HttpStatus.BAD_REQUEST);
+      for (FieldError error : bindException.getFieldErrors()) {
+        ParameterExceptionData errorData = new ParameterExceptionData(error.getField(), error.getDefaultMessage());
+        errors.add(errorData);
+      }
+    } else if (ex instanceof MissingServletRequestParameterException) {
+      MissingServletRequestParameterException missingServletRequestParameterException = (MissingServletRequestParameterException) ex;
+      ParameterExceptionData errorData = new ParameterExceptionData(
+          missingServletRequestParameterException.getParameterName(),
+          missingServletRequestParameterException.getMessage());
+      errors.add(errorData);
+    } else if (ex instanceof MethodArgumentNotValidException) {
+      MethodArgumentNotValidException methodArgumentNotValidException = (MethodArgumentNotValidException) ex;
+      for (FieldError error : methodArgumentNotValidException.getBindingResult().getFieldErrors()) {
+        ParameterExceptionData errorData = new ParameterExceptionData(error.getField(),
+            error.getDefaultMessage());
+        errors.add(errorData);
+      }
     }
 
+    return new ResponseEntity<>(new ParameterExceptionResponse(errors), HttpStatus.BAD_REQUEST);
+  }
 
   /**************************************************************************************
    * CommonException Handler
@@ -87,19 +84,19 @@ public class GlobalExceptionHandler {
    * 
    * @param ex
    */
- @ExceptionHandler({ Exception.class })
-    public ResponseEntity<ExceptionResponse> globalHandleConflict(Exception ex) {
-        ExceptionCode responseCode = ExceptionCode.SYSTEM_ERROR;
-        HttpStatus httpStatus = HttpStatus.INTERNAL_SERVER_ERROR;
+  @ExceptionHandler({ Exception.class })
+  public ResponseEntity<ExceptionResponse> globalHandleConflict(Exception ex) {
+    ExceptionCode responseCode = ExceptionCode.SYSTEM_ERROR;
+    HttpStatus httpStatus = HttpStatus.INTERNAL_SERVER_ERROR;
 
-        if (ex instanceof EntityNotFoundException) {
-            responseCode = ExceptionCode.NOT_FOUND;
-            httpStatus = HttpStatus.NOT_FOUND;
-        }
-
-        log.error("System Exception {}", ex.getMessage(), ex);
-        ExceptionResponse exceptionResponse = new ExceptionResponse(responseCode, ex.getMessage());
-        return new ResponseEntity<>(exceptionResponse, httpStatus);
+    if (ex instanceof EntityNotFoundException) {
+      responseCode = ExceptionCode.NOT_FOUND;
+      httpStatus = HttpStatus.NOT_FOUND;
     }
+
+    log.error("System Exception {}", ex.getMessage(), ex);
+    ExceptionResponse exceptionResponse = new ExceptionResponse(responseCode, ex.getMessage());
+    return new ResponseEntity<>(exceptionResponse, httpStatus);
+  }
 
 }

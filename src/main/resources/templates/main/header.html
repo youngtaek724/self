@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="/css/40d91952aa12e1a0.css">
     <link rel="stylesheet" href="/css/MyWidget.scss">
 </head>
+
 <body>
     <header class="GNB_HotelGNB__Kex7S">
         <div class="Header_Header__-Uqw2" data-fullbleed="true" data-service="hotel">
@@ -18,28 +20,32 @@
                     <a class="Header_naver__XtvKG" href="/main/home">
                         <span class="Header_label__oA3vw">HOME</span>
                     </a>
-                    <a class="Header_home__nCI9O" href="https://flight.naver.com">
+                    <a class="Header_home__nCI9O" href="">
                         <span class="Header_label__oA3vw">여행상품00</span>
                     </a>
-                    <a class="Header_service__D0wGs"  href="https://travel.naver.com">
+                    <a class="Header_service__D0wGs" href="">
                         <span class="Header_label__oA3vw">여행정보00</span>
                     </a>
                     <div class="Header_sub__UgpHr">
-                        <a class="Header_login__64--a" href="/login/login">로그인
-                            <span class="Header_hide_mo__SSC0z">후 등급확인</span>
-                        </a>
-                        <a class="Header_mypage__jXor0" href="/mypage/mypageInfo">
+                        <a class="Header_mypage__jXor0" href="/user/mypage/info" id="mypageInfoBtn"
+                            style="display: none;">
                             <span class="Header_label__oA3vw">마이페이지</span>
                         </a>
                         <div class="Header_naver_gnb__aYORZ">
                             <div id="gnb" class="gnb_one">
-                                <strong class="blind">사용자 링크</strong>
                                 <ul class="gnb_lst" id="gnb_lst" style="display: block">
                                     <li class="gnb_login_li" id="gnb_login_layer" style="display: inline-block">
-                                        <a class="gnb_btn_login" href="/login/login" id="gnb_login_button">
+                                        <a class="gnb_btn_login" href="/user/login" id="gnb_login_button">
                                             <span class="gnb_bg"></span>
                                             <span class="gnb_bdr"></span>
-                                            <span class="gnb_txt">로그인</span></a>
+                                            <span class="gnb_txt">로그인</span>
+                                        </a>
+                                        <a class="gnb_btn_login" id="gnb_logout_button" style="display:none"
+                                            onclick="logout()">
+                                            <span class="gnb_bg"></span>
+                                            <span class="gnb_bdr"></span>
+                                            <span class="gnb_txt">로그아웃</span>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -58,7 +64,7 @@
                     <a class="Header_nav_item__x9mz1" href="/hotels/room">
                         <span class="Header_nav_item_text__zBZUG">객실</span>
                     </a>
-                    <a class="Header_nav_item__x9mz1" href="/mypage/mypageInfo">
+                    <a class="Header_nav_item__x9mz1" href="/user/mypage/info" hidden>
                         <span class="Header_nav_item_text__zBZUG">마이페이지</span>
                         <i class="Header_beta__WUbM-" title="beta"></i>
                     </a>
@@ -74,7 +80,9 @@
     </header>
 </body>
 <script src="/js/jquery.min.js"></script>
+<script src="/js/sessionManager.js"></script>
 <script th:inline="javascript">
 
 </script>
+
 </html>

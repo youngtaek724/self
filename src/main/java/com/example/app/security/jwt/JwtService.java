@@ -92,7 +92,6 @@ public class JwtService {
    * @return
    */
   public String generateToken(RoleType roleType, int id) {
-    log.info("roleType : " + roleType);
     return generateToken(roleType, String.valueOf(id));
   }
 

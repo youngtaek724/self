@@ -10,16 +10,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import java.time.LocalDate;
+import lombok.RequiredArgsConstructor;
+
 @Slf4j
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/hotels/*")
 public class HotelsController {
     private final RequestAPI requestAPI;
+
+
     @GetMapping("/hotels")
-    public void hotels(Model model){
+    public void hotels(Model model) {
 
     }
     @GetMapping("/hotels/{hotelId}")
@@ -33,36 +36,14 @@ public class HotelsController {
             String month = checkIn.getMonthValue()+"";
 
     }
+    // 호텔리스트 보기(지도)
     @GetMapping("/place")
-    public void place(Model model){
+    public void place(Model model) {
 
     }
 
     @GetMapping("/room")
-    public void room(Model model){
+    public void room(Model model) {
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -17,5 +17,7 @@
         <typeAlias type="com.example.app.hotel.vo.Top10HotelsVO" alias="top10HotelsVO"/>
         <typeAlias type="com.example.app.hotel.vo.HotelsInfoVO" alias="hotelsInfoVO"/>
         <typeAlias type="com.example.app.auth.dto.AuthSignVO" alias="authSignVO"/>
+        <!-- 마이페이지 내 정보 -->
+        <typeAlias type="com.example.app.user.dto.MyPageInfoData" alias="MyPageInfoData"/>
     </typeAliases>
 </configuration>

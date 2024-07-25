@@ -12,4 +12,48 @@
          WHERE user_id = #{userId}
 	</select>
 
+     <!-- 관리자 정보 가져오기 _ 토큰 발급시 사용() -->
+    <select id="getUserLoginData" parameterType="String" resultType="CustomUserDetails">
+        select id,
+               password
+          from user_info
+         where id = #{id};
+    </select>
+
+    <!-- 이메일 인증 전 일치하는 정보 가져오기 -->
+    <select id="findUserEmail" parameterType="String" resultType="String">
+          SELECT EMAIL FROM USER_INFO WHERE EMAIL = #{email} AND NAME = #{userName};
+    </select>
+
+    <!-- 인증시간 가져오기 -->
+    <select id="findAuthStore" parameterType="String" resultType="String">
+          SELECT REQUEST_TIME FROM AUTH_STORE WHERE TARGET_KEY = #{email} AND STATUS = #{status};
+    </select>
+
+    <!-- 인증 실패 처리 -->
+     <update id="expired" parameterType="String">
+          UPDATE AUTH_STORE SET
+               STATUS = #{status},
+               EXPIRE_TIME = NOW()
+          WHERE TARGET_KEY = #{email};
+     </update>
+    <!-- 인증번호 중복체크 -->
+     <select id="findAuthKey" parameterType="String" resultType="Boolean">
+          SELECT * FROM AUTH_STORE WHERE AUTH_KEY = #{authNumber};
+     </select>
+    <!-- 인증번호 저장 -->
+     <insert id="insertAuth" parameterType="String">
+          INSERT INTO AUTH_STORE (
+               STATUS,
+               TARGET_KEY,
+               AUTH_KEY,
+               REQUEST_TIME
+          ) VALUES (
+               #{status},
+               #{email},
+               #{authNumber},
+               NOW()
+          );
+     </insert>
+
 </mapper>

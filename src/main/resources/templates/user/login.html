@@ -13,7 +13,7 @@
 <body>
   <div id="__next">
     <!--*****header*****!-->
-    <header th:replace="/main/header.html :: div"></header>
+    <header th:replace="/main/header.html :: div" id="header"></header>
     <!--******body 시작*****!-->
     <main class="css-1i6vue">
       <section class="css-cvaybd">
@@ -82,9 +82,15 @@
                   <div>
                     <button type="button" data-testid="Button" class="css-1akojk6" onclick="goRegister()">
                       <span data-testid="Typography" color="#000000" class="css-kfktv3">회원가입</span></button>
-                    <button type="button" data-testid="Button" class="css-zzrlz5" onclick="goNewPw()">
-                      <span data-testid="Typography" color="#000000" class="css-1nosfqs">비밀번호 재설정</span>
-                    </button>
+                    <div>
+                      <button type="button" data-testid="Button" class="css-zzrlz5" onclick="findUserId()">
+                        <span data-testid="Typography" color="#000000" class="css-1nosfqs"
+                          style="margin-right: 50px;">아이디 찾기</span>
+                      </button>
+                      <button type="button" data-testid="Button" class="css-zzrlz5" onclick="NewPw()">
+                        <span data-testid="Typography" color="#000000" class="css-1nosfqs">비밀번호 재설정</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </form>
@@ -110,6 +116,7 @@
       </div>
     </div>
   </div>
+  <script src="/js/sessionManager.js"></script>
   <script>
 
     // 비밀번호 숨기기 버튼
@@ -146,8 +153,6 @@
 
     // 로그인
     function loginBtn() {
-
-
       $.ajax({
         url: "/user/token",
         type: "post",
@@ -157,6 +162,9 @@
           password: $('#password').val(),
         },
         success: function (result) {
+          saveTokenToCookie(result);
+          updateUIBasedOnRole(result);
+          setupAjaxHeaders(result);
           window.location.href = "/main/home";
         },
         error: function (xhr, status, error) {
@@ -174,8 +182,12 @@
 
     // 회원가입 링크
     function goRegister() {
-      window.location.href = "/login/register";
+      window.location.href = "/user/register";
     }
+
+    window.onload = async function () {
+      await initializeToken();
+    };
 
 
   </script>

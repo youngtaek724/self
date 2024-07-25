@@ -115,18 +115,11 @@
             date_range.date, ri.ID
         ]]>
     </select>
-
-    <!-- update-->
-    <update id="update">
-
-    </update>
-
-
-
-    <!-- delete -->
-    <delete id="delete">
-
-    </delete>
+    
+    <!-- 호텔정보 가져오기 - 지도확인 -->
+    <select id="showHotelList" resultType="HotelMstVO">
+        SELECT * FROM HOTEL_MST;
+    </select>
 
 </mapper>
 

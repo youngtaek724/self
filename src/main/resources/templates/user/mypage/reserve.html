@@ -1,4 +1,4 @@
-<html lang="ko">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
@@ -6,10 +6,7 @@
     <link rel="stylesheet" href="/css/myPageInfo.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/1018dd7e055bc4cc.css">
-    <link rel="stylesheet" href="/css/6e77cb14485b3a18.css">
-    <link rel="stylesheet" href="/css/49ed35b58d7d245c.css">
-    <link rel="stylesheet" href="/css/40d91952aa12e1a0.css">
-    <link rel="stylesheet" href="/css/MyWidget.scss">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body id="mainBody" class="bgother">
@@ -35,26 +32,22 @@
                 <div id="headerLeft" class="header_left" aria-hidden="false">
                     <ul class="left_menu" role="menu">
                         <li>
-                            <a href="/user2/help/myInfoV2?m=viewProfile&amp;lang=ko_KR" class="left_item"
-                                role="menuitem" aria-current="true">
+                            <a href="/user/mypage/info" class="left_item" role="menuitem" aria-current="true">
                                 <div class="menu_text">내 프로필</div>
                             </a>
                         </li>
                         <li>
-                            <a href="/user2/help/myInfoV2?m=viewSecurity&amp;lang=ko_KR" class="left_item"
-                                role="menuitem" aria-current="">
+                            <a href="/user/mypage/reserve" class="left_item" role="menuitem" aria-current="">
                                 <div class="menu_text on">예약 내역</div>
                             </a>
                         </li>
                         <li>
-                            <a href="/user2/help/myInfoV2?m=viewManageHistory&amp;lang=ko_KR" class="left_item"
-                                role="menuitem" aria-current="">
+                            <a href="/user/mypage/wish" class="left_item" role="menuitem" aria-current="">
                                 <div class="menu_text ">찜한 여행지</div>
                             </a>
                         </li>
                         <li>
-                            <a href="/user2/help/myInfoV2?m=viewManageHistory&amp;lang=ko_KR" class="left_item"
-                                role="menuitem" aria-current="">
+                            <a href="/user/mypage/review" class="left_item" role="menuitem" aria-current="">
                                 <div class="menu_text ">리뷰 내역</div>
                             </a>
                         </li>
@@ -429,5 +422,15 @@
     </div>
 </body>
 <script src="/js/jquery.min.js"></script>
+<script src="/js/sessionManager.js"></script>
+<script>
+    // 페이지 로드 시 토큰 초기화
+    window.onload = function () {
+        initializeToken();
+    };
+    function getTokenFromSessionStorage() {
+        return sessionStorage.getItem('accessToken');
+    }
+</script>
 
 </html>

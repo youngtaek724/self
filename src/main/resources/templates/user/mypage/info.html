@@ -1,4 +1,4 @@
-<html lang="ko">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
@@ -6,10 +6,7 @@
     <link rel="stylesheet" href="/css/myPageInfo.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/1018dd7e055bc4cc.css">
-    <link rel="stylesheet" href="/css/6e77cb14485b3a18.css">
-    <link rel="stylesheet" href="/css/49ed35b58d7d245c.css">
-    <link rel="stylesheet" href="/css/40d91952aa12e1a0.css">
-    <link rel="stylesheet" href="/css/MyWidget.scss">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body id="mainBody" class="bgother">
@@ -25,44 +22,38 @@
                             <span class="photo_edit"></span>
                         </a>
                         <div class="profile">
-                            <p class="useid" style="margin-bottom: 5px">최신형</p>
-                            <p class="usemail">tlsgudrhfem@naver.com</p>
+                            <p class="useid" style="margin-bottom: 5px" id="userName"></p>
+                            <p class="usemail" id="email"></p>
                         </div>
-
                     </div>
                 </div>
                 <!-- end 프로필 -->
                 <div id="headerLeft" class="header_left" aria-hidden="false">
                     <ul class="left_menu" role="menu">
                         <li>
-                            <a href="/user2/help/myInfoV2?m=viewProfile&amp;lang=ko_KR" class="left_item"
-                                role="menuitem" aria-current="true">
+                            <a href="/user/mypage/info" class="left_item" role="menuitem" aria-current="true">
                                 <div class="menu_text on">내 프로필</div>
                             </a>
                         </li>
                         <li>
-                            <a href="/user2/help/myInfoV2?m=viewSecurity&amp;lang=ko_KR" class="left_item"
-                                role="menuitem" aria-current="">
+                            <a href="/user/mypage/reserve" class="left_item" role="menuitem" aria-current="">
                                 <div class="menu_text ">예약 내역</div>
                             </a>
                         </li>
                         <li>
-                            <a href="/user2/help/myInfoV2?m=viewManageHistory&amp;lang=ko_KR" class="left_item"
-                                role="menuitem" aria-current="">
+                            <a href="/user/mypage/wish" class="left_item" role="menuitem" aria-current="">
                                 <div class="menu_text ">찜한 여행지</div>
                             </a>
                         </li>
                         <li>
-                            <a href="/user2/help/myInfoV2?m=viewManageHistory&amp;lang=ko_KR" class="left_item"
-                                role="menuitem" aria-current="">
+                            <a href="/user/mypage/review" class="left_item" role="menuitem" aria-current="">
                                 <div class="menu_text ">리뷰 내역</div>
                             </a>
                         </li>
                     </ul>
                     <ul class="left_link">
                         <li>
-                            <a href="https://nca.naver.com/chat/account/view" class="left_item"
-                                onclick="nclk(this,'fot.smartbot','','',event)">
+                            <a href="" class="left_item" onclick="nclk(this,'fot.smartbot','','',event)">
                                 <div class="link_text">문의하기</div>
                             </a>
                         </li>
@@ -106,8 +97,8 @@
                                     <li>
                                         <div class="myaccount">
                                             <div class="myname">
-                                                <div class="name_text">최신형</div>
-                                                <span id="phoneNoRegSpan" class="item_text">ID : tlsgud2266</span>
+                                                <div class="name_text" id="name"></div>
+                                                <span class="item_text" id="userId"></span>
 
                                             </div>
                                         </div>
@@ -117,7 +108,7 @@
                             <ul class="subindex_row">
                                 <li>
                                     <div id="phoneNoRegDiv" class="row_item phone ">
-                                        <span id="phoneNoRegSpan" class="item_text">+82 10-2***-3***</span>
+                                        <span class="item_text" id="userPhone"></span>
                                         <button type="button" id="phoneNoRegBtn" class="btn_edit"
                                             onclick="showPhoneNumberChangePopUp()">
                                             <span id="phoneNoRegBtnTxt" class="text">수정</span>
@@ -126,7 +117,7 @@
                                 </li>
                                 <li>
                                     <div class="row_item mail ">
-                                        <span id="myLetterEmailRegSpan" class="item_text">01******@h*******.net</span>
+                                        <span class="item_text" id="userEmail"></span>
                                         <button type="button" class="btn_edit" onclick="showMyLetterEmailChangePopUp()">
                                             <span class="text">수정</span>
                                         </button>
@@ -134,7 +125,7 @@
                                 </li>
                                 <li>
                                     <div class="row_item mail ">
-                                        <span id="myLetterEmailRegSpan" class="item_text">[12345] 경기도 수원시 장안구 조원동</span>
+                                        <span class="item_text" id="userAddr"></span>
                                         <button type="button" class="btn_edit" onclick="showMyLetterEmailChangePopUp()">
                                             <span class="text">수정</span>
                                         </button>
@@ -153,12 +144,12 @@
                             <ul class="subindex_row">
                                 <li>
                                     <div class="row_item phone">
-                                        <span class="item_text">가입일 : 2024-07-18</span>
+                                        <span class="item_text" id="rgstDate">가입일 : </span>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="row_item mail">
-                                        <span class="item_text">랭크 : BRONZE</span>
+                                        <span class="item_text" id="rankType">랭크 : </span>
                                     </div>
                                 </li>
                             </ul>
@@ -223,5 +214,31 @@
     </div>
 </body>
 <script src="/js/jquery.min.js"></script>
+<script src="/js/sessionManager.js"></script>
+
+<script>
+    // 페이지 로드 시 토큰 초기화
+    checkPageAccess('USER');
+
+    window.onload = async function () {
+        await initializeToken();
+        fetchData('/mypage/info', getMyPageInfo);
+    };
+
+    function getMyPageInfo(data) {
+        document.getElementById('userId').innerText = "ID : " + data.userId;
+        document.getElementById('userName').innerText = data.name;
+        document.getElementById('name').innerText = data.name;
+        document.getElementById('email').innerText = data.email;
+        document.getElementById('userEmail').innerText = data.email;
+        document.getElementById('userAddr').innerText = "[ " + data.zipCode + " ] " + data.defaultAddr + " " + data.detailAddr;
+        document.getElementById('rgstDate').innerText = "가입일 : " + data.rgstDate;
+        document.getElementById('rankType').innerText = "등급 : " + data.rankType;
+        document.getElementById('userPhone').innerText = data.phone;
+    }
+
+
+
+</script>
 
 </html>
