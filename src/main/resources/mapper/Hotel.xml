@@ -36,6 +36,86 @@
         ]]>
     </select>
 
+    <!-- 상시가 적용 쿼리 -->
+    <select id="selectPrice" parameterType="map" resultType="map">
+        SELECT
+            date_range.date,
+            COALESCE(
+                -- pricing_b 테이블에서 가격을 우선적으로 가져옴
+                    rpb.price,
+                -- pricing_b 테이블에서 가격이 없는 경우 pricing_a 테이블에서 가격을 가져옴
+                    CASE
+                        -- 월이 6, 7, 8 중 하나일 때 성수기 가격 적용
+                        WHEN MONTH(date_range.date) IN (6, 7, 8) THEN
+                    CASE
+                        -- 일요일(1) 또는 토요일(7)일 때 성수기 주말 가격
+                        WHEN DAYOFWEEK(date_range.date) IN (1, 7) THEN rpa.peak_weekend_price
+                        -- 그 외 평일에 성수기 가격
+                        ELSE rpa.peak_weekday_price
+                    END
+                -- 월이 6, 7, 8이 아닐 때 비수기 가격 적용
+                ELSE
+                    CASE
+                        -- 일요일(1) 또는 토요일(7)일 때 비수기 주말 가격
+                        WHEN DAYOFWEEK(date_range.date) IN (1, 7) THEN rpa.off_weekend_price
+                        -- 그 외 평일에 비수기 가격
+                        ELSE rpa.off_weekday_price
+                    END
+            END
+        ) AS price
+        FROM
+            (SELECT DATE_ADD(STR_TO_DATE(#{startDate}, '%Y%m%d'), INTERVAL seq DAY) AS date
+             FROM seq_0_to_31
+             WHERE DATE_ADD(STR_TO_DATE(#{startDate}, '%Y%m%d'), INTERVAL seq DAY) BETWEEN STR_TO_DATE(#{startDate}, '%Y%m%d') AND STR_TO_DATE(#{endDate}, '%Y%m%d')) AS date_range
+                LEFT JOIN
+            room_pricing_b rpb ON date_range.date = rpb.date AND rpb.ROOM_ID = #{roomId}
+                LEFT JOIN
+            room_pricing_a rpa ON rpa.ROOM_ID = #{roomId}
+        ORDER BY
+            date_range.date
+    </select>
+
+    <select id="selectPriceByHotelId" parameterType="map" resultType="map">
+        <![CDATA[
+        SELECT
+            date_range.date,
+            ri.name AS room_name,
+            ri.description AS room_description,
+            ri.type AS room_type,
+            COALESCE(
+                    rpb.price,
+                    CASE
+                        WHEN MONTH(date_range.date) IN (6, 7, 8) THEN
+                    CASE
+                        WHEN DAYOFWEEK(date_range.date) IN (1, 7) THEN rpa.peak_weekend_price
+                        ELSE rpa.peak_weekday_price
+                    END
+                ELSE
+                    CASE
+                        WHEN DAYOFWEEK(date_range.date) IN (1, 7) THEN rpa.off_weekend_price
+                        ELSE rpa.off_weekday_price
+                    END
+            END
+        ) AS price
+        FROM
+            (SELECT DATE_ADD(STR_TO_DATE(#{startDate}, '%Y%m%d'), INTERVAL seq DAY) AS date
+             FROM seq_0_to_31
+             WHERE DATE_ADD(STR_TO_DATE(#{startDate}, '%Y%m%d'), INTERVAL seq DAY) BETWEEN STR_TO_DATE(#{startDate}, '%Y%m%d') AND DATE_SUB(STR_TO_DATE(#{endDate}, '%Y%m%d'), INTERVAL 1 DAY)) AS date_range
+                CROSS JOIN
+            room_info ri
+                LEFT JOIN
+            room_pricing_b rpb ON date_range.date = rpb.date AND ri.ID = rpb.ROOM_ID
+                LEFT JOIN
+            room_pricing_a rpa ON ri.ID = rpa.ROOM_ID
+                JOIN
+            hotel_mst hm ON ri.HOTEL_ID = hm.ID
+        WHERE
+            hm.ID = #{hotelId}
+        ORDER BY
+            date_range.date, ri.ID
+        ]]>
+    </select>
+
     <!-- update-->
     <update id="update">
 

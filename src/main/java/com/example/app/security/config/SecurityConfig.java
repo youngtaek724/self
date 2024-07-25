@@ -37,7 +37,8 @@ public class SecurityConfig {
         http.csrf(AbstractHttpConfigurer::disable)
             .authorizeHttpRequests(authorize -> authorize
                 .antMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-resources/**", "/swagger-ui.html").permitAll()
-                .antMatchers("/guest/token", "/admin/token", "/test/**","/main/**","/**/**").permitAll()
+                .antMatchers("/guest/token", "/admin/token", "/test/**","/main/**","/css/**","/js/**","/images/**","/**/**").permitAll()
+                .antMatchers("/hotels/**").permitAll()
                 .anyRequest().authenticated()
             )
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

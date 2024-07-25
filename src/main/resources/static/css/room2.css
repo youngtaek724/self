@@ -319,7 +319,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
     display: inline-block;
     height: 14px;
     width: 14px;
-    background-image: url(/ic_gallery_ou_wh3.svg);
+    background-image: url(/images/ic_gallery_ou_wh3.svg);
     background-size: contain;
     background-position: 0px 0px;
     background-repeat: no-repeat;
@@ -333,7 +333,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
     z-index: 2;
     height: 20px;
     width: 20px;
-    background-image: url(ic_arrow_right_ou_b_g90.svg);
+    background-image: url(/images/ic_arrow_right_ou_b_g90.svg);
     background-position: 0px 0px;
     background-repeat: no-repeat;
 }
@@ -362,7 +362,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
     z-index: 2;
     height: 20px;
     width: 20px;
-    background-image: url(ic_arrow_left_ou_b_g90.svg);
+    background-image: url(/images/ic_arrow_left_ou_b_g90.svg);
     background-position: 0px 0px;
     background-repeat: no-repeat;
 }
@@ -805,7 +805,7 @@ menu, ol, ul {
 }
 
 .Hotel_roomDetailInfo__wRz04 .Hotel_box2__6zdHP .Hotel_info2__8Vysc .Hotel_txtTipList__gLjHG li {
-    background-image: url(/bg_ico_bul01.svg);
+    background-image: url(/images/bg_ico_bul01.svg);
     background-position: 0 6px;
     background-repeat: no-repeat;
     margin-top: 4px;
@@ -832,4 +832,113 @@ menu, ol, ul {
 
 .absolute {
     position: absolute;
+}
+
+
+
+
+.Hotel_roomDetailInfo__wRz04 .Hotel_swiperSmall__dhimi {
+    overflow: hidden;
+    position: relative;
+}
+
+.Hotel_roomDetailInfo__wRz04 .Hotel_swiperSmall__dhimi>div {
+    margin: 0 43px;
+    overflow: hidden;
+}
+
+.swiper-pointer-events {
+    touch-action: pan-y;
+}
+
+.swiper {
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.swiper-wrapper {
+    box-sizing: content-box;
+    display: flex;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    width: 100%;
+    z-index: 1;
+}
+
+.iOuHYD .swiper-slide {
+    position: relative;
+    height: 92px;
+    width: 120px;
+    overflow: hidden;
+    border-radius: 12px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(230 230 230 / var(--tw-bg-opacity));
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    width: 100%;
+}
+
+.iOuHYD .swiper-slide-thumb-active::before {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    height: 92px;
+    width: 100%;
+    border-radius: 12px;
+    border-width: 3px;
+    border-style: solid;
+    --tw-border-opacity: 1;
+    border-color: rgb(18 18 18 / var(--tw-border-opacity));
+    --tw-content: '';
+    content: var(--tw-content);
+}
+
+.Hotel_roomDetailInfo__wRz04 .Hotel_gpBox1__HbqYG img {
+    height: 100%;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+img, video {
+    height: auto;
+    max-width: 100%;
+}
+
+audio, canvas, embed, iframe, img, object, svg, video {
+    display: block;
+    vertical-align: middle;
+}
+
+.iOuHYD .swiper-slide {
+    position: relative;
+    height: 92px;
+    width: 120px;
+    overflow: hidden;
+    border-radius: 12px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(230 230 230 / var(--tw-bg-opacity));
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    width: 100%;
 }

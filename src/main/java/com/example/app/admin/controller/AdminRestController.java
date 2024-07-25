@@ -35,5 +35,4 @@ public class AdminRestController {
   public String login(@RequestBody @Valid AdminLoginVO body) throws SeskException {
     return adminService.login(body);
   }
-  
 }
