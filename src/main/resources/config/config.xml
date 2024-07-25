@@ -15,7 +15,7 @@
         <typeAlias type="com.example.app.admin.vo.AdminLoginVO" alias="adminLoginVO"/>
         <typeAlias type="com.example.app.security.dto.CustomUserDetails" alias="CustomUserDetails"/>
         <typeAlias type="com.example.app.hotel.vo.Top10HotelsVO" alias="top10HotelsVO"/>
-        
+        <typeAlias type="com.example.app.hotel.vo.HotelsInfoVO" alias="hotelsInfoVO"/>
         <typeAlias type="com.example.app.auth.dto.AuthSignVO" alias="authSignVO"/>
     </typeAliases>
 </configuration>
