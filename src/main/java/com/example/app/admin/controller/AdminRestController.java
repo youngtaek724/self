@@ -37,5 +37,4 @@ public class AdminRestController {
     // push test
     return adminService.login(body);
   }
-  
 }

@@ -2,6 +2,8 @@ package com.example.app.hotel.service;
 
 import com.example.app.hotel.mapper.HotelMapper;
 import com.example.app.hotel.vo.Top10HotelsVO;
+import com.example.app.security.enums.RoleType;
+import com.example.app.security.jwt.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
